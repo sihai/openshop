@@ -1,0 +1,196 @@
+<div class="footer">
+  <ul class="nav footer-nav clearfix">
+    <li class="nav-item">
+      <ul class="first-footer-links footer-links">
+        <li><a class="gilt-logo logo hide-text" href="/sale/women">Gilt</a></li>
+        <li>
+          <div class="secondary copyright">&copy; 2007 - 2013 GILT GROUPE, INC.</div>
+          <div class="secondary copyright">ALL RIGHTS RESERVED.</div>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+    <ul class="footer-links">
+      <li class="primary">Company</li>
+      <li><a class="secondary highlight" href="/company">About</a></li>
+      <li><a class="secondary highlight" href="/company/careers">Careers</a></li>
+      <li><a class="secondary highlight" href="http://tech.gilt.com">Technologie</a></li>
+      <li><a class="secondary highlight" href="https://dev.gilt.com">Developers</a></li>
+      <li><a class="secondary highlight" href="/support/faq">FAQ</a></li>
+      <li><a class="secondary highlight" href="/gift-certificate/gift-card">E-Gift Cards</a></li>
+      
+      <li><a class="secondary highlight" href="/styles">Style Directory</a></li>
+      <li><a class="secondary highlight" href="/brands">Brand Directory</a></li>
+    </ul>
+    </li>
+    <li class="nav-item">
+      <ul class="footer-links">
+        <li class="primary">Customer Service</li>
+        <li><a class="secondary highlight" href="/support">Contact Us</a></li>
+        <li><a class="secondary highlight" href="/support/returns">Return Policy</a></li>
+        <li><a class="secondary highlight" href="/support/shipping">Shipping &amp; Tax</a></li>
+        <li><a class="secondary highlight" href="/support/global">International</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <ul class="footer-links">
+        <li class="primary">Policies</li>
+        <li><a class="secondary highlight" href="/company/termsOfUse">Terms Of Service</a></li>
+        <li><a class="secondary highlight" href="/company/privacy">Privacy</a></li>
+        <li><a class="secondary highlight" href="/company/security">Security</a></li>
+        <li><a class="secondary highlight" href="/company/websiteterms">Website Terms of Use</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <ul class="footer-links">
+        <li class="primary">Connect with Gilt</li>
+        <li class="social social-top">
+            <a class="social-icon secondary highlight" href="/apps/iphone">
+              <div class="button">
+                  <div class="icon mobile"></div>
+              </div>
+              <span class="label">Mobile</span>
+            </a>
+        </li>
+
+        <li class="social">
+          <a class="social-link secondary highlight" href="http://twitter.com/Gilt">
+            <div class="button">
+              <div class="icon twitter"></div>
+            </div>
+            <span class="label">Twitter</span>
+          </a>
+        </li>
+        <li class="social">
+          <a class="social-link secondary highlight" href="http://www.facebook.com/Gilt">
+            <div class="button">
+              <div class="icon facebook"></div>
+            </div>
+            <span class="label">Facebook</span>
+          </a>
+        </li>
+        <li class="social">
+          <a class="social-link secondary highlight" href="http://fusion.google.com/add?source=atgs&feedurl=https%3A//api.gilt.com/v1/sales/women/active.atom">
+            <div class="button">
+              <div class="icon reader"></div>
+            </div>
+            <span class="label">Google</span>
+          </a>
+        </li>
+        <li class="social">
+          <a class="social-link secondary highlight" href="https://dev.gilt.com">
+            <div class="button">
+              <div class="icon api"></div>
+            </div>
+            <span class="label">API</span>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+    <li class="nav-item">
+      <ul class="footer-links">
+        <li class="primary">Magazine Partner</li>
+        <li>
+          <a class="dujour-logo logo hide-text" rel="nofollow" href="http://www.dujour.com" title="DuJour" target="_blank">DuJour</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="scripts">
+    
+
+
+<script type="text/javascript">
+  // config
+  require = {
+    baseUrl : '//assets4.giltcdn.com/a/js/web-mosaic/0.0.93',
+    callback : function () {
+      var defineConfig = function (key, value) {
+        define(key, function () { return value; });
+      };
+      
+      defineConfig("config/service_base_uri", "");
+      defineConfig("config/baseUrl", 'http://www.gilt.com');
+      defineConfig("config/base_url", 'http://www.gilt.com');
+      defineConfig("config/cdn_base_uris", ('//cdn1.giltcdn.com,//cdn2.giltcdn.com').split(','));
+      defineConfig("config/cdnBaseUris", ('//cdn1.giltcdn.com,//cdn2.giltcdn.com').split(','));
+      defineConfig("config/js_base_path", '//assets4.giltcdn.com/a/js/web-mosaic/0.0.93');
+      defineConfig("config/jsBasePath", '//assets4.giltcdn.com/a/js/web-mosaic/0.0.93');
+      defineConfig("config/facebookAppId", '271483649617436');
+      defineConfig("config/facebook_app_id", '271483649617436');
+      defineConfig("config/web_mosaic", {
+        isBot: false,
+        store: 'women',
+        timeZone: 'Asia/Shanghai',
+        subsiteId: 1,
+        channelId: 1,
+        storeId: 1,
+        pageUrl: 'http://www.gilt.com' + window.location.pathname,
+        userMeta: {
+          pricer: {"price_adjustment":{"coefficient":1.0,"rule_id":null},"country":{"iso_3166_three":"USA","iso_3166_two":"US","name":"United States","default_currency":"USD","is_billable":true,"is_shippable":true,"requires_postal_code":true,"region":"UsAndCanada"},"currency":{"iso_4217_code":"USD","name":"US Dollar","visa_supported":true,"mastercard_supported":true,"amex_supported":true,"supported_cards":["DISCOVER","AMERICAN_EXPRESS","VISA","PAYPAL","MASTERCARD"],"decimal_places":2,"symbol":"$"},"shipping_destination":{"iso_3166":"UnitedStates","ship_method":"NA","ship_min_days":0,"ship_max_days":0,"sales_tax_name":"Sales Tax","price_includes_list":[],"local_country_name":"The United States","round_up":false,"price_includes":""},"exchange_rate":{"usd_rate":1.0},"format":{"symbol":"$","symbol_separator":"","symbol_before_amount":true,"grouping_separator":",","decimal_separator":".","decimal_places":2,"show_cents_by_default":false,"locale":"zh_CN","currency_code":"USD"}},
+          userIpAddress: '42.120.72.24',
+          vendorUserId: '763a87e7f78970d93550e40a25ce7a8251e8d63141ad44e6be8feec57fcc446ed4f61de24fa6e6857cdb8be4631376e23052d9ab815cdfaf589b947dc01ee166',
+          isLoggedIn: true,
+          groups: '12812|13007|11556|12929|12943|12745|12837|12657|11691|11346|12777|12927|12741|12866|12769|12917|12558|12946|12913|11692|12776|12806|12131|12899|12562|12727|12810|12821|12922|12544|12805|12944|12844',
+          isLoyaltyUser: false,
+          abTests: {"mobile_image_swiper":"on","true_fit":"on","intl_free_shipping":"on","paypal":"off","brand_alerts_2_0":"eligible_group","resubscribe_message":"on","personal_sale_member":"on","sale_to_sale_nav_v3":"on","navigation":"unified_no_hp","dsr_subject_line":"with_prefix","intl_decouple_currency":"off","mosaic_view_kafka_event_rollout":"on","mosaic_kids_shop_by_age":"on","dsr_personalization":"test_group_large","global_search":"on","loyalty":"loyalty_on","hopper_rollout":"rogue"}
+        }
+      });
+     }
+  };
+</script>
+    
+
+
+  
+    <script src="//assets4.giltcdn.com/a/js/web-mosaic/0.0.93/package.min.js"></script>
+  
+
+
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3311903-2']);
+  _gaq.push(['_setDomainName', 'gilt.com']);
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_setLocalGifPath', '//log4gilt.gilt.com/ga/__utm.gif']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+    <script type="text/javascript" charset="utf-8">
+      requireModules(['common.page_controller', 'config.web_mosaic', 'src/app'], function (pageController, config) {
+        pageController.setProperty('section', config.store);
+        pageController.setProperty('subsiteId', config.subsiteId);
+        pageController.setProperty('channelId', config.channelId);
+        pageController.setProperty('storeId', config.storeId);
+        pageController.setProperty('applicationName', 'web-mosaic');
+        pageController.setProperty('pageType', 'mosaic page');
+        pageController.setProperty('isLoyaltyUser', config.userMeta.isLoyaltyUser);
+        pageController.setProperty('vendorUserId', config.userMeta.vendorUserId);
+
+        
+        
+requireModules(
+  [
+    'vendor.jquery',
+    'nav.unified.nav'
+  ],
+  function ($, unifiedNav) {
+    unifiedNav($('.component-nav-unified'));
+  }
+);
+    
+
+        pageController.init();
+      });
+
+    </script>
+  </div>

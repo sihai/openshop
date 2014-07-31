@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="web-search">
+<!--<![endif]-->
+	<head>
+    	<title>TODO</title>
+
+        <script type="text/javascript">
+          server_clock_delta = (window.performance ? window.performance.timing.responseStart : (new Date()).getTime()) - 1376566212726
+        </script>
+        
+        <link rel="shortcut icon" type="image/png" href="/assets/front/images/favicon.ico">
+        <link rel="stylesheet" media="screen" href="/assets/front/css/main.min.css">
+        <script src="/assets/front/js/modernizr.js"></script>
+
+        <!--[if !(IE 7)]><!-->
+		<script>
+		  	(function () {
+		    	var head = document.getElementsByTagName('head')[0], scriptTag = document.createElement('script');
+		    	scriptTag.src = '//cdn.optimizely.com/js/37462882.js';
+		    	scriptTag.async = true,
+		    	scriptTag.defer = true;
+		
+		    	head.parentNode.insertBefore(scriptTag, head);
+		  	}());
+	
+	  		(function () {
+	     		setTimeout(function() {
+	      		window.optimizely = window.optimizely || [];
+		      		if (!window.optimizely.data) {
+		        		window.optimizely.push("disable");
+		      		}
+	    		}, 500);
+	  		}());
+		</script>
+		<!--<![endif]-->
+	</head>
+	
+	
+    <body>
+    	<div class="page-container">
+    		
+    		#parse("front/header.vm")
+    		#parse("front/announcement.vm")
+    		
+    		<!--Search query-->
+			<div class="serp-header">
+				<div class="serp-header-contents ">
+				    <h1 class="page-title primary">
+				       	<strong class="query primary">Clothing</strong>
+				    </h1>
+			  	</div>
+			</div>
+			<!--Search query end-->
+			
+			<!--Search result-->
+			<div class="search-results">
+				<!--分页&筛选-->
+    			<div class="listing-meta group">
+					<div class="flourish result-count">
+					  Showing: <span class="result-range">97-144</span> of <span class="total-results">811</span>
+					</div>
+
+      				<div class="controls group">
+				        <form class="sorting submittable" id="sorting" action="/search">
+				          	<label for="sort-by" class="label">Sort by: </label>
+				          	<select name="q.sort" class="sort changeable" id="sort-by">
+					            <option value="" >Relevance</option>
+					            <option value="brand-asc"  >Brand A-Z</option>
+					            <option value="brand-desc" >Brand Z-A</option>
+					            <option value="price-asc"  >Price Low-High</option>
+					            <option value="price-desc" >Price High-Low</option>
+				          	</select>
+				        </form>
+						
+						<div class="pagination">
+						    <a class="previous" href="?q.query=mens-clothing&q.start=48">Previous</a>
+						  Page <span class="current">3</span> of <span class="total">17</span>
+						    <a class="next" href="?q.query=mens-clothing&q.start=144">Next</a>
+						</div>
+						
+      				</div>
+    			</div>
+  				<!--分页&筛选 end-->
+  				
+  				<!--左侧类目-->
+    			<form class="search-results-faceting faceting submittable" id="facets" action="/search.jhtml">
+					<div class="categories-facet facet-set " data-gilt-facet-set="categories">
+  						<h2 class="facet-title">Categories</h2>
+  						<ul class="facets">
+    						<li>
+      							<label class="facet-label facet-parent selected" data-facet-count="5442" data-facet-filter-value="Gilt::Men">
+						        	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men" data-gilt-label="Men" checked />
+          							<span class="facet-text">Men</span>
+      							</label>
+        						<ul class="facets">
+    								<li>
+      									<label class="facet-label facet-parent" data-facet-count="5442" data-facet-filter-value="Gilt::Men::Clothing">
+							          		<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing" data-gilt-label="Clothing"/>
+          									<span class="facet-text">Clothing</span>
+      									</label>
+      
+        								<ul class="facets">
+    										<li>
+      											<label class="facet-label facet-parent" data-facet-count="4" data-facet-filter-value="Gilt::Men::Clothing::Activewear">
+										          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Activewear" data-gilt-label="Activewear"/>
+          											<span class="facet-text">Activewear</span>
+      											</label>
+        										<ul class="facets">
+    												<li>
+      													<label class="facet-label disabled" data-facet-count="4" data-facet-filter-value="Gilt::Men::Clothing::Activewear::Bottoms">
+          													<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Activewear::Bottoms" data-gilt-label="Bottoms"/>
+          													<span class="facet-text">Bottoms</span>
+      													</label>
+    												</li>
+        										</ul>
+    										</li>
+  
+    										<li>
+      											<label class="facet-label facet-parent    " data-facet-count="1340" data-facet-filter-value="Gilt::Men::Clothing::Denim">
+										         	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Denim" data-gilt-label="Denim"/>
+										          	<span class="facet-text">Denim</span>
+      											</label>
+        										<ul class="facets">
+    												<li>
+												      	<label class="facet-label   disabled  " data-facet-count="4" data-facet-filter-value="Gilt::Men::Clothing::Denim::Bootcut">
+												          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Denim::Bootcut" data-gilt-label="Bootcut" />
+												          	<span class="facet-text">Bootcut</span>
+												      	</label>
+    												</li>
+  
+    												<li>
+      													<label class="facet-label   disabled  " data-facet-count="60" data-facet-filter-value="Gilt::Men::Clothing::Denim::Relaxed Leg">
+												          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Denim::Relaxed Leg" data-gilt-label="Relaxed Leg"/>
+												          	<span class="facet-text">Relaxed Leg</span>
+      													</label>
+    												</li>
+												    <li>
+												      	<label class="facet-label   disabled  " data-facet-count="732" data-facet-filter-value="Gilt::Men::Clothing::Denim::Slim Leg">
+												          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Denim::Slim Leg" data-gilt-label="Slim Leg"/>
+												          	<span class="facet-text">Slim Leg</span>
+												      	</label>
+												    </li>
+												    <li>
+												      	<label class="facet-label   disabled  "
+												            data-facet-count="544" data-facet-filter-value="Gilt::Men::Clothing::Denim::Straight Leg">
+												          <input
+												            type="radio"
+												            class="facet changeable "
+												            name="q.category"
+												            value="Gilt::Men::Clothing::Denim::Straight Leg"
+												            data-gilt-label="Straight Leg"
+												            
+												            />
+												          <span class="facet-text">Straight Leg</span>
+												      </label>
+												    </li>
+												</ul>
+    										</li>
+    										
+										    <li>
+										      	<label class="facet-label facet-parent" data-facet-count="143" data-facet-filter-value="Gilt::Men::Clothing::Sweaters &amp; Hoodies">
+										          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Sweaters &amp; Hoodies" data-gilt-label="Sweaters &amp; Hoodies"/>
+										          	<span class="facet-text">Sweaters &amp; Hoodies</span>
+										      	</label>
+										        <ul class="facets">
+										    		<li>
+										      			<label class="facet-label   disabled" data-facet-count="48" data-facet-filter-value="Gilt::Men::Clothing::Sweaters &amp; Hoodies::Crewnecks">
+												          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Sweaters &amp; Hoodies::Crewnecks" data-gilt-label="Crewnecks" />
+										          			<span class="facet-text">Crewnecks</span>
+										      			</label>
+										    		</li>
+										  
+												    <li>
+												      	<label class="facet-label   disabled  "  data-facet-count="54" data-facet-filter-value="Gilt::Men::Clothing::Sweaters &amp; Hoodies::Hoodies">
+												          	<input type="radio" class="facet changeable " name="q.category" value="Gilt::Men::Clothing::Sweaters &amp; Hoodies::Hoodies" data-gilt-label="Hoodies" />
+												          	<span class="facet-text">Hoodies</span>
+												      	</label>
+												    </li>
+										        </ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+  						</ul>
+					</div>
+    			</form>
+    			<!--左侧类目 end-->
+    			
+    			<!--结果列表-->
+  				<section class="listing search-results-listing products  " id="search-result-products">
+  					<!--一个结果-->
+  					<article class="product-look look hproduct for_sale" data-gilt-look-id="173003179" id="look-173003179">
+						<a class="url look-photo" href="/detail.jhtml?id=0" >
+        					<img class="look-photo" src='http://cdn1.gilt.com/images/share/uploads/0000/0002/0153/201530910/220x294.jpg' />
+    					</a>
+					    <header class="summary">
+					      	<hgroup class="look-name">
+					        	<h2 class="brand brand-name"> 
+									<a class="" href="/detail.jhtml?id=0" >
+						            	Fremont
+						          	</a>
+					        	</h2>
+					        	<h1 class="name fn product-name">
+									<a class="" href="/detail.jhtml?id=0" >
+					            		Double Layer Sport Shirt
+					          		</a>
+					        	</h1>
+					      	</hgroup>
+							<a class="pricing" href="/detail.jhtml?id=0" >
+					        	<div class="sale-price highlight flourish">
+					          		<span class="price">&yen;667.96 Gilt</span>
+					            	<span class="price-includes">incl. Duties and VAT)</span>
+					        	</div>
+					          	<div class="original-price diminished">
+					            	<span class="msrp">&yen;1,793.30</span>
+					          	</div>
+					     	</a>
+					    </header>
+				      	<section class="quick-add overlay">
+				        	<form class="sku-selection cart-selection" method="get" data-gilt-product-id="148555467" data-gilt-default-cart-sale-id="101641773">
+				            	<div class="sku-attribute" data-gilt-attribute-name="Size">
+				              		<dl class="group attribute-label key-value">
+				                		<dt class="attribute-name attribute-info secondary">Size:</dt>
+				                		<dd class="selected-attribute-value attribute-info "></dd>
+				              		</dl>
+				              		<ul class="text group sku-attribute-values" data-gilt-attribute-id="">
+				                      	<li class="text-attribute attribute-value for_sale " data-gilt-attribute-value-id="2002" data-gilt-value-name="s" data-gilt-test="link-size-2002">
+					                        <label class="value-label primary trigger">s
+					                          	<input type="radio" class="value" name="2" value="2002">
+					                        </label>
+				                      	</li>
+				                      	
+				                      	<li class="text-attribute attribute-value for_sale " data-gilt-attribute-value-id="2000" data-gilt-value-name="m" data-gilt-test="link-size-2000">
+				                        	<label class="value-label primary trigger">m
+				                          		<input type="radio" class="value" name="2" value="2000">
+				                        	</label>
+				                      	</li>
+				                      	
+				                      	<li class="text-attribute attribute-value for_sale " data-gilt-attribute-value-id="2001" data-gilt-value-name="l" data-gilt-test="link-size-2001">
+				                        	<label class="value-label primary trigger">l
+				                          		<input type="radio" class="value" name="2" value="2001">
+				                        	</label>
+				                      	</li>
+				                    
+				                      	<li class="text-attribute attribute-value for_sale " data-gilt-attribute-value-id="2003" data-gilt-value-name="xl" data-gilt-test="link-size-2003">
+				                        	<label class="value-label primary trigger">xl
+				                          		<input type="radio" class="value" name="2" value="2003">
+				                        	</label>
+				                      	</li>
+				              		</ul>
+				            	</div>
+				          		
+				          		<div class="actions group">
+				            		<div class="submit-area">
+				              			<input type="submit" class="add-to-cart primary-action button for_sale" value="Add to Cart">
+				              			<input type="submit" class="add-to-cart primary-action button for_sale" value="Just buy">
+				            		</div>
+				          		</div>
+				        	</form>
+				      	</section>
+				      	
+				      	<section class="wait-list overlay quick-wait-list">
+					        <form data-gilt-default-waitlist-sale-id="6161789" data-gilt-product-id="1006500425" method="get" class="sku-selection wait-list-selection">
+					          <div class="information form-elements">
+					            <p class="title">Add this item to your wait list!</p>
+					            <p class="description">We will notify you as soon as it becomes available.</p>
+					          </div>
+					
+					          <div class="confirmation">
+					            <h6 class="title">Success!</h6>
+					            <p>This item has been added to your Wait List.</p>
+					          </div>
+					
+					
+					          <div class="actions group form-elements">
+					             <div class="submit-area">
+					               <input type="submit" value="Add to Wait List" class="wait-list-submit primary-action button">
+					               <a class="cancel-action link highlight">No, thanks</a>
+					             </div>
+					          </div>
+					        </form>
+				      	</section>
+						
+						<div class="tooltip select-size-warning add-to-cart-warning">Please select a size.</div>
+				    	<div class="tooltip select-size-warning add-to-wait-list-warning">Please select a sold out size.</div>
+  					</article>
+  					<!--一个结果 end-->
+  					
+    				<!--分页信息-->
+      				<div class="listing-meta group">
+						<div class="pagination">
+    						<a class="previous" href="?q.query=mens-clothing&q.start=48">Previous</a>
+  							Page <span class="current">3</span> of <span class="total">17</span>
+    						<a class="next" href="?q.query=mens-clothing&q.start=144">Next</a>
+						</div>
+      				</div>
+      				<!--分页信息 end-->
+  				</section>
+  				<!--结果列表 end-->
+			</div>
+
+  			<script type="text/x-handlebars-template" id="listing-look-template">
+    			<article class="product-look look hproduct {{inventoryStatusClassName}}" data-gilt-look-id="{{selectedLook.productLookId}}" id="look-{{selectedLook.productLookId}}">
+					<a class="url look-photo" href="{{detailsUrl}}" >
+				      	{{selectedLook}}
+				          	{{primaryImage}}
+				            	<img class="look-photo" src="http://cdn1.gilt.com{{prefix}}/220x294.{{postfix}}" />
+				          	{{/primaryImage}}
+				      	{{/selectedLook}}
+      				</a>
+      				<header class="summary">
+        				<hgroup class="look-name">
+          					<h2 class="brand brand-name">
+								<a class="" href="{{detailsUrl}}" >
+              						{{brand.name}}
+            					</a>
+          					</h2>
+          					<h1 class="name fn product-name">
+								<a class="" href="{{detailsUrl}}" >
+              						{{product.name}}
+            					</a>
+          					</h1>
+        				</hgroup>
+						<a class="pricing" href="{{detailsUrl}}" >
+				            <div class="sale-price highlight flourish">
+				                <span class="price">
+				                  	{{selectedLook.pricing.salePriceFormatted}}{{if showMsrp}} Gilt{{/if}}
+				                </span>
+				                {{priceIncludes}}
+				                <span class="price-includes">
+				                    (incl. {{this}})
+				                </span>
+				                {{/priceIncludes}}
+				            </div>
+          					{{if showMsrp}}
+					        <div class="original-price diminished">
+					        	<span class="msrp">{{selectedLook.pricing.msrpPriceFormatted}}</span>
+					        </div>
+					        {{/if}}
+        				</a>
+      				</header>
+      
+			      	{{if showQuickAdd}}
+			        	<section class="quick-add overlay">
+			          		<form class="sku-selection cart-selection" method="get" data-gilt-product-id="{{product.productId}}" data-gilt-default-cart-sale-id="{{cartDefaultSaleId}}">
+					            {{if showSizeLabel}}
+					              {{>sku-selection}}
+					            {{/if}}
+			
+					            <div class="actions group">
+					              	<div class="submit-area">
+					                	<input type="submit" class="add-to-cart primary-action button {{inventoryStatusClassName}}" value="Add to Cart">
+					                	{{if showWaitList}}
+					                  		<a href="{{detailsUrl}}" class="add-to-wait-list primary-action hidden">Add to Wait List</a>
+					                	{{/if}}
+					              	</div>
+					           	</div>
+			          		</form>
+			        	</section>
+			
+			        	<section class="wait-list quick-wait-list overlay">
+			          		<form class="sku-selection cart-selection" method="get" data-gilt-product-id="{{product.productId}}" data-gilt-default-waitlist-sale-id="{{waitlistDefaultSaleId}}">
+					            <div class="information form-elements">
+					              	<h6 class="title">Add this item to your wait list!</h6>
+					              	<p>We will notify you as soon as it becomes available.</p>
+					            </div>
+				
+					            <div class="confirmation">
+					              	<h6 class="title">Success!</h6>
+					              	<p>This item has been added to your Wait List.</p>
+					            </div>
+					            {{if showSizeLabel}}
+					              	{{>sku-selection}}
+					            {{/if}}
+				
+					            <div class="actions group form-elements">
+					              	<div class="submit-area">
+					                	<input type="submit" class="wait-list-submit primary-action button" value="Add to Wait List">
+					                	<a class="cancel-action link highlight">No, thanks</a>
+					              	</div>
+					            </div>
+				          	</form>
+			        	</section>
+			      	{{/if}}
+
+			      	{{if isUnavailable}}
+			        	<div class="inventory-status {{inventoryStatusClassName}}">
+			          		{{inventoryStatusMessaging}}
+			        	</div>
+			      	{{/if}}
+
+      				<div class="tooltip select-size-warning add-to-cart-warning">
+        				Please select a size.
+      				</div>
+      				<div class="tooltip select-size-warning add-to-wait-list-warning">
+        				Please select a sold out size.
+      				</div>
+    			</article>
+  			</script>
+  
+
+		  	<script type="text/x-handlebars-template" id="sku-selection-partial">
+			    <div class="sku-attribute form-elements" data-gilt-attribute-name="Size">
+			      	<dl class="group attribute-label key-value">
+				        <dt class="attribute-name attribute-info secondary">
+				          Size:
+				        </dt>
+			        	<dd class="selected-attribute-value attribute-info ">
+			        	</dd>
+			      	</dl>
+			
+				    {{product.sizeAttribute}}
+				    	<ul class="text group sku-attribute-values" data-gilt-attribute-id="">
+				        	{{values}}
+					        	<li class="text-attribute attribute-value {{toLowerCase status}}" data-gilt-attribute-value-id="{{id}}" data-gilt-value-name="{{value}}" data-gilt-test="link-size-{{id}}">
+					              	<label class="value-label primary trigger">
+					                	{{value}}
+					                	<input type="radio" class="value" name="2" value="{{id}}">
+					              	</label>
+					            </li>
+				        	{{/values}}
+				     	</ul>
+				    {{/product.sizeAttribute}}
+			    </div>
+		  </script>
+
+		  <script type="text/x-handlebars-template" id="pagination-template">
+		    	<div class="pagination">
+			      	{{previous}}
+			        	<a class="previous" href="?{{{parameters}}}">Previous</a>
+			      	{{/previous}}
+			      	Page <span class="current">{{current}}</span> of <span class="total">{{total}}</span>
+				   	{{next}}
+				    	<a class="next" href="?{{{parameters}}}">Next</a>
+				    {{/next}}
+		    	</div>
+		  </script>
+		#parse("front/footer.vm")
+	</body>
+</html>
+
