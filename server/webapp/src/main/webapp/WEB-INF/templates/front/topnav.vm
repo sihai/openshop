@@ -1,0 +1,47 @@
+<!--Top Nav-->
+<nav class="account-navigation">
+	<ul class="account-tabs menu">
+		<li class="account-tab tab-with-menu">
+			<a class="account-nav-label" data-tab-name="Account" data-gilt-tracking="account" href="/account" data-gilt-test="link-util-nav-account"> My Account </a>
+          	<ul class="account-menu">
+            	<li><a href="/account/order" class="account-menu-item account-menu-orders" data-gilt-test="link-util-nav-orders" data-gilt-tracking="order"><span class="icon">+</span> Orders</a></li>
+            	<li><a href="/account/return" class="account-menu-item account-menu-returns" data-gilt-test="link-util-nav-returns" data-gilt-tracking="returns" ><span class="icon">+</span> Returns and Exchanges</a></li>
+            	<li><a href="/account/waitlist" class="account-menu-item account-menu-waitlist" data-gilt-test="link-util-nav-waitlist" data-gilt-tracking="waitlist"><span class="icon">+</span> Waitlist</a></li>
+            	<li><a href="/account/credits" class="account-menu-item account-menu-credits" data-gilt-test="link-util-nav-credits" data-gilt-tracking="credits"><span class="icon">+</span> Credits</a></li>
+            
+            	<li><a href="/account/favorites" class="account-menu-item account-menu-favorites" data-gilt-test="link-util-nav-favorites" data-gilt-tracking="favorites"><span class="icon">+</span> Favorites</a></li>
+            	<li><a href="/account/update" class="account-menu-item account-menu-settings" data-gilt-test="link-util-nav-account-settings" data-gilt-tracking="account-settings"><span class="icon">+</span> Account Settings</a></li>
+            	<li><a href="/account/invite" class="account-menu-item account-menu-invite" data-gilt-test="link-util-nav-invite" data-gilt-tracking="invite-friends"><span class="icon">+</span> Invite Friends, Get $25</a></li>
+            	<li><a href="/account/social/list" class="account-menu-item account-menu-sharing" data-gilt-test="link-util-nav-sharing" data-gilt-tracking="facebook-sharing"><span class="icon">+</span> Facebook Sharing</a></li>
+            	<li><a href="/session/logout?return_url=/" class="account-menu-item account-menu-logout" data-gilt-test="link-util-nav-sign-out" data-gilt-tracking="logout"><span class="icon">+</span> (Sign Out)</a></li>
+          	</ul>
+		</li>
+
+		<li class="account-tab tab-with-menu account-country-dropdown">
+			<a class="account-nav-label country-button" data-tab-name="Account Setting" data-gilt-tracking="country-selection" href="/account/update" data-gilt-test="link-util-nav-account-setting">
+				<span class="flag-icon flag-US hide-text">US</span>
+			</a>
+			<div class="country-tooltip account-menu">
+  				<p class="country">
+  					<span class="tooltip-label">Ship To:</span>
+  					<a class="primary" href="/account/update#user-localization">United States</a>
+  				</p>
+  				<p class="currency">
+    				<span class="tooltip-label">Currency:</span>
+    				<a class="primary" href="/account/update#user-localization">
+      					USD <span class="tooltip-label">($)</span>
+    				</a>
+  				</p>
+  				<a class="primary highlight" href="/account/update#user-localization">Change</a>
+			</div>
+		</li>
+
+		<li class="account-tab account-nav-invite-friends meta-action"><a href="/account/invite" class="account-nav-label">Invite Friends, Get $25</a></li>
+		<li class="account-tab account-cart account-nav-cart-actions">
+			<button class="account-nav-cart-label gilt-cart-open-link login-reg-wall-override" data-gilt-tracking="cart-label">My Cart</button>
+			<button class="account-nav-cart-count account-nav-button cart-count gilt-cart-open-link login-reg-wall-override" data-gilt-tracking="cart-count" data-gilt-test="link-util-nav-cart">1</button>
+			<a class="account-nav-checkout account-nav-button checkout" href="/checkout" data-gilt-test="link-util-nav-checkout"  data-gilt-tracking="checkout">Checkout</a>
+		</li>
+	</ul>
+</nav>
+<!--Top Nav end-->

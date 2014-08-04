@@ -1,0 +1,49 @@
+.result table {
+	width: 100%;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.result th {
+	text-align: left;
+}
+
+.result td {
+	padding: 0px 4px;
+	border: 1px solid #dbdbdb;
+	background-color: #fdf9ee;
+}
+
+.result .paymentPlugin td {
+	padding: 4px;
+	border: none;
+	background-color: #fef7e4;
+}
+
+.result td {
+	padding: 0px 4px;
+	border: 1px solid #dbdbdb;
+	background-color: #fdf9ee;
+}
+
+.result .paymentButton:hover {
+	color: #ffead0;
+}
+
+.result .paymentButton {
+	width: 150px;
+	height: 37px;
+	line-height: 37px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	cursor: pointer;
+	overflow: visible;
+	outline: none;
+	blr: expression(this.hideFocus = true);
+	border: none;
+	background: url(/assets/v2/shop/images/order.gif) 0px -30px no-repeat;
+}

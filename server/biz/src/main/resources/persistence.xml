@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+			 http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+
+	<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+		<class>com.openteach.openshop.server.biz.entity.Ad</class>
+		<class>com.openteach.openshop.server.biz.entity.Admin</class>
+		<class>com.openteach.openshop.server.biz.entity.AdPosition</class>
+		<class>com.openteach.openshop.server.biz.entity.Area</class>
+		<class>com.openteach.openshop.server.biz.entity.Article</class>
+		<class>com.openteach.openshop.server.biz.entity.ArticleCategory</class>
+		<class>com.openteach.openshop.server.biz.entity.Attribute</class>
+		<class>com.openteach.openshop.server.biz.entity.Brand</class>
+		<class>com.openteach.openshop.server.biz.entity.Cart</class>
+		<class>com.openteach.openshop.server.biz.entity.CartItem</class>
+		<class>com.openteach.openshop.server.biz.entity.Consultation</class>
+		<class>com.openteach.openshop.server.biz.entity.Coupon</class>
+		<class>com.openteach.openshop.server.biz.entity.CouponCode</class>
+		<class>com.openteach.openshop.server.biz.entity.DeliveryCenter</class>
+		<class>com.openteach.openshop.server.biz.entity.DeliveryCorp</class>
+		<class>com.openteach.openshop.server.biz.entity.DeliveryTemplate</class>
+		<class>com.openteach.openshop.server.biz.entity.Deposit</class>
+		<class>com.openteach.openshop.server.biz.entity.FriendLink</class>
+		<class>com.openteach.openshop.server.biz.entity.GiftItem</class>
+		<class>com.openteach.openshop.server.biz.entity.Goods</class>
+		<class>com.openteach.openshop.server.biz.entity.Log</class>
+		<class>com.openteach.openshop.server.biz.entity.Member</class>
+		<class>com.openteach.openshop.server.biz.entity.MemberAttribute</class>
+		<class>com.openteach.openshop.server.biz.entity.MemberRank</class>
+		<class>com.openteach.openshop.server.biz.entity.Message</class>
+		<class>com.openteach.openshop.server.biz.entity.Navigation</class>
+		<class>com.openteach.openshop.server.biz.entity.Order</class>
+		<class>com.openteach.openshop.server.biz.entity.OrderItem</class>
+		<class>com.openteach.openshop.server.biz.entity.OrderLog</class>
+		<class>com.openteach.openshop.server.biz.entity.Parameter</class>
+		<class>com.openteach.openshop.server.biz.entity.ParameterGroup</class>
+		<class>com.openteach.openshop.server.biz.entity.Payment</class>
+		<class>com.openteach.openshop.server.biz.entity.PaymentMethod</class>
+		<class>com.openteach.openshop.server.biz.entity.PluginConfig</class>
+		<class>com.openteach.openshop.server.biz.entity.Supplier</class>
+		<class>com.openteach.openshop.server.biz.entity.Product</class>
+		<class>com.openteach.openshop.server.biz.entity.ProductCategory</class>
+		<class>com.openteach.openshop.server.biz.entity.ProductNotify</class>
+		<class>com.openteach.openshop.server.biz.entity.Promotion</class>
+		<class>com.openteach.openshop.server.biz.entity.Receiver</class>
+		<class>com.openteach.openshop.server.biz.entity.Refunds</class>
+		<class>com.openteach.openshop.server.biz.entity.Returns</class>
+		<class>com.openteach.openshop.server.biz.entity.ReturnsItem</class>
+		<class>com.openteach.openshop.server.biz.entity.Review</class>
+		<class>com.openteach.openshop.server.biz.entity.Role</class>
+		<class>com.openteach.openshop.server.biz.entity.Seo</class>
+		<class>com.openteach.openshop.server.biz.entity.Shipping</class>
+		<class>com.openteach.openshop.server.biz.entity.ShippingItem</class>
+		<class>com.openteach.openshop.server.biz.entity.ShippingMethod</class>
+		<class>com.openteach.openshop.server.biz.entity.Sn</class>
+		<class>com.openteach.openshop.server.biz.entity.Specification</class>
+		<class>com.openteach.openshop.server.biz.entity.SpecificationValue</class>
+		<class>com.openteach.openshop.server.biz.entity.Tag</class>
+		<class>com.openteach.openshop.server.biz.entity.PlatformPayment</class>
+		<class>com.openteach.openshop.server.biz.entity.Cooperation</class>
+	</persistence-unit>
+</persistence>

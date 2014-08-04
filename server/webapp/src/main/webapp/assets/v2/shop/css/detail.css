@@ -1,0 +1,103 @@
+/**
+ * aigechibaole.com
+ */
+ 
+.page .content .thumbnails {
+	margin-top:20px;
+}
+
+.page .content .thumbnails img {
+	width:80px;
+	height:80px;
+}
+
+.page .content .block .body .product-info {
+	margin-top: 20px;
+}
+
+.page .content .block .body .product-info .product-head {
+}
+
+.page .content .block .body .product-info .product-body {
+	margin-top: 40px;
+}
+
+.page .content .block .body .product-info .product-related {
+	margin-top: 40px;
+}
+
+.page .content .block .body .product-info .product-price {
+	width: 184px;
+	height: 177px;
+	margin-left: 108px;
+	background: url(../images/circle.png) 0px 0px;
+	font-size: 18px;
+}
+
+.page .content .block .body .product-info .product-appraise {
+	width: 100%;
+	height: 60px;
+	margin-top:30px;
+	background-color: #FFFFFF;
+	font-size: 18px;
+}
+
+.page .content .block .body .product-info .product-info {
+	width: 100%;
+	margin-top:30px;
+	font-size: 18px;
+}
+
+.page .content .block .body .product-info .product-operation {
+	width: 100%;
+	margin-top:30px;
+	font-size: 18px;
+}
+
+.page .content .block .body .product-info .add-2-cart {
+	width: 168px;
+	height: 56px;
+	border: 0px;
+	background: url(../images/add_2_cart.png) 0px 0px;
+}
+
+.page .content .block .body .product-info .add-0 {
+	height:28px;
+	width:50px;
+	border:1px solid #FDA617;
+	background: url(../images/add_0.png) 0px 0px;
+}
+
+.page .content .block .body .product-info .sub-0 {
+	height:28px;
+	width:50px;
+	border:1px solid #FDA617;
+	background: url(../images/sub_0.png) 0px 0px;
+}
+
+.page .content .block .body .product-info .body-tab{
+	line-height:50px;
+	width: 100%;
+	height: 50px;
+	background-color:#242424;
+	font-size: 18px;
+}
+
+.page .content .block .body .product-info .body-tab .tab-span{
+	width: 80px;
+	height: 50px;
+	margin-left:20px;
+	font-size: 18px;
+	display:block;
+	float: left;
+}
+
+.page .content .block .body .product-info .detail {
+	width: 100%;
+	margin-top:30px;
+}
+
+.pic_viewer .big_img {
+	width: 600px;
+	height: 600px;
+}
