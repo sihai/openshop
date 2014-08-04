@@ -1,7 +1,0 @@
-<header class="gilt-navigation component-nav-unified login-reg-wall">
-	<div class="nav-wrap">
-		<a href="/" class="logo login-reg-wall-override ">Gilt</a>
-		#parse("/front/topnav.vm")
-		#parse("/front/menu.vm")
-	</div>
-</header>
