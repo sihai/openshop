@@ -26,7 +26,7 @@ import com.openteach.openshop.server.biz.entity.Member;
  * @version 0.0.1
  */
 @Repository("depositDaoImpl")
-public class DepositDaoImpl extends BaseDaoImpl<Deposit, Long> implements DepositDao {
+public class DepositDaoImpl extends BaseDAOImpl<Deposit, Long> implements DepositDao {
 
 	public Page<Deposit> findPage(Member member, Pageable pageable) {
 		if (member == null) {

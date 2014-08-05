@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.Admin;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface AdminDao extends BaseDao<Admin, Long> {
+public interface AdminDao extends BaseDAO<Admin, Long> {
 
 	/**
 	 * 判断用户名是否存在

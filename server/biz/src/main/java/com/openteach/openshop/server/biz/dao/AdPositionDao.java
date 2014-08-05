@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.AdPosition;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface AdPositionDao extends BaseDao<AdPosition, Long> {
+public interface AdPositionDao extends BaseDAO<AdPosition, Long> {
 
 }

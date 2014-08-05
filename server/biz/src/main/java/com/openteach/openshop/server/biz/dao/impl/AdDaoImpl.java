@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.Ad;
  * @version 0.0.1
  */
 @Repository("adDaoImpl")
-public class AdDaoImpl extends BaseDaoImpl<Ad, Long> implements AdDao {
+public class AdDaoImpl extends BaseDAOImpl<Ad, Long> implements AdDao {
 
 }

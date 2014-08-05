@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.DeliveryCorp;
  * @version 0.0.1
  */
 @Repository("deliveryCorpDaoImpl")
-public class DeliveryCorpDaoImpl extends BaseDaoImpl<DeliveryCorp, Long> implements DeliveryCorpDao {
+public class DeliveryCorpDaoImpl extends BaseDAOImpl<DeliveryCorp, Long> implements DeliveryCorpDao {
 
 }

@@ -32,7 +32,7 @@ import com.openteach.openshop.server.biz.entity.Product.OrderType;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ProductDao extends BaseDao<Product, Long> {
+public interface ProductDao extends BaseDAO<Product, Long> {
 
 	/**
 	 * 判断商品编号是否存在

@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.AdPosition;
  * @version 0.0.1
  */
 @Repository("adPositionDaoImpl")
-public class AdPositionDaoImpl extends BaseDaoImpl<AdPosition, Long> implements AdPositionDao {
+public class AdPositionDaoImpl extends BaseDAOImpl<AdPosition, Long> implements AdPositionDao {
 
 }

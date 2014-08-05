@@ -17,7 +17,7 @@ import com.openteach.openshop.server.biz.entity.ParameterGroup;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ParameterDao extends BaseDao<Parameter, Long> {
+public interface ParameterDao extends BaseDAO<Parameter, Long> {
 
 	/**
 	 * 查找参数

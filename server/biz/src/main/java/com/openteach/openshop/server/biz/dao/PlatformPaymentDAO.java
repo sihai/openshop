@@ -18,7 +18,7 @@ import com.openteach.openshop.server.biz.entity.Supplier;
  * @author Team
  * @version 0.0.1
  */
-public interface PlatformPaymentDAO extends BaseDao<PlatformPayment, Long> {
+public interface PlatformPaymentDAO extends BaseDAO<PlatformPayment, Long> {
 	
 	/**
 	 * 

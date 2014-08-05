@@ -139,8 +139,8 @@ public class TemplateServiceImpl implements TemplateService, ServletContextAware
 	 * @throws DocumentException
 	 */
 	private List<Element> getTemplateElements(Type type) throws DocumentException {
-		Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-		return document.selectNodes("/shopxx/template[@type='" + type + "']");
+		Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+		return document.selectNodes("/openshop/template[@type='" + type + "']");
 	}
 	
 	/**
@@ -149,8 +149,8 @@ public class TemplateServiceImpl implements TemplateService, ServletContextAware
 	 * @throws DocumentException
 	 */
 	private List<Element> getTemplateElements() throws DocumentException {
-		Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-		return document.selectNodes("/shopxx/template");
+		Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+		return document.selectNodes("/openshop/template");
 	}
 	
 	/**
@@ -159,8 +159,8 @@ public class TemplateServiceImpl implements TemplateService, ServletContextAware
 	 * @return
 	 */
 	private Element getTemplateElement(String id) throws DocumentException {
-		Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-		return (Element) document.selectSingleNode("/shopxx/template[@id='" + id + "']");
+		Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+		return (Element) document.selectSingleNode("/openshop/template[@id='" + id + "']");
 	}
 	
 	/**

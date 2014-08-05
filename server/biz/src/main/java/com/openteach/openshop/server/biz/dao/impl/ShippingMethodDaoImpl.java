@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.ShippingMethod;
  * @version 0.0.1
  */
 @Repository("shippingMethodDaoImpl")
-public class ShippingMethodDaoImpl extends BaseDaoImpl<ShippingMethod, Long> implements ShippingMethodDao {
+public class ShippingMethodDaoImpl extends BaseDAOImpl<ShippingMethod, Long> implements ShippingMethodDao {
 
 }

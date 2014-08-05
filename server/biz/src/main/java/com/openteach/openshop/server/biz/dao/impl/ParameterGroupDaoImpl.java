@@ -30,7 +30,7 @@ import com.openteach.openshop.server.biz.entity.Product;
  * @version 0.0.1
  */
 @Repository("parameterGroupDaoImpl")
-public class ParameterGroupDaoImpl extends BaseDaoImpl<ParameterGroup, Long> implements ParameterGroupDao {
+public class ParameterGroupDaoImpl extends BaseDAOImpl<ParameterGroup, Long> implements ParameterGroupDao {
 
 	@Resource(name = "parameterDaoImpl")
 	private ParameterDao parameterDao;

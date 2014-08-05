@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.PluginConfig;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface PluginConfigDao extends BaseDao<PluginConfig, Long> {
+public interface PluginConfigDao extends BaseDAO<PluginConfig, Long> {
 
 	/**
 	 * 判断插件ID是否存在

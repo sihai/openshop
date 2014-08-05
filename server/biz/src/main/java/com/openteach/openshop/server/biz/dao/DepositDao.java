@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.Member;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface DepositDao extends BaseDao<Deposit, Long> {
+public interface DepositDao extends BaseDAO<Deposit, Long> {
 
 	/**
 	 * 查找预存款分页

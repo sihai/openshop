@@ -21,7 +21,7 @@ import com.openteach.openshop.server.biz.entity.Product;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ConsultationDao extends BaseDao<Consultation, Long> {
+public interface ConsultationDao extends BaseDAO<Consultation, Long> {
 
 	/**
 	 * 查找咨询

@@ -24,7 +24,7 @@ import com.openteach.openshop.server.biz.entity.Order.ShippingStatus;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface OrderDao extends BaseDao<Order, Long> {
+public interface OrderDao extends BaseDAO<Order, Long> {
 
 	/**
 	 * 根据订单编号查找订单

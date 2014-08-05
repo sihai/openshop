@@ -15,7 +15,7 @@ import com.openteach.openshop.server.biz.entity.MemberRank;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface MemberRankDao extends BaseDao<MemberRank, Long> {
+public interface MemberRankDao extends BaseDAO<MemberRank, Long> {
 
 	/**
 	 * 判断名称是否存在

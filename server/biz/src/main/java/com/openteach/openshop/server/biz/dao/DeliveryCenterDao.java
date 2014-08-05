@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.DeliveryCenter;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface DeliveryCenterDao extends BaseDao<DeliveryCenter, Long> {
+public interface DeliveryCenterDao extends BaseDAO<DeliveryCenter, Long> {
 
 	/**
 	 * 查找默认发货点

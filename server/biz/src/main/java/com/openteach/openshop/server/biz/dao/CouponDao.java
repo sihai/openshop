@@ -15,7 +15,7 @@ import com.openteach.openshop.server.biz.entity.Coupon;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface CouponDao extends BaseDao<Coupon, Long> {
+public interface CouponDao extends BaseDAO<Coupon, Long> {
 
 	/**
 	 * 查找优惠券分页

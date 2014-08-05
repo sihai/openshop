@@ -17,7 +17,7 @@ import com.openteach.openshop.server.biz.entity.Promotion;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface PromotionDao extends BaseDao<Promotion, Long> {
+public interface PromotionDao extends BaseDAO<Promotion, Long> {
 
 	/**
 	 * 查找促销

@@ -14,7 +14,7 @@ import com.openteach.openshop.server.biz.entity.Seo.Type;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface SeoDao extends BaseDao<Seo, Long> {
+public interface SeoDao extends BaseDAO<Seo, Long> {
 
 	/**
 	 * 查找SEO设置

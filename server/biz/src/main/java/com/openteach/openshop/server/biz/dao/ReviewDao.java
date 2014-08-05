@@ -22,7 +22,7 @@ import com.openteach.openshop.server.biz.entity.Review.Type;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ReviewDao extends BaseDao<Review, Long> {
+public interface ReviewDao extends BaseDAO<Review, Long> {
 
 	/**
 	 * 查找评论

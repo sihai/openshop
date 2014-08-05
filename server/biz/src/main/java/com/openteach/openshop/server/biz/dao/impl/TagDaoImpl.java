@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.entity.Tag.Type;
  * @version 0.0.1
  */
 @Repository("tagDaoImpl")
-public class TagDaoImpl extends BaseDaoImpl<Tag, Long> implements TagDao {
+public class TagDaoImpl extends BaseDAOImpl<Tag, Long> implements TagDao {
 
 	public List<Tag> findList(Type type) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

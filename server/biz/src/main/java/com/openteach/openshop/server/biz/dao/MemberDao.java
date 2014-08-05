@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.Member;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface MemberDao extends BaseDao<Member, Long> {
+public interface MemberDao extends BaseDAO<Member, Long> {
 
 	/**
 	 * 判断用户名是否存在

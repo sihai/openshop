@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.CartItem;
  * @version 0.0.1
  */
 @Repository("cartItemDaoImpl")
-public class CartItemDaoImpl extends BaseDaoImpl<CartItem, Long> implements CartItemDao {
+public class CartItemDaoImpl extends BaseDAOImpl<CartItem, Long> implements CartItemDao {
 
 }

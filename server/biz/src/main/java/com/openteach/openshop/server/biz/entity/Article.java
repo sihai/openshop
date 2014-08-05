@@ -126,8 +126,8 @@ public class Article extends BaseEntity {
 
 	static {
 		try {
-			org.dom4j.Document document = new SAXReader().read(Article.class.getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-			org.dom4j.Element element = (org.dom4j.Element) document.selectSingleNode("/shopxx/template[@id='articleContent']");
+			org.dom4j.Document document = new SAXReader().read(Article.class.getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+			org.dom4j.Element element = (org.dom4j.Element) document.selectSingleNode("/openshop/template[@id='articleContent']");
 			staticPath = element.attributeValue("staticPath");
 		} catch (Exception e) {
 			e.printStackTrace();

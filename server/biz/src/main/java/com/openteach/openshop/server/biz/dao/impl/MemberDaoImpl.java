@@ -35,7 +35,7 @@ import com.openteach.openshop.server.biz.entity.Order.PaymentStatus;
  * @version 0.0.1
  */
 @Repository("memberDaoImpl")
-public class MemberDaoImpl extends BaseDaoImpl<Member, Long> implements MemberDao {
+public class MemberDaoImpl extends BaseDAOImpl<Member, Long> implements MemberDao {
 
 	public boolean usernameExists(String username) {
 		if (username == null) {

@@ -15,7 +15,7 @@ import com.openteach.openshop.server.biz.entity.Area;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface AreaDao extends BaseDao<Area, Long> {
+public interface AreaDao extends BaseDAO<Area, Long> {
 
 	/**
 	 * 查找顶级地区

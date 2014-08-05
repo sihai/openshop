@@ -27,7 +27,7 @@ import com.openteach.openshop.server.biz.entity.Promotion;
  * @version 0.0.1
  */
 @Repository("promotionDaoImpl")
-public class PromotionDaoImpl extends BaseDaoImpl<Promotion, Long> implements PromotionDao {
+public class PromotionDaoImpl extends BaseDAOImpl<Promotion, Long> implements PromotionDao {
 
 	public List<Promotion> findList(Boolean hasBegun, Boolean hasEnded, Integer count, List<Filter> filters, List<Order> orders) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

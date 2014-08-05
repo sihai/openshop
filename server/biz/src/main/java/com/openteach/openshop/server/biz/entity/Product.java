@@ -364,8 +364,8 @@ public class Product extends BaseEntity {
 
 	static {
 		try {
-			org.dom4j.Document document = new SAXReader().read(Product.class.getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-			org.dom4j.Element element = (org.dom4j.Element) document.selectSingleNode("/shopxx/template[@id='productContent']");
+			org.dom4j.Document document = new SAXReader().read(Product.class.getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+			org.dom4j.Element element = (org.dom4j.Element) document.selectSingleNode("/openshop/template[@id='productContent']");
 			staticPath = element.attributeValue("staticPath");
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.Message;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface MessageDao extends BaseDao<Message, Long> {
+public interface MessageDao extends BaseDAO<Message, Long> {
 
 	/**
 	 * 查找消息分页

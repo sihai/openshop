@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.Tag.Type;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface TagDao extends BaseDao<Tag, Long> {
+public interface TagDao extends BaseDAO<Tag, Long> {
 
 	/**
 	 * 查找标签

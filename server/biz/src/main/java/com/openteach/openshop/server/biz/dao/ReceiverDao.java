@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.Receiver;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ReceiverDao extends BaseDao<Receiver, Long> {
+public interface ReceiverDao extends BaseDAO<Receiver, Long> {
 
 	/**
 	 * 查找默认收货地址

@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.Specification;
  * @version 0.0.1
  */
 @Repository("specificationDaoImpl")
-public class SpecificationDaoImpl extends BaseDaoImpl<Specification, Long> implements SpecificationDao {
+public class SpecificationDaoImpl extends BaseDAOImpl<Specification, Long> implements SpecificationDao {
 
 }

@@ -15,7 +15,7 @@ import com.openteach.openshop.server.biz.entity.ProductCategory;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ProductCategoryDao extends BaseDao<ProductCategory, Long> {
+public interface ProductCategoryDao extends BaseDAO<ProductCategory, Long> {
 
 	/**
 	 * 查找顶级商品分类

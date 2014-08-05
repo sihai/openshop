@@ -21,7 +21,7 @@ import com.openteach.openshop.server.biz.entity.Seo.Type;
  * @version 0.0.1
  */
 @Repository("seoDaoImpl")
-public class SeoDaoImpl extends BaseDaoImpl<Seo, Long> implements SeoDao {
+public class SeoDaoImpl extends BaseDAOImpl<Seo, Long> implements SeoDao {
 
 	public Seo find(Type type) {
 		if (type == null) {

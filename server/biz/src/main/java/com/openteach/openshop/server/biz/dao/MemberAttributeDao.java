@@ -15,7 +15,7 @@ import com.openteach.openshop.server.biz.entity.MemberAttribute;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface MemberAttributeDao extends BaseDao<MemberAttribute, Long> {
+public interface MemberAttributeDao extends BaseDAO<MemberAttribute, Long> {
 
 	/**
 	 * 查找未使用的对象属性序号

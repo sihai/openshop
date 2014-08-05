@@ -40,7 +40,7 @@ import com.openteach.openshop.server.biz.entity.Order.ShippingStatus;
  * @version 0.0.1
  */
 @Repository("orderDaoImpl")
-public class OrderDaoImpl extends BaseDaoImpl<Order, Long> implements OrderDao {
+public class OrderDaoImpl extends BaseDAOImpl<Order, Long> implements OrderDao {
 
 	public Order findBySn(String sn) {
 		if (sn == null) {

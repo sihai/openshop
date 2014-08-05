@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.PaymentMethod;
  * @version 0.0.1
  */
 @Repository("paymentMethodDaoImpl")
-public class PaymentMethodDaoImpl extends BaseDaoImpl<PaymentMethod, Long> implements PaymentMethodDao {
+public class PaymentMethodDaoImpl extends BaseDAOImpl<PaymentMethod, Long> implements PaymentMethodDao {
 
 }

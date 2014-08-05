@@ -18,7 +18,7 @@ import com.openteach.openshop.server.biz.entity.Cooperation;
  *
  */
 @Repository("cooperationDaoImpl")
-public class CooperationDaoImpl extends BaseDaoImpl<Cooperation, Long> implements CooperationDao {
+public class CooperationDaoImpl extends BaseDAOImpl<Cooperation, Long> implements CooperationDao {
 
 	@Override
 	public Page<Cooperation> findPage(Cooperation.Status status, Pageable pageable) {

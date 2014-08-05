@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.entity.Product;
  * @version 0.0.1
  */
 @Repository("memberRankDaoImpl")
-public class MemberRankDaoImpl extends BaseDaoImpl<MemberRank, Long> implements MemberRankDao {
+public class MemberRankDaoImpl extends BaseDAOImpl<MemberRank, Long> implements MemberRankDao {
 
 	public boolean nameExists(String name) {
 		if (name == null) {

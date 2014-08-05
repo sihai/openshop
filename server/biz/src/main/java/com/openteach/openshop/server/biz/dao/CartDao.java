@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.Cart;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface CartDao extends BaseDao<Cart, Long> {
+public interface CartDao extends BaseDAO<Cart, Long> {
 
 	/**
 	 * 清除过期购物车

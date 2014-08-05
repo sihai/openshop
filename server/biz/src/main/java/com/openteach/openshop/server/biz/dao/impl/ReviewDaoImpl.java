@@ -32,7 +32,7 @@ import com.openteach.openshop.server.biz.entity.Review.Type;
  * @version 0.0.1
  */
 @Repository("reviewDaoImpl")
-public class ReviewDaoImpl extends BaseDaoImpl<Review, Long> implements ReviewDao {
+public class ReviewDaoImpl extends BaseDAOImpl<Review, Long> implements ReviewDao {
 
 	public List<Review> findList(Member member, Product product, Type type, Boolean isShow, Integer count, List<Filter> filters, List<Order> orders) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

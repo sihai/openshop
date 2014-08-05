@@ -26,7 +26,7 @@ import com.openteach.openshop.server.biz.entity.Coupon;
  * @version 0.0.1
  */
 @Repository("couponDaoImpl")
-public class CouponDaoImpl extends BaseDaoImpl<Coupon, Long> implements CouponDao {
+public class CouponDaoImpl extends BaseDAOImpl<Coupon, Long> implements CouponDao {
 
 	public Page<Coupon> findPage(Boolean isEnabled, Boolean isExchange, Boolean hasExpired, Pageable pageable) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

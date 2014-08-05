@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.entity.Navigation.Position;
  * @version 0.0.1
  */
 @Repository("navigationDaoImpl")
-public class NavigationDaoImpl extends BaseDaoImpl<Navigation, Long> implements NavigationDao {
+public class NavigationDaoImpl extends BaseDAOImpl<Navigation, Long> implements NavigationDao {
 
 	public List<Navigation> findList(Position position) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

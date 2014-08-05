@@ -27,7 +27,7 @@ import com.openteach.openshop.server.biz.entity.ParameterGroup;
  * @version 0.0.1
  */
 @Repository("parameterDaoImpl")
-public class ParameterDaoImpl extends BaseDaoImpl<Parameter, Long> implements ParameterDao {
+public class ParameterDaoImpl extends BaseDAOImpl<Parameter, Long> implements ParameterDao {
 
 	public List<Parameter> findList(ParameterGroup parameterGroup, Set<Parameter> excludes) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

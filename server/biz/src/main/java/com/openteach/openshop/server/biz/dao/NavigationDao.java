@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.Navigation.Position;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface NavigationDao extends BaseDao<Navigation, Long> {
+public interface NavigationDao extends BaseDAO<Navigation, Long> {
 
 	/**
 	 * 查找导航

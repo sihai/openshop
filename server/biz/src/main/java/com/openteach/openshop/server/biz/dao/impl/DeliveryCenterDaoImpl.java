@@ -21,7 +21,7 @@ import com.openteach.openshop.server.biz.entity.DeliveryCenter;
  * @version 0.0.1
  */
 @Repository("deliveryCenterDaoImpl")
-public class DeliveryCenterDaoImpl extends BaseDaoImpl<DeliveryCenter, Long> implements DeliveryCenterDao {
+public class DeliveryCenterDaoImpl extends BaseDAOImpl<DeliveryCenter, Long> implements DeliveryCenterDao {
 
 	public DeliveryCenter findDefault() {
 		try {

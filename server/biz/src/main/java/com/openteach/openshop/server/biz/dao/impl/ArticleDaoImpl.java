@@ -32,7 +32,7 @@ import com.openteach.openshop.server.biz.entity.Tag;
  * @version 0.0.1
  */
 @Repository("articleDaoImpl")
-public class ArticleDaoImpl extends BaseDaoImpl<Article, Long> implements ArticleDao {
+public class ArticleDaoImpl extends BaseDAOImpl<Article, Long> implements ArticleDao {
 
 	public List<Article> findList(ArticleCategory articleCategory, List<Tag> tags, Integer count, List<Filter> filters, List<Order> orders) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

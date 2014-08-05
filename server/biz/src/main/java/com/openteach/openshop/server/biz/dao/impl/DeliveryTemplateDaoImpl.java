@@ -21,7 +21,7 @@ import com.openteach.openshop.server.biz.entity.DeliveryTemplate;
  * @version 0.0.1
  */
 @Repository("deliveryTemplateDaoImpl")
-public class DeliveryTemplateDaoImpl extends BaseDaoImpl<DeliveryTemplate, Long> implements DeliveryTemplateDao {
+public class DeliveryTemplateDaoImpl extends BaseDAOImpl<DeliveryTemplate, Long> implements DeliveryTemplateDao {
 
 	public DeliveryTemplate findDefault() {
 		try {

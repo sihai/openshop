@@ -21,7 +21,7 @@ import com.openteach.openshop.server.biz.Pageable;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface BaseDao<T, ID extends Serializable> {
+public interface BaseDAO<T, ID extends Serializable> {
 
 	/**
 	 * 查找实体对象

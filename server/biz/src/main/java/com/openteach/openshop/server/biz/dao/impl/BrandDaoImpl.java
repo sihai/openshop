@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.Brand;
  * @version 0.0.1
  */
 @Repository("brandDaoImpl")
-public class BrandDaoImpl extends BaseDaoImpl<Brand, Long> implements BrandDao {
+public class BrandDaoImpl extends BaseDAOImpl<Brand, Long> implements BrandDao {
 
 }

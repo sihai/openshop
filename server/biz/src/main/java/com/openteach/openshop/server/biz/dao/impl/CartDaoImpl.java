@@ -22,7 +22,7 @@ import com.openteach.openshop.server.biz.entity.Cart;
  * @version 0.0.1
  */
 @Repository("cartDaoImpl")
-public class CartDaoImpl extends BaseDaoImpl<Cart, Long> implements CartDao {
+public class CartDaoImpl extends BaseDAOImpl<Cart, Long> implements CartDao {
 
 	public void evictExpired() {
 		String jpql = "delete from Cart cart where cart.modifyDate <= :expire";

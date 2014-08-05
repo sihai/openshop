@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.CartItem;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface CartItemDao extends BaseDao<CartItem, Long> {
+public interface CartItemDao extends BaseDAO<CartItem, Long> {
 
 }

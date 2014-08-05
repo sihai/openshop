@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.Role;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface RoleDao extends BaseDao<Role, Long> {
+public interface RoleDao extends BaseDAO<Role, Long> {
 
 }

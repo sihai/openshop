@@ -32,8 +32,8 @@ public class LogConfigServiceImpl implements LogConfigService {
 	@Cacheable("logConfig")
 	public List<LogConfig> getAll() {
 		try {
-			Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-			List<org.dom4j.Element> elements = document.selectNodes("/shopxx/logConfig");
+			Document document = new SAXReader().read(this.getClass().getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+			List<org.dom4j.Element> elements = document.selectNodes("/openshop/logConfig");
 			List<LogConfig> logConfigs = new ArrayList<LogConfig>();
 			for (org.dom4j.Element element : elements) {
 				String operation = element.attributeValue("operation");

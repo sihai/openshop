@@ -34,7 +34,7 @@ import com.openteach.openshop.server.biz.entity.Sn.Type;
  * @version 0.0.1
  */
 @Repository("goodsDaoImpl")
-public class GoodsDaoImpl extends BaseDaoImpl<Goods, Long> implements GoodsDao {
+public class GoodsDaoImpl extends BaseDAOImpl<Goods, Long> implements GoodsDao {
 
 	@Resource(name = "productDaoImpl")
 	private ProductDao productDao;

@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.Refunds;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface RefundsDao extends BaseDao<Refunds, Long> {
+public interface RefundsDao extends BaseDAO<Refunds, Long> {
 
 }

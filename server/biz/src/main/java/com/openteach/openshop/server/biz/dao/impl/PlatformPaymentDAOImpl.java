@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.entity.Sn.Type;
  *
  */
 @Repository("platformPaymentDAO")
-public class PlatformPaymentDAOImpl extends BaseDaoImpl<PlatformPayment, Long> implements PlatformPaymentDAO {
+public class PlatformPaymentDAOImpl extends BaseDAOImpl<PlatformPayment, Long> implements PlatformPaymentDAO {
 
 	@Resource(name = "snDaoImpl")
 	private SnDao snDao;

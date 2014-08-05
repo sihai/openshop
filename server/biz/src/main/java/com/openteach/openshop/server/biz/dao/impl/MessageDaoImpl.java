@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.entity.Message;
  * @version 0.0.1
  */
 @Repository("messageDaoImpl")
-public class MessageDaoImpl extends BaseDaoImpl<Message, Long> implements MessageDao {
+public class MessageDaoImpl extends BaseDAOImpl<Message, Long> implements MessageDao {
 
 	public Page<Message> findPage(Member member, Pageable pageable) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

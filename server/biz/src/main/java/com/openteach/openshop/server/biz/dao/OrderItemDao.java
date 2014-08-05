@@ -22,7 +22,7 @@ import com.openteach.openshop.server.biz.entity.OrderItem.PlatformPaymentStatus;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface OrderItemDao extends BaseDao<OrderItem, Long> {
+public interface OrderItemDao extends BaseDAO<OrderItem, Long> {
 
 	/**
 	 * 

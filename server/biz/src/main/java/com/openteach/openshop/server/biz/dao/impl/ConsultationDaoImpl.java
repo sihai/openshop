@@ -30,7 +30,7 @@ import com.openteach.openshop.server.biz.entity.Product;
  * @version 0.0.1
  */
 @Repository("consultationDaoImpl")
-public class ConsultationDaoImpl extends BaseDaoImpl<Consultation, Long> implements ConsultationDao {
+public class ConsultationDaoImpl extends BaseDAOImpl<Consultation, Long> implements ConsultationDao {
 
 	public List<Consultation> findList(Member member, Product product, Boolean isShow, Integer count, List<Filter> filters, List<Order> orders) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

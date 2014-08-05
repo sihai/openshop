@@ -19,7 +19,7 @@ import com.openteach.openshop.server.biz.entity.Member;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface CouponCodeDao extends BaseDao<CouponCode, Long> {
+public interface CouponCodeDao extends BaseDAO<CouponCode, Long> {
 
 	/**
 	 * 判断优惠码是否存在

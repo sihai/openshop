@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.Filter;
 import com.openteach.openshop.server.biz.Order;
 import com.openteach.openshop.server.biz.Page;
 import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.dao.BaseDao;
+import com.openteach.openshop.server.biz.dao.BaseDAO;
 import com.openteach.openshop.server.biz.entity.BaseEntity;
 import com.openteach.openshop.server.biz.service.BaseService;
 
@@ -42,9 +42,9 @@ public class BaseServiceImpl<T, ID extends Serializable> implements BaseService<
 	private static final String[] UPDATE_IGNORE_PROPERTIES = new String[] { BaseEntity.ID_PROPERTY_NAME, BaseEntity.CREATE_DATE_PROPERTY_NAME, BaseEntity.MODIFY_DATE_PROPERTY_NAME };
 
 	/** baseDao */
-	private BaseDao<T, ID> baseDao;
+	private BaseDAO<T, ID> baseDao;
 
-	public void setBaseDao(BaseDao<T, ID> baseDao) {
+	public void setBaseDao(BaseDAO<T, ID> baseDao) {
 		this.baseDao = baseDao;
 	}
 

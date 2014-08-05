@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.Payment;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface PaymentDao extends BaseDao<Payment, Long> {
+public interface PaymentDao extends BaseDAO<Payment, Long> {
 
 	/**
 	 * 根据编号查找收款单

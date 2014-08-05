@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.Goods;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface GoodsDao extends BaseDao<Goods, Long> {
+public interface GoodsDao extends BaseDAO<Goods, Long> {
 
 }

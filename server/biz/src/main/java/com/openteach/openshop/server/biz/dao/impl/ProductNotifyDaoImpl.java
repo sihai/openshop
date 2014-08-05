@@ -28,7 +28,7 @@ import com.openteach.openshop.server.biz.entity.ProductNotify;
  * @version 0.0.1
  */
 @Repository("productNotifyDaoImpl")
-public class ProductNotifyDaoImpl extends BaseDaoImpl<ProductNotify, Long> implements ProductNotifyDao {
+public class ProductNotifyDaoImpl extends BaseDAOImpl<ProductNotify, Long> implements ProductNotifyDao {
 
 	public boolean exists(Product product, String email) {
 		String jpql = "select count(*) from ProductNotify productNotify where productNotify.product = :product and lower(productNotify.email) = lower(:email) and productNotify.hasSent = false";

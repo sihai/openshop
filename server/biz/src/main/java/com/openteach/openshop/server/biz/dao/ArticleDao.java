@@ -22,7 +22,7 @@ import com.openteach.openshop.server.biz.entity.Tag;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ArticleDao extends BaseDao<Article, Long> {
+public interface ArticleDao extends BaseDAO<Article, Long> {
 
 	/**
 	 * 查找文章

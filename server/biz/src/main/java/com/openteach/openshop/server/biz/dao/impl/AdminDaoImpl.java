@@ -20,7 +20,7 @@ import com.openteach.openshop.server.biz.entity.Admin;
  * @version 0.0.1
  */
 @Repository("adminDaoImpl")
-public class AdminDaoImpl extends BaseDaoImpl<Admin, Long> implements AdminDao {
+public class AdminDaoImpl extends BaseDAOImpl<Admin, Long> implements AdminDao {
 
 	public boolean usernameExists(String username) {
 		if (username == null) {

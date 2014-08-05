@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.Attribute;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface AttributeDao extends BaseDao<Attribute, Long> {
+public interface AttributeDao extends BaseDAO<Attribute, Long> {
 
 }

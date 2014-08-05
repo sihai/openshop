@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.PaymentMethod;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface PaymentMethodDao extends BaseDao<PaymentMethod, Long> {
+public interface PaymentMethodDao extends BaseDAO<PaymentMethod, Long> {
 
 }

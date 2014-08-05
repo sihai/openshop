@@ -35,7 +35,7 @@ import com.openteach.openshop.server.biz.Page;
 import com.openteach.openshop.server.biz.Pageable;
 import com.openteach.openshop.server.biz.Filter.Operator;
 import com.openteach.openshop.server.biz.Order.Direction;
-import com.openteach.openshop.server.biz.dao.BaseDao;
+import com.openteach.openshop.server.biz.dao.BaseDAO;
 import com.openteach.openshop.server.biz.entity.OrderEntity;
 
 /**
@@ -44,7 +44,7 @@ import com.openteach.openshop.server.biz.entity.OrderEntity;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public abstract class BaseDaoImpl<T, ID extends Serializable> implements BaseDao<T, ID> {
+public abstract class BaseDAOImpl<T, ID extends Serializable> implements BaseDAO<T, ID> {
 
 	/** 实体类类型 */
 	private Class<T> entityClass;
@@ -56,7 +56,7 @@ public abstract class BaseDaoImpl<T, ID extends Serializable> implements BaseDao
 	protected EntityManager entityManager;
 
 	@SuppressWarnings("unchecked")
-	public BaseDaoImpl() {
+	public BaseDAOImpl() {
 		Type type = getClass().getGenericSuperclass();
 		Type[] parameterizedType = ((ParameterizedType) type).getActualTypeArguments();
 		entityClass = (Class<T>) parameterizedType[0];
@@ -255,7 +255,7 @@ public abstract class BaseDaoImpl<T, ID extends Serializable> implements BaseDao
 				if (aliasCount >= 1000) {
 					aliasCount = 0;
 				}
-				alias = "shopxxGeneratedAlias" + aliasCount++;
+				alias = "openshopGeneratedAlias" + aliasCount++;
 				selection.alias(alias);
 			}
 			return alias;

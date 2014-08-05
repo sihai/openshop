@@ -23,7 +23,7 @@ import com.openteach.openshop.server.biz.entity.Product;
  * @version 0.0.1
  */
 @Repository("attributeDaoImpl")
-public class AttributeDaoImpl extends BaseDaoImpl<Attribute, Long> implements AttributeDao {
+public class AttributeDaoImpl extends BaseDAOImpl<Attribute, Long> implements AttributeDao {
 
 	/**
 	 * 设置propertyIndex并保存

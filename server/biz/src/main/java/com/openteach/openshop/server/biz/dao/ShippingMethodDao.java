@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.ShippingMethod;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ShippingMethodDao extends BaseDao<ShippingMethod, Long> {
+public interface ShippingMethodDao extends BaseDAO<ShippingMethod, Long> {
 
 }

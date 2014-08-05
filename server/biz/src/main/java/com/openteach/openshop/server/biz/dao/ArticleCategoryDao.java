@@ -15,7 +15,7 @@ import com.openteach.openshop.server.biz.entity.ArticleCategory;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ArticleCategoryDao extends BaseDao<ArticleCategory, Long> {
+public interface ArticleCategoryDao extends BaseDAO<ArticleCategory, Long> {
 
 	/**
 	 * 查找顶级文章分类

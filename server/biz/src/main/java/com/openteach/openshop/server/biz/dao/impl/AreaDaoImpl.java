@@ -22,7 +22,7 @@ import com.openteach.openshop.server.biz.entity.Area;
  * @version 0.0.1
  */
 @Repository("areaDaoImpl")
-public class AreaDaoImpl extends BaseDaoImpl<Area, Long> implements AreaDao {
+public class AreaDaoImpl extends BaseDAOImpl<Area, Long> implements AreaDao {
 
 	public List<Area> findRoots(Integer count) {
 		String jpql = "select area from Area area where area.parent is null order by area.order asc";

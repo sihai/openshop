@@ -26,7 +26,7 @@ import com.openteach.openshop.server.biz.entity.ProductCategory;
  * @version 0.0.1
  */
 @Repository("productCategoryDaoImpl")
-public class ProductCategoryDaoImpl extends BaseDaoImpl<ProductCategory, Long> implements ProductCategoryDao {
+public class ProductCategoryDaoImpl extends BaseDAOImpl<ProductCategory, Long> implements ProductCategoryDao {
 
 	public List<ProductCategory> findRoots(Integer count) {
 		String jpql = "select productCategory from ProductCategory productCategory where productCategory.parent is null order by productCategory.order asc";

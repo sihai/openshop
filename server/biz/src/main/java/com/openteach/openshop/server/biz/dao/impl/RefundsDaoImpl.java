@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.Refunds;
  * @version 0.0.1
  */
 @Repository("refundsDaoImpl")
-public class RefundsDaoImpl extends BaseDaoImpl<Refunds, Long> implements RefundsDao {
+public class RefundsDaoImpl extends BaseDAOImpl<Refunds, Long> implements RefundsDao {
 
 }

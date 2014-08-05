@@ -9,7 +9,7 @@ import com.openteach.openshop.server.biz.entity.Cooperation;
  * @author sihai
  *
  */
-public interface CooperationDao extends BaseDao<Cooperation, Long> {
+public interface CooperationDao extends BaseDAO<Cooperation, Long> {
 
 	/**
 	 * 

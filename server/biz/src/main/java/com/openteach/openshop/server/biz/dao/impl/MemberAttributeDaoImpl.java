@@ -23,7 +23,7 @@ import com.openteach.openshop.server.biz.entity.MemberAttribute.Type;
  * @version 0.0.1
  */
 @Repository("memberAttributeDaoImpl")
-public class MemberAttributeDaoImpl extends BaseDaoImpl<MemberAttribute, Long> implements MemberAttributeDao {
+public class MemberAttributeDaoImpl extends BaseDAOImpl<MemberAttribute, Long> implements MemberAttributeDao {
 
 	public Integer findUnusedPropertyIndex() {
 		for (int i = 0; i < Member.ATTRIBUTE_VALUE_PROPERTY_COUNT; i++) {

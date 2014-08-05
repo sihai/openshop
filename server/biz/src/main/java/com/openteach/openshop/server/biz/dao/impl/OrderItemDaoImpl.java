@@ -35,7 +35,7 @@ import com.openteach.openshop.server.biz.entity.OrderItem.PlatformPaymentStatus;
  * @version 0.0.1
  */
 @Repository("orderItemDaoImpl")
-public class OrderItemDaoImpl extends BaseDaoImpl<OrderItem, Long> implements OrderItemDao {
+public class OrderItemDaoImpl extends BaseDAOImpl<OrderItem, Long> implements OrderItemDao {
 
 	@Override
 	public List<OrderItem> findOrderBySupplier(Supplier supplier, OrderStatus[] orderStatuss, PaymentStatus[] paymentStatuss,

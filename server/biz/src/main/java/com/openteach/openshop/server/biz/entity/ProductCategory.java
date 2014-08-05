@@ -106,8 +106,8 @@ public class ProductCategory extends OrderEntity {
 
 	static {
 		try {
-			org.dom4j.Document document = new SAXReader().read(ProductCategory.class.getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-			org.dom4j.Element element = (org.dom4j.Element) document.selectSingleNode("/shopxx/template[@id='rootCategoryContent']");
+			org.dom4j.Document document = new SAXReader().read(ProductCategory.class.getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+			org.dom4j.Element element = (org.dom4j.Element) document.selectSingleNode("/openshop/template[@id='rootCategoryContent']");
 			staticPath = element.attributeValue("staticPath");
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -20,7 +20,7 @@ import com.openteach.openshop.server.biz.entity.Supplier;
  * @version 0.0.1
  */
 @Repository("supplierDAO")
-public class SupplierDAOImpl extends BaseDaoImpl<Supplier, Long> implements SupplierDAO {
+public class SupplierDAOImpl extends BaseDAOImpl<Supplier, Long> implements SupplierDAO {
 
 	public boolean isNameExists(String name) {
 		if (name == null) {

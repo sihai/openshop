@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.OrderLog;
  * @version 0.0.1
  */
 @Repository("orderLogDaoImpl")
-public class OrderLogDaoImpl extends BaseDaoImpl<OrderLog, Long> implements OrderLogDao {
+public class OrderLogDaoImpl extends BaseDAOImpl<OrderLog, Long> implements OrderLogDao {
 
 }

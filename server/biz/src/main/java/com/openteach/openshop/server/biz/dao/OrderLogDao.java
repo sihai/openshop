@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.OrderLog;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface OrderLogDao extends BaseDao<OrderLog, Long> {
+public interface OrderLogDao extends BaseDAO<OrderLog, Long> {
 
 }

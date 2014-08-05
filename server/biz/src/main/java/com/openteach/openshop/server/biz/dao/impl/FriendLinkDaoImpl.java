@@ -25,7 +25,7 @@ import com.openteach.openshop.server.biz.entity.FriendLink.Type;
  * @version 0.0.1
  */
 @Repository("friendLinkDaoImpl")
-public class FriendLinkDaoImpl extends BaseDaoImpl<FriendLink, Long> implements FriendLinkDao {
+public class FriendLinkDaoImpl extends BaseDAOImpl<FriendLink, Long> implements FriendLinkDao {
 
 	public List<FriendLink> findList(Type type) {
 		CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

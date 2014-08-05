@@ -66,7 +66,7 @@ import com.openteach.openshop.server.biz.util.SettingUtils;
  * @version 0.0.1
  */
 @Repository("productDaoImpl")
-public class ProductDaoImpl extends BaseDaoImpl<Product, Long> implements ProductDao {
+public class ProductDaoImpl extends BaseDAOImpl<Product, Long> implements ProductDao {
 
 	private static final Pattern pattern = Pattern.compile("\\d*");
 

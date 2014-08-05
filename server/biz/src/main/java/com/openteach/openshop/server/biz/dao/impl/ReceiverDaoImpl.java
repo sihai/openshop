@@ -27,7 +27,7 @@ import com.openteach.openshop.server.biz.entity.Receiver;
  * @version 0.0.1
  */
 @Repository("receiverDaoImpl")
-public class ReceiverDaoImpl extends BaseDaoImpl<Receiver, Long> implements ReceiverDao {
+public class ReceiverDaoImpl extends BaseDAOImpl<Receiver, Long> implements ReceiverDao {
 
 	public Receiver findDefault(Member member) {
 		if (member == null) {

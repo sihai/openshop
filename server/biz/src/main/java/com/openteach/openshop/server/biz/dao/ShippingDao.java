@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.Shipping;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ShippingDao extends BaseDao<Shipping, Long> {
+public interface ShippingDao extends BaseDAO<Shipping, Long> {
 
 	/**
 	 * 根据编号查找发货单

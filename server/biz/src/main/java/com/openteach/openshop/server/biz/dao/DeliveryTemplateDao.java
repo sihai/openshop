@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.DeliveryTemplate;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface DeliveryTemplateDao extends BaseDao<DeliveryTemplate, Long> {
+public interface DeliveryTemplateDao extends BaseDAO<DeliveryTemplate, Long> {
 
 	/**
 	 * 查找默认快递单模板

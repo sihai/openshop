@@ -17,6 +17,6 @@ import com.openteach.openshop.server.biz.entity.Role;
  * @version 0.0.1
  */
 @Repository("roleDaoImpl")
-public class RoleDaoImpl extends BaseDaoImpl<Role, Long> implements RoleDao {
+public class RoleDaoImpl extends BaseDAOImpl<Role, Long> implements RoleDao {
 
 }

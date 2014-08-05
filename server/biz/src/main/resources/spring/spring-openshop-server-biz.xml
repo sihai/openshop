@@ -8,7 +8,7 @@
 	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd"
 	default-lazy-init="true">
 
-	<context:property-placeholder location="classpath*:/env.properties" ignore-resource-not-found="true" ignore-unresolvable="true" />
+	<context:property-placeholder location="classpath*:/openshop.properties" ignore-resource-not-found="true" ignore-unresolvable="true" />
 	
 	<import resource="spring-openshop-server-biz-context.xml"></import>
 	<import resource="spring-openshop-server-biz-shiro.xml"></import>

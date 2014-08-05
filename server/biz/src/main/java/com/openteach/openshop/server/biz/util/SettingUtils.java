@@ -5,7 +5,6 @@
  */
 package com.openteach.openshop.server.biz.util;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -27,7 +26,6 @@ import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
-import org.springframework.core.io.ClassPathResource;
 
 import com.openteach.openshop.server.biz.CommonAttributes;
 import com.openteach.openshop.server.biz.EnumConverter;
@@ -129,8 +127,8 @@ public final class SettingUtils {
 		} else {
 			setting = new Setting();
 			try {
-				Document document = new SAXReader().read(SettingUtils.class.getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-				List<Element> elements = document.selectNodes("/shopxx/setting");
+				Document document = new SAXReader().read(SettingUtils.class.getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+				List<Element> elements = document.selectNodes("/openshop/setting");
 				for (Element element : elements) {
 					String name = element.attributeValue("name");
 					String value = element.attributeValue("value");
@@ -158,8 +156,8 @@ public final class SettingUtils {
 	 */
 	public static void set(Setting setting) {
 		try {
-			Document document = new SAXReader().read(SettingUtils.class.getResourceAsStream(CommonAttributes.SHOPXX_XML_PATH));
-			List<Element> elements = document.selectNodes("/shopxx/setting");
+			Document document = new SAXReader().read(SettingUtils.class.getResourceAsStream(CommonAttributes.OPENSHOP_XML_PATH));
+			List<Element> elements = document.selectNodes("/openshop/setting");
 			for (Element element : elements) {
 				try {
 					String name = element.attributeValue("name");
@@ -183,7 +181,7 @@ public final class SettingUtils {
 				outputFormat.setIndent(true);
 				outputFormat.setIndent("	");
 				outputFormat.setNewlines(true);
-				//fileOutputStream = new FileOutputStream(shopxxXmlFile);
+				//fileOutputStream = new FileOutputStream(openshopXmlFile);
 				//xmlWriter = new XMLWriter(fileOutputStream, outputFormat);
 				//xmlWriter.write(document);
 			} catch (Exception e) {

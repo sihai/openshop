@@ -20,7 +20,7 @@ import com.openteach.openshop.server.biz.entity.PluginConfig;
  * @version 0.0.1
  */
 @Repository("pluginConfigDaoImpl")
-public class PluginConfigDaoImpl extends BaseDaoImpl<PluginConfig, Long> implements PluginConfigDao {
+public class PluginConfigDaoImpl extends BaseDAOImpl<PluginConfig, Long> implements PluginConfigDao {
 
 	public boolean pluginIdExists(String pluginId) {
 		if (pluginId == null) {

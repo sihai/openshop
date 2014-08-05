@@ -20,7 +20,7 @@ import com.openteach.openshop.server.biz.entity.Payment;
  * @version 0.0.1
  */
 @Repository("paymentDaoImpl")
-public class PaymentDaoImpl extends BaseDaoImpl<Payment, Long> implements PaymentDao {
+public class PaymentDaoImpl extends BaseDAOImpl<Payment, Long> implements PaymentDao {
 
 	public Payment findBySn(String sn) {
 		if (sn == null) {

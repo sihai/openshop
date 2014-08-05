@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.Supplier;
  * @author Team
  * @version 0.0.1
  */
-public interface SupplierDAO extends BaseDao<Supplier, Long> {
+public interface SupplierDAO extends BaseDAO<Supplier, Long> {
 
 	/**
 	 * 判断供应商名称是否存在

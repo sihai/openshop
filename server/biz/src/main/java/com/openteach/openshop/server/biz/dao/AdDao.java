@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.Ad;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface AdDao extends BaseDao<Ad, Long> {
+public interface AdDao extends BaseDAO<Ad, Long> {
 
 }

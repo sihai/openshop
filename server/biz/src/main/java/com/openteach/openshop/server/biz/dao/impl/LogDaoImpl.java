@@ -19,7 +19,7 @@ import com.openteach.openshop.server.biz.entity.Log;
  * @version 0.0.1
  */
 @Repository("logDaoImpl")
-public class LogDaoImpl extends BaseDaoImpl<Log, Long> implements LogDao {
+public class LogDaoImpl extends BaseDAOImpl<Log, Long> implements LogDao {
 
 	public void removeAll() {
 		String jpql = "delete from Log log";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shopxx>
+<openshop>
 	<setting name="siteName" value="艾格吃饱了" />
 	<setting name="siteUrl" value="http://www.aigechibaole.com:8080" />
 	<setting name="logo" value="/upload/image/logo.gif" />
@@ -7,7 +7,7 @@
 	<setting name="address" value="上海" />
 	<setting name="phone" value="400-8888888" />
 	<setting name="zipCode" value="400000" />
-	<setting name="email" value="service@shopxx.net" />
+	<setting name="email" value="service@openshop.openteach.com" />
 	<setting name="certtext" value="沪ICP备10000000号" />
 	<setting name="isSiteEnabled" value="true" />
 	<setting name="siteCloseMessage" value="&lt;dl&gt;&lt;dt&gt;网站维护中，暂时无法访问！&lt;/dt&gt;&lt;dd&gt;本网站正在进行系统维护和技术升级，网站暂时无法访问，敬请谅解！&lt;/dd&gt;&lt;/dl&gt;" />
@@ -153,4 +153,4 @@
 	<template id="productPrint" type="print" name="购物单打印" templatePath="/admin/print/product.ftl"/>
 	<template id="shippingPrint" type="print" name="配送单打印" templatePath="/admin/print/shipping.ftl"/>
 	
-</shopxx>
+</openshop>

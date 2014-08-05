@@ -20,7 +20,7 @@ import com.openteach.openshop.server.biz.entity.Shipping;
  * @version 0.0.1
  */
 @Repository("shippingDaoImpl")
-public class ShippingDaoImpl extends BaseDaoImpl<Shipping, Long> implements ShippingDao {
+public class ShippingDaoImpl extends BaseDAOImpl<Shipping, Long> implements ShippingDao {
 
 	public Shipping findBySn(String sn) {
 		if (sn == null) {

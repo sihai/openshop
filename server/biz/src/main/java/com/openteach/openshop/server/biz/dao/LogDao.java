@@ -13,7 +13,7 @@ import com.openteach.openshop.server.biz.entity.Log;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface LogDao extends BaseDao<Log, Long> {
+public interface LogDao extends BaseDAO<Log, Long> {
 
 	/**
 	 * 删除所有日志

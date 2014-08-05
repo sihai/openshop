@@ -17,7 +17,7 @@ import com.openteach.openshop.server.biz.entity.ProductNotify;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface ProductNotifyDao extends BaseDao<ProductNotify, Long> {
+public interface ProductNotifyDao extends BaseDAO<ProductNotify, Long> {
 
 	/**
 	 * 判断到货通知是否存在

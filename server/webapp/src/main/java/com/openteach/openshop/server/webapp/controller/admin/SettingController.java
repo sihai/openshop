@@ -164,7 +164,7 @@ public class SettingController extends BaseController {
 
 		OutputStream outputStream = null;
 		try {
-			org.springframework.core.io.Resource resource = new ClassPathResource(CommonAttributes.SHOPXX_PROPERTIES_PATH);
+			org.springframework.core.io.Resource resource = new ClassPathResource(CommonAttributes.OPENSHOP_PROPERTIES_PATH);
 			Properties properties = PropertiesLoaderUtils.loadProperties(resource);
 			String templateUpdateDelay = properties.getProperty("template.update_delay");
 			String messageCacheSeconds = properties.getProperty("message.cache_seconds");

@@ -35,7 +35,7 @@ import com.openteach.openshop.server.biz.entity.Member;
  * @version 0.0.1
  */
 @Repository("couponCodeDaoImpl")
-public class CouponCodeDaoImpl extends BaseDaoImpl<CouponCode, Long> implements CouponCodeDao {
+public class CouponCodeDaoImpl extends BaseDAOImpl<CouponCode, Long> implements CouponCodeDao {
 
 	public boolean codeExists(String code) {
 		if (code == null) {

@@ -13,6 +13,6 @@ import com.openteach.openshop.server.biz.entity.SpecificationValue;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface SpecificationValueDao extends BaseDao<SpecificationValue, Long> {
+public interface SpecificationValueDao extends BaseDAO<SpecificationValue, Long> {
 
 }

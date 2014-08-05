@@ -16,7 +16,7 @@ import com.openteach.openshop.server.biz.entity.FriendLink.Type;
  * @author AIGECHIBAOLE Team
  * @version 0.0.1
  */
-public interface FriendLinkDao extends BaseDao<FriendLink, Long> {
+public interface FriendLinkDao extends BaseDAO<FriendLink, Long> {
 
 	/**
 	 * 查找友情链接
