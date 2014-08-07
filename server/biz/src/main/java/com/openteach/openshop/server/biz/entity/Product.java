@@ -319,6 +319,11 @@ public class Product extends BaseEntity {
 	 * 返点比例
 	 */
 	private BigDecimal rebatePoint;
+	
+	/**
+	 * 推荐理由
+	 */
+	private String recommendReason;
 
 	/** 商品图片 */
 	private List<ProductImage> productImages = new ArrayList<ProductImage>();
@@ -1651,6 +1656,23 @@ public class Product extends BaseEntity {
 	 */
 	public void setRebatePoint(BigDecimal rebatePoint) {
 		this.rebatePoint = rebatePoint;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	@Length(max = 200)
+	public String getRecommendReason() {
+		return recommendReason;
+	}
+
+	/**
+	 * 
+	 * @param recommendReason
+	 */
+	public void setRecommendReason(String recommendReason) {
+		this.recommendReason = recommendReason;
 	}
 
 	/**

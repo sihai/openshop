@@ -53,27 +53,6 @@ public class ProductListDirective extends BaseDirective {
 	/** "商品分类ID"参数名称 */
 	private static final String PRODUCT_CATEGORY_ID_PARAMETER_NAME = "productCategoryId";
 
-	/** "品牌ID"参数名称 */
-	private static final String BRAND_ID_PARAMETER_NAME = "brandId";
-
-	/** "促销ID"参数名称 */
-	private static final String PROMOTION_ID_PARAMETER_NAME = "promotionId";
-
-	/** "标签ID"参数名称 */
-	private static final String TAG_IDS_PARAMETER_NAME = "tagIds";
-
-	/** "属性值"参数名称 */
-	private static final String ATTRIBUTE_VALUE_PARAMETER_NAME = "attributeValue";
-
-	/** "最低价格"参数名称 */
-	private static final String START_PRICE_PARAMETER_NAME = "startPrice";
-
-	/** "最高价格"参数名称 */
-	private static final String END_PRICE_PARAMETER_NAME = "endPrice";
-
-	/** "排序类型"参数名称 */
-	private static final String ORDER_TYPE_PARAMETER_NAME = "orderType";
-
 	/** 变量名称 */
 	private static final String VARIABLE_NAME = "products";
 	

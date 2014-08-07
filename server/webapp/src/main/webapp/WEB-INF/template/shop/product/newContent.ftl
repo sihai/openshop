@@ -10,7 +10,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     [@seo type = "productContent"]
-		<title>[#if product.seoTitle??]${product.seoTitle}[#elseif seo.title??][@seo.title?interpret /][/#if][#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+		<title>[#if product.seoTitle??]${product.seoTitle}[#elseif seo.title??][@seo.title?interpret /][/#if][#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 		[#if product.seoKeywords??]
 			<meta name="keywords" content="${product.seoKeywords}" />
 		[#elseif seo.keywords??]

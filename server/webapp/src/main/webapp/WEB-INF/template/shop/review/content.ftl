@@ -7,7 +7,7 @@
 <!--<![endif]-->
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>${product.name} ${message("shop.review.title")}[#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+		<title>${product.name} ${message("shop.review.title")}[#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 		[#include "/shop/include/metaAndcss.ftl" /]
 		<link href="${base}/resources/shop/css/product.css" rel="stylesheet" type="text/css" />
 		<link href="${base}/resources/shop/css/review.css" rel="stylesheet" type="text/css" />

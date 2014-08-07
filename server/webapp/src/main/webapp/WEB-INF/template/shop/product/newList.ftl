@@ -10,7 +10,7 @@
 	
 	[#if productCategory??]
 		[@seo type = "productList"]
-			<title>[#if productCategory.seoTitle??]${productCategory.seoTitle}[#elseif seo.title??][@seo.title?interpret /][/#if][#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+			<title>[#if productCategory.seoTitle??]${productCategory.seoTitle}[#elseif seo.title??][@seo.title?interpret /][/#if][#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 			[#if productCategory.seoKeywords??]
 				<meta name="keywords" content="${productCategory.seoKeywords}" />
 			[#elseif seo.keywords??]
@@ -23,7 +23,7 @@
 			[/#if]
 		[/@seo]
 	[#else]
-		<title>${message("shop.product.title")}[#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+		<title>${message("shop.product.title")}[#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 	[/#if]modernizr
 	
 	<meta name="author" content="openteach inc." />

@@ -10,7 +10,7 @@
 		<meta property="qc:admins" content="3275546717611753012174563757" />
 		<meta property="wb:webmaster" content="955a134bdab20b26" />
 		[@seo type = "index"]
-			<title>[#if seo.title??][@seo.title?interpret /][#else]${message("shop.index.title")}[/#if][#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+			<title>[#if seo.title??][@seo.title?interpret /][#else]${message("shop.index.title")}[/#if][#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 			[#if seo.keywords??]
 				<meta name="keywords" content="[@seo.keywords?interpret /]" />
 			[/#if]

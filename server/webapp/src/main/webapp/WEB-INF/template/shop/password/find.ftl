@@ -7,7 +7,7 @@
 <!--<![endif]-->
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>${message("shop.password.find")}[#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+		<title>${message("shop.password.find")}[#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 		[#include "/shop/include/metaAndcss.ftl" /]
 		<link href="${base}/resources/shop/css/password.css" rel="stylesheet" type="text/css" />
 		

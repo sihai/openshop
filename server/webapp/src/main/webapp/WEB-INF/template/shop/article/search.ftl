@@ -8,7 +8,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		[@seo type = "articleSearch"]
-			<title>[#if seo.title??][@seo.title?interpret /][/#if][#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+			<title>[#if seo.title??][@seo.title?interpret /][/#if][#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 			[#if seo.keywords??]
 				<meta name="keywords" content="[@seo.keywords?interpret /]" />
 			[/#if]

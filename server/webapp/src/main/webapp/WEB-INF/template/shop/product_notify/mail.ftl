@@ -7,7 +7,7 @@
 <!--<![endif]-->
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>${message("shop.productNotify.mailTitle")} - Powered By aigechibaole</title>
+		<title>${message("shop.productNotify.mailTitle")} - Powered By openteach inc.</title>
 		[#include "/shop/include/metaAndcss.ftl" /]
 		<link href="${base}/resources/shop/css/product.css" rel="stylesheet" type="text/css" />
 		

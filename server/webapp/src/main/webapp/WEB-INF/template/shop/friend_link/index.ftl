@@ -7,7 +7,7 @@
 <!--<![endif]-->
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>${message("shop.friendLink.title")}[#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+		<title>${message("shop.friendLink.title")}[#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 		[#include "/shop/include/metaAndcss.ftl" /]
 		<link href="${base}/resources/shop/css/article.css" rel="stylesheet" type="text/css" />
 		<link href="${base}/resources/shop/css/friend_link.css" rel="stylesheet" type="text/css" />

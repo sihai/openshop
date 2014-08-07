@@ -10,7 +10,7 @@
 		<meta property="qc:admins" content="3275546717611753012174563757" />
 		<meta property="wb:webmaster" content="955a134bdab20b26" />
 		[@seo type = "index"]
-			<title>[#if seo.title??][@seo.title?interpret /][#else]${message("shop.index.title")}[/#if][#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+			<title>[#if seo.title??][@seo.title?interpret /][#else]${message("shop.index.title")}[/#if][#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 			[#if seo.keywords??]
 				<meta name="keywords" content="[@seo.keywords?interpret /]" />
 			[/#if]
@@ -22,53 +22,6 @@
 		[#include "/shop/include/metaAndcss.ftl" /]
 		
 		<link href="${base}/assets/v2/shop/css/index.css" rel="stylesheet" type="text/css" />
-		
-		<style>
-
-			.myButton {
-				-moz-box-shadow: 0px 10px 14px -7px #3e7327;
-				-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
-				box-shadow: 0px 10px 14px -7px #3e7327;
-				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
-				background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
-				background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
-				background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
-				background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
-				background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
-				background-color:#77b55a;
-				-moz-border-radius:4px;
-				-webkit-border-radius:4px;
-				border-radius:4px;
-				border:1px solid #4b8f29;
-				display:inline-block;
-				cursor:pointer;
-				color:#ffffff;
-				font-family:arial;
-				font-size:13px;
-				font-weight:bold;
-				padding:6px 12px;
-				text-decoration:none;
-				text-shadow:0px 1px 0px #5b8a3c;
-				width: 64px;
-				height: 32px;
-			}
-			.myButton:hover {
-				background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
-				background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
-				background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
-				background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
-				background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
-				background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
-				background-color:#72b352;
-			}
-			.myButton:active {
-				position:relative;
-				top:1px;
-			}
-			
-		</style>
 		
 	</head>
 	
@@ -93,42 +46,58 @@
 						</div>
 					</div>
 					<div class="body">
-							<div class="view grid-nosku view-noCom" id="J_ItemList" data-spm="a220m.1000858.1000725" data-area="杭州" data-atp-a="{p},{id},,,spu,1,spu,{user_id}" data-atp-b="{p},{id},,,spu,2,spu,{user_id}" data-spm-max-idx="312">
+					
+						<ul class="product-list" id="product-list">
 							[@product_list productCategoryId = currentRootCategory.id count = 128]
 								[#list products as product]
-									<div class="product">
-									
-										<div class="product-iWrap">
- 											<div class="productImg-wrap">
- 												<a target="_blank" href="${base}${product.path}" >
-													<img class="product_img lazy_img" src="${base}/assets/front/images/spacer.gif" data-img-src="[#if product.image??]${product.image}[#else]${setting.defaultThumbnailProductImage}[/#if]" />
-												</a>
-												<a class="j_ProductPin productPin"><span>钉一下已钉住</span></a>
- 											</div>
- 											
- 											<p class="productPrice">
-												<a href="${base}${product.path}" class="tag" target="_blank"><img src="http://gtms04.alicdn.com/tps/i4/T13XGKFD8cXXbSBwfc-30-30.png" title="天猫电器城认证"></a>
-												<em title="${currency(product.price, true)}"><b></b>${currency(product.price, true)}</em>
-												<del>${currency(product.marketPrice, true)}</del>
-											</p>
-											
-											<p class="productTitle">
-												<a href="${base}${product.path}" target="_blank" title="${product.name}" ><span class="H">${abbreviate(product.name, 24)}</span></a>
-											</p>
-											
-											<div class="productShop" data-atp="b!1-3,{user_id},,,,,,">
-												<span>正宗四川美味，值得推荐，买了不后悔，后悔没买</span>
-											</div>
-											
-											<p class="productStatus">
-												<span>该款月成交 <em>4025笔</em></span>
-												<span class="no-right-border">好评数/总评数 <em>4025/5000</em></span>
-											</p>
-	 									</div>
-									</div>
+									<li id="${product.id}">
+							        	<div class="img_b">
+							            	<a href="${base}${product.path}" target="_blank">
+							            		<img class="big-img lazy_img" src="${base}/assets/front/images/spacer.gif" data-img-src="[#if product.image??]${product.image}[#else]${setting.defaultThumbnailProductImage}[/#if]">
+							            	</a>
+							                <div class="simg_lst" [#if product.productImages?has_content] count="${product.productImages.size()}" [#else] count="1" [/#if]>
+						                		<ul style="width: 291px;">
+						                			[#if product.productImages?has_content]
+														[#list product.productImages as productImage]
+															<li>
+																<img class="lazy_img" src="${base}/assets/front/images/spacer.gif" data-img-src="${productImage.thumbnail}" big-img-src="${productImage.large}" title="${productImage.title}"></img>
+															</li>
+														[/#list]
+													[#else]
+														<li>
+															<img class="lazy_img" src="${base}/assets/front/images/spacer.gif" data-img-src="${setting.defaultThumbnailProductImage}" title="${productImage.title}"></img>
+														</li>
+													[/#if]
+						                    	</ul>
+							                </div>
+							                <div class="s_img_lst_l"></div>
+							                <div class="s_img_lst_r"></div>
+							                <div class="t_bg"></div>
+							                <div class="icon new"></div>
+							            </div>
+							            <div class="img_tit">
+							                <span class="img_p">${message("Product.price")}：<span class="n">${currency(product.price, true)}</span></span>            
+							                <span class="img_t"><a href="${base}${product.path}" target="_blank" title="${product.name}">${abbreviate(product.name, 24)}</a></span>
+							                <span class="img_c"><i class="icon"></i></span>
+							                
+							            </div>
+							            <div class="img_info">
+							            	<p>
+							            		<span id="apply_num_1" style="color:#000; font-family:Microsoft YaHei; font-weight:bold; font-size:14px; float:right; padding-right:25px;">${message("Product.sales")}：${product.sales}</span>
+							            		<span style="color:#000; font-family:Microsoft YaHei; font-weight:bold; font-size:14px;">${message("Product.stock")}：${product.stock}</span>
+							            	</p>
+							                <p>
+							                	<span class="label2">推荐理由： </span>
+							                	<span class="w2">${abbreviate(product.recommendReason, 64)}</span>
+							                </p>
+							                <p><a class="btnbuy" href="#" target="_blank">加入购物车</a></p>
+							            </div>
+							                
+							        </li>
 								[/#list]
 							[/@product_list]
-						</div>
+					        
+					    </ul>
 					</div>	
 				</div>
 				

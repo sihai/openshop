@@ -659,6 +659,7 @@ CREATE TABLE xx_product (
     brand BIGINT,
     supplier BIGINT,
     rebate_point DECIMAL(21 , 6 ) NOT NULL,
+    recommend_reason VARCHAR(64),
     goods BIGINT NOT NULL,
     product_category BIGINT NOT NULL,
     PRIMARY KEY (id)

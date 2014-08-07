@@ -34,11 +34,11 @@ function toInt(str) {
 }
 
 function setCartQuantity(quantity) {
-	$("#cart-number").text('' + quantity);
+	$("#cart-number").html('' + quantity);
 }
 
 function getCartQuantity() {
-	parseInt($("#cart-number").text());
+	return parseInt($("#cart-number").text());
 }
 
 function refreshCart() {
@@ -61,6 +61,33 @@ function refreshCart() {
 	});
 }
 
+function ssimg(obj, lbtn, rbtn, total, n, speed){
+	var curi = 0;
+	var sum=obj.find("li").size();
+	var mw=obj.width()+parseFloat(obj.find("li").css("margin-left"))+parseFloat(obj.find("li").css("margin-right"));
+	var w=obj.find("li").width()+parseFloat(obj.find("li").css("margin-left"))+parseFloat(obj.find("li").css("margin-right"))+(parseFloat(obj.find("li").css("border-left-width"))*2);
+	obj.find("ul").width(w*sum);
+	var mnum=Math.ceil(sum/n);
+	
+	lbtn.bind("click",function(){
+		curi--;
+		if(curi<0){
+			curi=0;
+			return false;
+		}
+		obj.find("ul").stop().animate({left:-curi*mw},speed);
+	});
+	
+	rbtn.bind("click",function(){
+		curi++;
+		if(curi>=mnum){
+			curi=mnum-1;
+			return false;
+		}
+		obj.find("ul").stop().animate({left:-curi*mw},speed);
+	});
+}
+
 $().ready(function () {
  
 	var $loginInfo = $("#login-info");
@@ -70,11 +97,11 @@ $().ready(function () {
 	var $loginForm = $("#login-form");
 	var $memberName = $("#member-name");
 	var $memberInfo = $("#member-info");
-	var $captchaImage = $("#captchaImage");
+	var $captchaImage = $("#login_captchaImage");
 	var name = getCookie("name");
-	var $username = $('#username');
-	var $password = $('#password');
-	var $captcha = $('#captcha');
+	var $username = $('#login_username');
+	var $password = $('#login_password');
+	var $captcha = $('#login_captcha');
 	var $submit = $("#login-form :submit");
 	
 	if (name != null) {
@@ -89,8 +116,12 @@ $().ready(function () {
 		$memberInfo.hide();
 		$loginInfo.show();
 		
-		$login.click(function(){
-			$loginFormDiv.slideDown("slow");
+		$login.click(function() {
+			if($loginFormDiv.css('display') == 'none') {
+				$loginFormDiv.slideDown("slow");
+			} else {
+				$loginFormDiv.slideUp("slow");
+			}
 			return false;
 		});
 		
@@ -110,7 +141,17 @@ $().ready(function () {
 		$captchaImage.click(function() {
 			$captchaImage.attr("src",  '/common/captcha.jhtml?captchaId=' + captchaId + '&timestamp=' + (new Date()).valueOf());
 		});
-	}	
+	}
+	
+	$(".simg_lst").each(function() {
+		var _this = $(this);
+		new ssimg(_this, _this.siblings(".s_img_lst_l"), _this.siblings(".s_img_lst_r"), _this.attr('count'), 3, 600);
+	})
+	
+	$(".simg_lst li").bind("click",function(){
+		var imgsrc = $(this).find("img").attr("big-img-src");
+		$(this).parent().parent().prev().find("img").attr("src",imgsrc);
+	});
 	
 	// 表单验证、记住用户名
 	$loginForm.validate({

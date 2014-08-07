@@ -36,20 +36,41 @@ import freemarker.template.TemplateModelException;
  */
 public abstract class BaseDirective implements TemplateDirectiveModel {
 
+	/** "品牌ID"参数名称 */
+	protected static final String BRAND_ID_PARAMETER_NAME = "brandId";
+
+	/** "促销ID"参数名称 */
+	protected static final String PROMOTION_ID_PARAMETER_NAME = "promotionId";
+
+	/** "最低价格"参数名称 */
+	protected static final String START_PRICE_PARAMETER_NAME = "startPrice";
+
+	/** "最高价格"参数名称 */
+	protected static final String END_PRICE_PARAMETER_NAME = "endPrice";
+	
+	/** "标签ID"参数名称 */
+	protected static final String TAG_IDS_PARAMETER_NAME = "tagIds";
+	
 	/** "使用缓存"参数名称 */
-	private static final String USE_CACHE_PARAMETER_NAME = "useCache";
+	protected static final String USE_CACHE_PARAMETER_NAME = "useCache";
 	/** "缓存区域"参数名称 */
-	private static final String CACHE_REGION_PARAMETER_NAME = "cacheRegion";
+	protected static final String CACHE_REGION_PARAMETER_NAME = "cacheRegion";
 	/** "ID"参数名称 */
-	private static final String ID_PARAMETER_NAME = "id";
+	protected static final String ID_PARAMETER_NAME = "id";
 	/** "数量"参数名称 */
-	private static final String COUNT_PARAMETER_NAME = "count";
+	protected static final String COUNT_PARAMETER_NAME = "count";
+	
+	/** "属性值"参数名称 */
+	protected static final String ATTRIBUTE_VALUE_PARAMETER_NAME = "attributeValue";
+	
+	/** "排序类型"参数名称 */
+	protected static final String ORDER_TYPE_PARAMETER_NAME = "orderType";
 	/** "排序"参数名称 */
-	private static final String ORDER_BY_PARAMETER_NAME = "orderBy";
+	protected static final String ORDER_BY_PARAMETER_NAME = "orderBy";
 	/** 排序项分隔符 */
-	private static final String ORDER_BY_ITEM_SEPARATOR = "\\s*,\\s*";
+	protected static final String ORDER_BY_ITEM_SEPARATOR = "\\s*,\\s*";
 	/** 排序字段分隔符 */
-	private static final String ORDER_BY_FIELD_SEPARATOR = "\\s+";
+	protected static final String ORDER_BY_FIELD_SEPARATOR = "\\s+";
 
 	/**
 	 * 使用缓存

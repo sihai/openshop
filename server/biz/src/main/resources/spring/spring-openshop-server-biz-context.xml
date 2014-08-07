@@ -131,6 +131,7 @@
 				<entry key="article_category_parent_list" value-ref="articleCategoryParentListDirective" />
 				<entry key="article_category_children_list" value-ref="articleCategoryChildrenListDirective" />
 				<entry key="product_list" value-ref="productListDirective" />
+				<entry key="related_product_list" value-ref="relatedProductListDirective" />
 				<entry key="product_category_root_list" value-ref="productCategoryRootListDirective" />
 				<entry key="product_category_parent_list" value-ref="productCategoryParentListDirective" />
 				<entry key="product_category_children_list" value-ref="productCategoryChildrenListDirective" />

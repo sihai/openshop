@@ -167,7 +167,7 @@ $().ready(function() {
 					&nbsp;
 				</td>
 				<td colspan="2">
-					Powered By AIGECHIBAOLE
+					Powered By openteach inc.
 				</td>
 			</tr>
 		</table>

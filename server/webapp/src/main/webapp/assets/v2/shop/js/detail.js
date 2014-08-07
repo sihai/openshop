@@ -51,9 +51,9 @@ $().ready(function () {
 		var quantity = $quantity.val();
 		if (/^\d*[1-9]\d*$/.test(quantity) && parseInt(quantity) > 0) {
 			$.ajax({
-				url: "${base}/cart/add.jhtml",
+				url: baseURL + "/cart/add.jhtml",
 				type: "POST",
-				data: {id: ${product.id}, quantity: quantity},
+				data: {id: productId, quantity: quantity},
 				dataType: "json",
 				cache: false,
 				success: function(message) {
@@ -63,7 +63,7 @@ $().ready(function () {
 				}
 			});
 		} else {
-			$.message("warn", "${message("shop.product.quantityPositive")}");
+			$.message("warn", quantityPositive);
 		}
 	});
 });

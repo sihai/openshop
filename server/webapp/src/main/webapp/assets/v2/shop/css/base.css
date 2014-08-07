@@ -21,7 +21,7 @@ body {
 	_height: 100%;
 	//min-width: 1000px;
 	_width: expression(document.body.clientWidth <= 1000 ? "1000px": "auto");
-	font: 12px tahoma, Arial, Verdana, sans-serif;
+	font: 12px/1.5 "Microsoft Yahei",tahoma,arial;
 	color: #666666;
 	background-color: #EEEEEE;
 	_background-image: url(about: blank);
@@ -42,6 +42,51 @@ button, input, select, textarea {
     font-size: 100%;
     margin: 0;
 }
+
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+	width: 64px;
+	height: 32px;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+	background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+			
 
 .page {
 	width: 100%;
@@ -73,7 +118,7 @@ button, input, select, textarea {
 
 .page .head .login-form .text {
 	width: 200px;
-	height: 36px;
+	height: 28px;
 }
 
 .page .head .login-form .submit {
@@ -347,6 +392,7 @@ button, input, select, textarea {
 .productImg-wrap a, .productImg-wrap img {
 	max-width: 100%;
 	_width: expression(function(el){if(/msie 6/i.test(navigator.userAgent)){var threshold=100*el.parentNode.clientWidth/100;el.style.width=(threshold==0||el.clientWidth>threshold)?threshold||'100%':'auto';}}(this));
+	width: 320px;
 	height: 240px;
 	_height: expression(function(el){if(/msie 6/i.test(navigator.userAgent))el.style.height=(el.scrollHeight>210)?'210px':'auto';}(this));
 }
@@ -527,6 +573,267 @@ span.H {
 	font-size: 12px;
 	font-weight: 700;
 }
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+li {
+	list-style: none;
+}
+
+p {
+	word-wrap: break-word;
+}
+
+/*------------------------------------------------------------------*/
+/*					product new										*/
+/*------------------------------------------------------------------*/
+.product-list {
+	width: 1090px;
+	margin-left:15px;
+}
+
+.product-list li {
+	width: 523px;
+	height: 526px;
+	border: 1px solid #e7e7e7;
+	float: left;
+	margin: 10px 20px 0 0;
+	background-color: #fff;
+}
+
+.product-list li .img_b {
+	width: 488px;
+	height: 300px;
+	margin: 18px 0 0 19px;
+	position: relative;
+}
+
+.product-list .big-img {
+	width: 488px;
+	height: 300px;
+}
+
+.product-list li .img_b .simg_lst {
+	width: 274px;
+	height: 50px;
+	position: absolute;
+	bottom: 10px;
+	left: 89px;
+	overflow: hidden;
+	z-index: 3;
+}
+
+.product-list li .img_b .simg_lst ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.product-list li .img_b .simg_lst ul li {
+	width: 78px;
+	height: 48px;
+	border: 1px solid #fff;
+	float: left;
+	margin: 0 17px 0 0;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.product-list li .img_b .simg_lst ul li img {
+	width: 78px;
+	height: 48px;
+}
+
+.product-list li .img_b .s_img_lst_l {
+	width: 9px;
+	height: 16px;
+	position: absolute;
+	bottom: 28px;
+	left: 67px;
+	cursor: pointer;
+	background: url(http://y0.ifengimg.com/auto/image/2014/0711/c_icon1.png) no-repeat -315px -170px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.product-list li .img_b .s_img_lst_r {
+	width: 9px;
+	height: 16px;
+	position: absolute;
+	bottom: 28px;
+	right: 66px;
+	cursor: pointer;
+	background: url(http://y0.ifengimg.com/auto/image/2014/0711/c_icon1.png) no-repeat -365px -170px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.product-list li .img_b .t_bg {
+	width: 488px;
+	height: 70px;
+	background-color: #fff;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.product-list li .img_b .new {
+	width: 46px;
+	height: 44px;
+	background-position: -167px -45px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.icon {
+	background-image: url(http://y0.ifengimg.com/auto/image/2014/0711/c_icon1.png);
+	background-repeat: no-repeat;
+}
+
+.product-list li .img_tit {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px dashed #bebebe;
+	text-align: left;
+}
+
+.product-list li .img_tit .img_p {
+	float: right;
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: #7b7b7b;
+	line-height: 50px;
+	padding-right: 19px;
+}
+
+.product-list li .img_tit .img_p .n {
+	font-size: 24px;
+	color: #ec2b2b;
+}
+
+.product-list li .img_tit .img_t {
+	font-size: 18px;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: #333;
+	line-height: 50px;
+	padding-left: 19px;
+}
+
+.product-list li .img_tit .img_t a {
+	font-size: 18px;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: #333;
+	width: 234px;
+	height: 50px;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: top;
+}
+
+.product-list  li .img_info {
+	text-align: left;
+	padding-left: 19px;
+	padding-top: 6px;
+}
+
+.product-list li .img_info p {
+	padding-top: 6px;
+}
+
+
+.product-list li .img_info .label2 {
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: #fff;
+	background-color: #429671;
+	padding-left: 3px;
+}
+
+
+.product-list li .img_info .w2 {
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+	color: #4c9b78;
+	padding-left: 3px;
+	margin-top: -3px;
+	display: inline-block;
+	vertical-align: top;
+	width: 368px;
+}
+
+
+.product-list li .img_info .btnbuy {
+	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+	width: 139px;
+	height: 32px;
+	line-height:32px;
+	margin: 0 auto;
+	//text-indent: -9999px;
+	margin-top: 6px;
+	display: block;
+	text-align: center;
+}
+.product-list li .img_info .btnbuy:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+	background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+.product-list li .img_info .btnbuy:active {
+	position:relative;
+	top:1px;
+}
+
+.product-list li .img_info .btnbuyxx {
+	
+	//background: url(http://y3.ifengimg.com/auto/image/2014/0722/mc.png) no-repeat 0 0;
+	background: url("../images/add_2_cart.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	cursor: pointer;
+	margin: 0 auto;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-top: 6px;
+	display: block;
+}
+
 
 .page .footer{
 	width: 100%;

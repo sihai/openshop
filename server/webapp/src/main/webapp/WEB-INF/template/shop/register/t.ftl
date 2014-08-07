@@ -10,7 +10,7 @@
 		<meta property="qc:admins" content="3275546717611753012174563757" />
 		<meta property="wb:webmaster" content="955a134bdab20b26" />
 		[@seo type = "index"]
-			<title>[#if seo.title??][@seo.title?interpret /][#else]${message("shop.index.title")}[/#if][#if systemShowPowered] - Powered By aigechibaole[/#if]</title>
+			<title>[#if seo.title??][@seo.title?interpret /][#else]${message("shop.index.title")}[/#if][#if systemShowPowered] - Powered By openteach inc.[/#if]</title>
 			[#if seo.keywords??]
 				<meta name="keywords" content="[@seo.keywords?interpret /]" />
 			[/#if]
@@ -44,7 +44,7 @@
 						<table style="width:100%;vertical-align:top;">
 							<tr>
 								<td style="width:50%;vertical-align:top;">
-									<img src="http://storage.shopxx.net/demo-image/3.0/ad/login.jpg" width="500" height="330" alt="会员登录" title="会员登录">
+									<img src="${base}/assets/v2/shop/images/register_logo.jpg" width="500" height="330" alt="会员注册" title="会员注册">
 								</td>
 								<td style="width:50%;vertical-align:top;">
 									<div class="register">
@@ -226,7 +226,7 @@
 			
 			// 注册协议
 			$agreement.hover(function() {
-				$(this).height(200);
+				$(this).height(400);
 			});
 			
 			// 表单验证

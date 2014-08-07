@@ -7,7 +7,7 @@
 <!--<![endif]-->
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=[#if requestCharset?has_content]${requestCharset}[#else]utf-8[/#if]" />
-		<title>${message("shop.payment.submit")} - Powered By aigechibaole</title>
+		<title>${message("shop.payment.submit")} - Powered By openteach inc.</title>
 		<meta name="author" content="openteach inc." />
 		<meta name="copyright" content="aigechibaole" />
 	</head>
