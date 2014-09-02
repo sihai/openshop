@@ -9,8 +9,8 @@
 <%@page import="org.apache.commons.lang.StringUtils"%>
 <%@page import="org.apache.commons.lang.time.DateUtils"%>
 <%@page import="org.apache.commons.codec.digest.DigestUtils"%>
-<%@page import="com.openteach.openshop.server.biz.util.FreemarkerUtils"%>
-<%@page import="com.openteach.openshop.server.biz.util.JsonUtils"%>
+<%@page import="com.openteach.openshop.server.service.FreemarkerUtils"%>
+<%@page import="com.openteach.openshop.server.service.JsonUtils"%>
 <%@include file="common.jsp"%>
 <%
 	Boolean isAgreeAgreement = (Boolean) session.getAttribute("isAgreeAgreement");

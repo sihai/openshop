@@ -31,19 +31,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Filter;
-import com.openteach.openshop.server.biz.entity.Area;
-import com.openteach.openshop.server.biz.entity.Supplier;
-import com.openteach.openshop.server.biz.entity.Supplier.Level;
-import com.openteach.openshop.server.biz.service.AreaService;
-import com.openteach.openshop.server.biz.service.CaptchaService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.MessageService;
-import com.openteach.openshop.server.biz.service.OrderItemService;
-import com.openteach.openshop.server.biz.service.OrderService;
-import com.openteach.openshop.server.biz.service.PlatformPaymentService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.service.SupplierService;
+import com.openteach.openshop.server.service.Filter;
+import com.openteach.openshop.server.service.entity.Area;
+import com.openteach.openshop.server.service.entity.Supplier;
+import com.openteach.openshop.server.service.entity.Supplier.Level;
+import com.openteach.openshop.server.service.service.AreaService;
+import com.openteach.openshop.server.service.service.CaptchaService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.MessageService;
+import com.openteach.openshop.server.service.service.OrderItemService;
+import com.openteach.openshop.server.service.service.OrderService;
+import com.openteach.openshop.server.service.service.PlatformPaymentService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.service.SupplierService;
 
 /**
  * Controller - 共用

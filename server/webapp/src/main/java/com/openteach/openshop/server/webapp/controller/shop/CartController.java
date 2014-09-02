@@ -24,20 +24,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.entity.Cart;
-import com.openteach.openshop.server.biz.entity.CartItem;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.Product;
-import com.openteach.openshop.server.biz.plugin.PaymentPlugin;
-import com.openteach.openshop.server.biz.service.CartItemService;
-import com.openteach.openshop.server.biz.service.CartService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.PaymentMethodService;
-import com.openteach.openshop.server.biz.service.PluginService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.service.ShippingMethodService;
-import com.openteach.openshop.server.biz.util.WebUtils;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.entity.Cart;
+import com.openteach.openshop.server.service.entity.CartItem;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.Product;
+import com.openteach.openshop.server.service.plugin.PaymentPlugin;
+import com.openteach.openshop.server.service.service.CartItemService;
+import com.openteach.openshop.server.service.service.CartService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.PaymentMethodService;
+import com.openteach.openshop.server.service.service.PluginService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.service.ShippingMethodService;
+import com.openteach.openshop.server.service.util.WebUtils;
 
 /**
  * Controller - 购物车

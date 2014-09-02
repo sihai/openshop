@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.MemberRank;
-import com.openteach.openshop.server.biz.service.MemberRankService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.MemberRank;
+import com.openteach.openshop.server.service.service.MemberRankService;
 
 /**
  * Controller - 会员等级

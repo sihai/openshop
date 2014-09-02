@@ -23,15 +23,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.ExcelView;
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Coupon;
-import com.openteach.openshop.server.biz.entity.CouponCode;
-import com.openteach.openshop.server.biz.service.AdminService;
-import com.openteach.openshop.server.biz.service.CouponCodeService;
-import com.openteach.openshop.server.biz.service.CouponService;
-import com.openteach.openshop.server.biz.util.FreemarkerUtils;
+import com.openteach.openshop.server.service.ExcelView;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Coupon;
+import com.openteach.openshop.server.service.entity.CouponCode;
+import com.openteach.openshop.server.service.service.AdminService;
+import com.openteach.openshop.server.service.service.CouponCodeService;
+import com.openteach.openshop.server.service.service.CouponService;
+import com.openteach.openshop.server.service.util.FreemarkerUtils;
 
 /**
  * Controller - 优惠券

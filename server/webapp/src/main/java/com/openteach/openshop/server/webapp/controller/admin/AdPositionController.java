@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.AdPosition;
-import com.openteach.openshop.server.biz.service.AdPositionService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.AdPosition;
+import com.openteach.openshop.server.service.service.AdPositionService;
 
 /**
  * Controller - 广告位

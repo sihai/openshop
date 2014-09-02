@@ -12,8 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.entity.FriendLink.Type;
-import com.openteach.openshop.server.biz.service.FriendLinkService;
+import com.openteach.openshop.server.service.entity.FriendLink.Type;
+import com.openteach.openshop.server.service.service.FriendLinkService;
 
 /**
  * Controller - 友情链接

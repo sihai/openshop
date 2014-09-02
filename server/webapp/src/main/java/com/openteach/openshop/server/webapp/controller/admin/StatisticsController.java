@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.service.CacheService;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.service.CacheService;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Controller - 统计

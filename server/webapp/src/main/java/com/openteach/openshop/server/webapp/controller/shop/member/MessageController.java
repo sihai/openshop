@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.Message;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.MessageService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.Message;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.MessageService;
 import com.openteach.openshop.server.webapp.controller.shop.BaseController;
 
 /**
@@ -99,10 +99,10 @@ public class MessageController extends BaseController {
 		message.setReceiver(receiver);
 		messageService.save(message);
 		if (isDraft) {
-			addFlashMessage(redirectAttributes, com.openteach.openshop.server.biz.Message.success("shop.member.message.saveDraftSuccess"));
+			addFlashMessage(redirectAttributes, com.openteach.openshop.server.service.Message.success("shop.member.message.saveDraftSuccess"));
 			return "redirect:draft.jhtml";
 		} else {
-			addFlashMessage(redirectAttributes, com.openteach.openshop.server.biz.Message.success("shop.member.message.sendSuccess"));
+			addFlashMessage(redirectAttributes, com.openteach.openshop.server.service.Message.success("shop.member.message.sendSuccess"));
 			return "redirect:list.jhtml";
 		}
 	}
@@ -175,7 +175,7 @@ public class MessageController extends BaseController {
 			addFlashMessage(redirectAttributes, SUCCESS_MESSAGE);
 			return "redirect:view.jhtml?id=" + forMessage.getId();
 		} else {
-			addFlashMessage(redirectAttributes, com.openteach.openshop.server.biz.Message.success("shop.member.message.replySuccess"));
+			addFlashMessage(redirectAttributes, com.openteach.openshop.server.service.Message.success("shop.member.message.replySuccess"));
 			return "redirect:list.jhtml";
 		}
 	}
@@ -207,7 +207,7 @@ public class MessageController extends BaseController {
 	 */
 	@RequestMapping(value = "delete", method = RequestMethod.POST)
 	public @ResponseBody
-	com.openteach.openshop.server.biz.Message delete(Long id) {
+	com.openteach.openshop.server.service.Message delete(Long id) {
 		Member member = memberService.getCurrent();
 		messageService.delete(id, member);
 		return SUCCESS_MESSAGE;

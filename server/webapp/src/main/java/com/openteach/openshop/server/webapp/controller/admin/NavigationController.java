@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Navigation;
-import com.openteach.openshop.server.biz.entity.Navigation.Position;
-import com.openteach.openshop.server.biz.service.ArticleCategoryService;
-import com.openteach.openshop.server.biz.service.NavigationService;
-import com.openteach.openshop.server.biz.service.ProductCategoryService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Navigation;
+import com.openteach.openshop.server.service.entity.Navigation.Position;
+import com.openteach.openshop.server.service.service.ArticleCategoryService;
+import com.openteach.openshop.server.service.service.NavigationService;
+import com.openteach.openshop.server.service.service.ProductCategoryService;
 
 /**
  * Controller - 导航

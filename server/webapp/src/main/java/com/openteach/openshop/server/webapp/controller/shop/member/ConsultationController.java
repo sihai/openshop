@@ -12,10 +12,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.service.ConsultationService;
-import com.openteach.openshop.server.biz.service.MemberService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.service.ConsultationService;
+import com.openteach.openshop.server.service.service.MemberService;
 import com.openteach.openshop.server.webapp.controller.shop.BaseController;
 
 /**

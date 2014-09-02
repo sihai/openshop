@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Seo;
-import com.openteach.openshop.server.biz.service.SeoService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Seo;
+import com.openteach.openshop.server.service.service.SeoService;
 
 /**
  * Controller - SEO设置

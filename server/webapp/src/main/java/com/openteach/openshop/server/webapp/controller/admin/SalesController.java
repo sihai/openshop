@@ -19,7 +19,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.service.OrderService;
+import com.openteach.openshop.server.service.service.OrderService;
 
 /**
  * Controller - 销售统计

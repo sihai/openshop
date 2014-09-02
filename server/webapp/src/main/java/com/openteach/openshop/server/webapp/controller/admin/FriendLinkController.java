@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.FriendLink;
-import com.openteach.openshop.server.biz.entity.FriendLink.Type;
-import com.openteach.openshop.server.biz.service.FriendLinkService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.FriendLink;
+import com.openteach.openshop.server.service.entity.FriendLink.Type;
+import com.openteach.openshop.server.service.service.FriendLinkService;
 
 /**
  * Controller - 友情链接

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.entity.PluginConfig;
-import com.openteach.openshop.server.biz.service.PluginConfigService;
+import com.openteach.openshop.server.service.entity.PluginConfig;
+import com.openteach.openshop.server.service.service.PluginConfigService;
 import com.openteach.openshop.server.webapp.controller.admin.BaseController;
 
 /**

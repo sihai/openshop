@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.PaymentMethod;
-import com.openteach.openshop.server.biz.entity.ShippingMethod;
-import com.openteach.openshop.server.biz.entity.PaymentMethod.Method;
-import com.openteach.openshop.server.biz.service.PaymentMethodService;
-import com.openteach.openshop.server.biz.service.ShippingMethodService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.PaymentMethod;
+import com.openteach.openshop.server.service.entity.ShippingMethod;
+import com.openteach.openshop.server.service.entity.PaymentMethod.Method;
+import com.openteach.openshop.server.service.service.PaymentMethodService;
+import com.openteach.openshop.server.service.service.ShippingMethodService;
 
 /**
  * Controller - 支付方式

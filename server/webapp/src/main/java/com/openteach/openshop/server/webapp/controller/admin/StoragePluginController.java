@@ -12,7 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.service.PluginService;
+import com.openteach.openshop.server.service.service.PluginService;
 
 /**
  * Controller - 存储插件

@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Template;
-import com.openteach.openshop.server.biz.service.StaticService;
-import com.openteach.openshop.server.biz.service.TemplateService;
+import com.openteach.openshop.server.service.Template;
+import com.openteach.openshop.server.service.service.StaticService;
+import com.openteach.openshop.server.service.service.TemplateService;
 
 /**
  * Controller - Sitemap

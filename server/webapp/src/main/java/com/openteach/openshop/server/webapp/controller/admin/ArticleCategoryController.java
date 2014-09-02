@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.entity.Article;
-import com.openteach.openshop.server.biz.entity.ArticleCategory;
-import com.openteach.openshop.server.biz.service.ArticleCategoryService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.entity.Article;
+import com.openteach.openshop.server.service.entity.ArticleCategory;
+import com.openteach.openshop.server.service.service.ArticleCategoryService;
 
 /**
  * Controller - 文章分类

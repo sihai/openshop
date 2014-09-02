@@ -20,9 +20,9 @@ import com.aliyun.openservices.oss.model.ListObjectsRequest;
 import com.aliyun.openservices.oss.model.OSSObjectSummary;
 import com.aliyun.openservices.oss.model.ObjectListing;
 import com.aliyun.openservices.oss.model.ObjectMetadata;
-import com.openteach.openshop.server.biz.FileInfo;
-import com.openteach.openshop.server.biz.entity.PluginConfig;
-import com.openteach.openshop.server.biz.plugin.StoragePlugin;
+import com.openteach.openshop.server.service.FileInfo;
+import com.openteach.openshop.server.service.entity.PluginConfig;
+import com.openteach.openshop.server.service.plugin.StoragePlugin;
 
 /**
  * Plugin - 阿里云存储

@@ -12,13 +12,13 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.entity.DeliveryCenter;
-import com.openteach.openshop.server.biz.entity.DeliveryTemplate;
-import com.openteach.openshop.server.biz.entity.OrderItem;
-import com.openteach.openshop.server.biz.service.DeliveryCenterService;
-import com.openteach.openshop.server.biz.service.DeliveryTemplateService;
-import com.openteach.openshop.server.biz.service.OrderItemService;
-import com.openteach.openshop.server.biz.service.OrderService;
+import com.openteach.openshop.server.service.entity.DeliveryCenter;
+import com.openteach.openshop.server.service.entity.DeliveryTemplate;
+import com.openteach.openshop.server.service.entity.OrderItem;
+import com.openteach.openshop.server.service.service.DeliveryCenterService;
+import com.openteach.openshop.server.service.service.DeliveryTemplateService;
+import com.openteach.openshop.server.service.service.OrderItemService;
+import com.openteach.openshop.server.service.service.OrderService;
 
 /**
  * Controller - 打印

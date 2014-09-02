@@ -12,16 +12,16 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.service.ConsultationService;
-import com.openteach.openshop.server.biz.service.CouponCodeService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.MessageService;
-import com.openteach.openshop.server.biz.service.OrderService;
-import com.openteach.openshop.server.biz.service.ProductNotifyService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.service.ReviewService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.service.ConsultationService;
+import com.openteach.openshop.server.service.service.CouponCodeService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.MessageService;
+import com.openteach.openshop.server.service.service.OrderService;
+import com.openteach.openshop.server.service.service.ProductNotifyService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.service.ReviewService;
 import com.openteach.openshop.server.webapp.controller.shop.BaseController;
 
 /**

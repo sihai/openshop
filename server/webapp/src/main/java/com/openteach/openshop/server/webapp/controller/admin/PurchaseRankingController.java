@@ -16,7 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.service.MemberService;
+import com.openteach.openshop.server.service.service.MemberService;
 
 /**
  * Controller - 消费排行

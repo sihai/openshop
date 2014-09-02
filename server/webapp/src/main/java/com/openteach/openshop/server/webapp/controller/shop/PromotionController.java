@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.ResourceNotFoundException;
-import com.openteach.openshop.server.biz.entity.Promotion;
-import com.openteach.openshop.server.biz.service.PromotionService;
+import com.openteach.openshop.server.service.ResourceNotFoundException;
+import com.openteach.openshop.server.service.entity.Promotion;
+import com.openteach.openshop.server.service.service.PromotionService;
 
 /**
  * Controller - 促销

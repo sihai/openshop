@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "JSBridgeWebView.h"
 
-@interface MainViewController : UIViewController
-
-@property(strong, nonatomic) IBOutlet JSBridgeWebView* webView;
+@interface MainViewController : JSBridgeWebView
 
 @end

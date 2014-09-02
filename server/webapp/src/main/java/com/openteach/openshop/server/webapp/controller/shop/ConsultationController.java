@@ -17,20 +17,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.ResourceNotFoundException;
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.Setting.CaptchaType;
-import com.openteach.openshop.server.biz.Setting.ConsultationAuthority;
-import com.openteach.openshop.server.biz.entity.Consultation;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.Product;
-import com.openteach.openshop.server.biz.service.CaptchaService;
-import com.openteach.openshop.server.biz.service.ConsultationService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.ResourceNotFoundException;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.Setting.CaptchaType;
+import com.openteach.openshop.server.service.Setting.ConsultationAuthority;
+import com.openteach.openshop.server.service.entity.Consultation;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.Product;
+import com.openteach.openshop.server.service.service.CaptchaService;
+import com.openteach.openshop.server.service.service.ConsultationService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Controller - 咨询

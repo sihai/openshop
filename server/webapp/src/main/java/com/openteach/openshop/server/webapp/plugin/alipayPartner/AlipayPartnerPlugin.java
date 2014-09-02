@@ -21,12 +21,12 @@ import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.springframework.stereotype.Component;
 
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.entity.Order;
-import com.openteach.openshop.server.biz.entity.Payment;
-import com.openteach.openshop.server.biz.entity.PluginConfig;
-import com.openteach.openshop.server.biz.plugin.PaymentPlugin;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.entity.Order;
+import com.openteach.openshop.server.service.entity.Payment;
+import com.openteach.openshop.server.service.entity.PluginConfig;
+import com.openteach.openshop.server.service.plugin.PaymentPlugin;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Plugin - 支付宝(担保交易)

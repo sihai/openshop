@@ -20,24 +20,24 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.Order;
-import com.openteach.openshop.server.biz.entity.Payment;
-import com.openteach.openshop.server.biz.entity.PaymentMethod;
-import com.openteach.openshop.server.biz.entity.Sn;
-import com.openteach.openshop.server.biz.entity.Order.PaymentStatus;
-import com.openteach.openshop.server.biz.entity.Payment.Method;
-import com.openteach.openshop.server.biz.entity.Payment.Status;
-import com.openteach.openshop.server.biz.entity.Payment.Type;
-import com.openteach.openshop.server.biz.plugin.PaymentPlugin;
-import com.openteach.openshop.server.biz.plugin.PaymentPlugin.NotifyMethod;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.OrderService;
-import com.openteach.openshop.server.biz.service.PaymentService;
-import com.openteach.openshop.server.biz.service.PluginService;
-import com.openteach.openshop.server.biz.service.SnService;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.Order;
+import com.openteach.openshop.server.service.entity.Payment;
+import com.openteach.openshop.server.service.entity.PaymentMethod;
+import com.openteach.openshop.server.service.entity.Sn;
+import com.openteach.openshop.server.service.entity.Order.PaymentStatus;
+import com.openteach.openshop.server.service.entity.Payment.Method;
+import com.openteach.openshop.server.service.entity.Payment.Status;
+import com.openteach.openshop.server.service.entity.Payment.Type;
+import com.openteach.openshop.server.service.plugin.PaymentPlugin;
+import com.openteach.openshop.server.service.plugin.PaymentPlugin.NotifyMethod;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.OrderService;
+import com.openteach.openshop.server.service.service.PaymentService;
+import com.openteach.openshop.server.service.service.PluginService;
+import com.openteach.openshop.server.service.service.SnService;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Controller - 支付

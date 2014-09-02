@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.plugin.PaymentPlugin;
-import com.openteach.openshop.server.biz.service.DepositService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.PluginService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.plugin.PaymentPlugin;
+import com.openteach.openshop.server.service.service.DepositService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.PluginService;
 import com.openteach.openshop.server.webapp.controller.shop.BaseController;
 
 /**

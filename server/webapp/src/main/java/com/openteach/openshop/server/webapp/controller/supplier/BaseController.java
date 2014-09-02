@@ -20,13 +20,13 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.DateEditor;
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.entity.Log;
-import com.openteach.openshop.server.biz.template.directive.FlashMessageDirective;
-import com.openteach.openshop.server.biz.util.SettingUtils;
-import com.openteach.openshop.server.biz.util.SpringUtils;
+import com.openteach.openshop.server.service.DateEditor;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.entity.Log;
+import com.openteach.openshop.server.service.template.directive.FlashMessageDirective;
+import com.openteach.openshop.server.service.util.SettingUtils;
+import com.openteach.openshop.server.service.util.SpringUtils;
 
 /**
  * Controller - 基类

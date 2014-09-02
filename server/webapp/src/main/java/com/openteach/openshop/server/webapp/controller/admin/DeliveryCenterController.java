@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.DeliveryCenter;
-import com.openteach.openshop.server.biz.service.AreaService;
-import com.openteach.openshop.server.biz.service.DeliveryCenterService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.DeliveryCenter;
+import com.openteach.openshop.server.service.service.AreaService;
+import com.openteach.openshop.server.service.service.DeliveryCenterService;
 
 /**
  * Controller - 发货点

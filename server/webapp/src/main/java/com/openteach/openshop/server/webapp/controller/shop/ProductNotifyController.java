@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.Product;
-import com.openteach.openshop.server.biz.entity.ProductNotify;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.ProductNotifyService;
-import com.openteach.openshop.server.biz.service.ProductService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.Product;
+import com.openteach.openshop.server.service.entity.ProductNotify;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.ProductNotifyService;
+import com.openteach.openshop.server.service.service.ProductService;
 
 /**
  * Controller - 到货通知

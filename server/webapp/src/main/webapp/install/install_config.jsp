@@ -15,8 +15,8 @@
 <%@page import="org.dom4j.io.OutputFormat"%>
 <%@page import="org.dom4j.io.XMLWriter"%>
 <%@page import="org.dom4j.io.SAXReader"%>
-<%@page import="com.openteach.openshop.server.biz.CommonAttributes"%>
-<%@page import="com.openteach.openshop.server.biz.util.JsonUtils"%>
+<%@page import="com.openteach.openshop.server.service.CommonAttributes"%>
+<%@page import="com.openteach.openshop.server.service.JsonUtils"%>
 <%@include file="common.jsp"%>
 <%
 	Boolean isAgreeAgreement = (Boolean) session.getAttribute("isAgreeAgreement");

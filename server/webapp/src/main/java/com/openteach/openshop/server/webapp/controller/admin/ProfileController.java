@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.entity.Admin;
-import com.openteach.openshop.server.biz.service.AdminService;
+import com.openteach.openshop.server.service.entity.Admin;
+import com.openteach.openshop.server.service.service.AdminService;
 
 /**
  * Controller - 个人资料

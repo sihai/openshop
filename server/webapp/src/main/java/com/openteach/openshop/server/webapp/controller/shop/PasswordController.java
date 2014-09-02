@@ -20,16 +20,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.Setting.CaptchaType;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.SafeKey;
-import com.openteach.openshop.server.biz.entity.BaseEntity.Save;
-import com.openteach.openshop.server.biz.service.CaptchaService;
-import com.openteach.openshop.server.biz.service.MailService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.Setting.CaptchaType;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.SafeKey;
+import com.openteach.openshop.server.service.entity.BaseEntity.Save;
+import com.openteach.openshop.server.service.service.CaptchaService;
+import com.openteach.openshop.server.service.service.MailService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Controller - 密码

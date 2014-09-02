@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Admin;
-import com.openteach.openshop.server.biz.entity.Role;
-import com.openteach.openshop.server.biz.entity.BaseEntity.Save;
-import com.openteach.openshop.server.biz.service.AdminService;
-import com.openteach.openshop.server.biz.service.RoleService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Admin;
+import com.openteach.openshop.server.service.entity.BaseEntity.Save;
+import com.openteach.openshop.server.service.entity.Role;
+import com.openteach.openshop.server.service.service.AdminService;
+import com.openteach.openshop.server.service.service.RoleService;
 
 /**
  * Controller - 管理员

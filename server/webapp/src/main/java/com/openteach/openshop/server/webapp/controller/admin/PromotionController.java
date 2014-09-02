@@ -23,22 +23,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Brand;
-import com.openteach.openshop.server.biz.entity.Coupon;
-import com.openteach.openshop.server.biz.entity.GiftItem;
-import com.openteach.openshop.server.biz.entity.MemberRank;
-import com.openteach.openshop.server.biz.entity.Product;
-import com.openteach.openshop.server.biz.entity.ProductCategory;
-import com.openteach.openshop.server.biz.entity.Promotion;
-import com.openteach.openshop.server.biz.service.BrandService;
-import com.openteach.openshop.server.biz.service.CouponService;
-import com.openteach.openshop.server.biz.service.MemberRankService;
-import com.openteach.openshop.server.biz.service.ProductCategoryService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.service.PromotionService;
-import com.openteach.openshop.server.biz.util.FreemarkerUtils;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Brand;
+import com.openteach.openshop.server.service.entity.Coupon;
+import com.openteach.openshop.server.service.entity.GiftItem;
+import com.openteach.openshop.server.service.entity.MemberRank;
+import com.openteach.openshop.server.service.entity.Product;
+import com.openteach.openshop.server.service.entity.ProductCategory;
+import com.openteach.openshop.server.service.entity.Promotion;
+import com.openteach.openshop.server.service.service.BrandService;
+import com.openteach.openshop.server.service.service.CouponService;
+import com.openteach.openshop.server.service.service.MemberRankService;
+import com.openteach.openshop.server.service.service.ProductCategoryService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.service.PromotionService;
+import com.openteach.openshop.server.service.util.FreemarkerUtils;
 
 /**
  * Controller - 促销

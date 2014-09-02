@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>160E0F3C-C8CC-43E8-8DD6-A2D894E1A3BC</string>
+	<string>EB5EEC8B-5298-4B5B-BBA7-FDE233ABC22D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>openshop</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2B981368-7323-40B8-AA81-DFAC7A3457EB</key>
+		<key>BB46406A-1511-42A8-A08E-208D081072C9</key>
 		<string>https://github.com/sihai/openshop.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>client/ios/openshop/openshop.xcodeproj/project.xcworkspace</string>
+	<string>client/ios/openshop.bk3/openshop.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2B981368-7323-40B8-AA81-DFAC7A3457EB</key>
+		<key>BB46406A-1511-42A8-A08E-208D081072C9</key>
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2B981368-7323-40B8-AA81-DFAC7A3457EB</string>
+	<string>BB46406A-1511-42A8-A08E-208D081072C9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2B981368-7323-40B8-AA81-DFAC7A3457EB</string>
+			<string>BB46406A-1511-42A8-A08E-208D081072C9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>openshop</string>
 		</dict>

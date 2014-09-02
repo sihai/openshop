@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
-import com.openteach.openshop.server.biz.Template.Type;
-import com.openteach.openshop.server.biz.service.TemplateService;
+import com.openteach.openshop.server.service.Template.Type;
+import com.openteach.openshop.server.service.service.TemplateService;
 
 /**
  * Controller - 模板

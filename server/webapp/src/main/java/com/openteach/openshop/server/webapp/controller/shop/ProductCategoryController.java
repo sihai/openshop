@@ -12,7 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.service.ProductCategoryService;
+import com.openteach.openshop.server.service.service.ProductCategoryService;
 
 /**
  * Controller - 商品分类

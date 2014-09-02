@@ -17,10 +17,10 @@ import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.ServletContextAware;
 
-import com.openteach.openshop.server.biz.FileInfo;
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.plugin.StoragePlugin;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.FileInfo;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.plugin.StoragePlugin;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Plugin - 本地文件存储

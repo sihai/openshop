@@ -13,8 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.util.WebUtils;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.util.WebUtils;
 
 /**
  * Controller - 会员注销

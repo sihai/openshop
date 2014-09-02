@@ -20,9 +20,9 @@ import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
 import org.springframework.stereotype.Component;
 
-import com.openteach.openshop.server.biz.FileInfo;
-import com.openteach.openshop.server.biz.entity.PluginConfig;
-import com.openteach.openshop.server.biz.plugin.StoragePlugin;
+import com.openteach.openshop.server.service.FileInfo;
+import com.openteach.openshop.server.service.entity.PluginConfig;
+import com.openteach.openshop.server.service.plugin.StoragePlugin;
 
 /**
  * Plugin - FTP

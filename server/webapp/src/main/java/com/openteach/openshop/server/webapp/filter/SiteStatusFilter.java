@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Filter - 网站状态

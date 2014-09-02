@@ -1,0 +1,31 @@
+PODS:
+  - ASIHTTPRequest (1.8.2):
+    - ASIHTTPRequest/ASIWebPageRequest
+    - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/Core
+    - ASIHTTPRequest/S3
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/CloudFiles (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.2):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.2):
+    - ASIHTTPRequest/Core
+  - JSONKit (1.6-marcDown)
+  - Reachability (3.1.1)
+  - RegexKitLite (4.0)
+
+DEPENDENCIES:
+  - ASIHTTPRequest (~> 1.8.2)
+  - JSONKit (~> 1.6-marcDown)
+  - Reachability (~> 3.1.1)
+  - RegexKitLite (~> 4.0)
+
+SPEC CHECKSUMS:
+  ASIHTTPRequest: 4bd3ed65bf8a726292c5fa79ea5c0a2e02c97241
+  JSONKit: e001b91b903dec38cdd3c1124bfe3ac7c32ac777
+  Reachability: 71582d378b50f6869f30f92991a0e4ff574c5cf9
+  RegexKitLite: 995946b619a6d85d894e0df49347000a7279a4a7
+
+COCOAPODS: 0.33.1

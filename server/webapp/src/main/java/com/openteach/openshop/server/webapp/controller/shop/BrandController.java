@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.ResourceNotFoundException;
-import com.openteach.openshop.server.biz.entity.Brand;
-import com.openteach.openshop.server.biz.service.BrandService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.ResourceNotFoundException;
+import com.openteach.openshop.server.service.entity.Brand;
+import com.openteach.openshop.server.service.service.BrandService;
 
 /**
  * Controller - 品牌

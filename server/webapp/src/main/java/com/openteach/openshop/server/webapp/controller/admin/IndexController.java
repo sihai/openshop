@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.entity.Article;
-import com.openteach.openshop.server.biz.entity.Product;
-import com.openteach.openshop.server.biz.service.ArticleService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.service.SearchService;
+import com.openteach.openshop.server.service.entity.Article;
+import com.openteach.openshop.server.service.entity.Product;
+import com.openteach.openshop.server.service.service.ArticleService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.service.SearchService;
 
 /**
  * Controller - 索引

@@ -17,24 +17,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Filter;
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.OrderItem;
-import com.openteach.openshop.server.biz.entity.PlatformPayment;
-import com.openteach.openshop.server.biz.entity.Supplier;
-import com.openteach.openshop.server.biz.entity.Order.OrderStatus;
-import com.openteach.openshop.server.biz.entity.Order.PaymentStatus;
-import com.openteach.openshop.server.biz.entity.Order.ShippingStatus;
-import com.openteach.openshop.server.biz.entity.OrderItem.PlatformPaymentStatus;
-import com.openteach.openshop.server.biz.entity.Supplier.Level;
-import com.openteach.openshop.server.biz.service.AdminService;
-import com.openteach.openshop.server.biz.service.MessageService;
-import com.openteach.openshop.server.biz.service.OrderItemService;
-import com.openteach.openshop.server.biz.service.PlatformPaymentService;
-import com.openteach.openshop.server.biz.service.ProductService;
-import com.openteach.openshop.server.biz.service.RoleService;
-import com.openteach.openshop.server.biz.service.SupplierService;
+import com.openteach.openshop.server.service.Filter;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.OrderItem;
+import com.openteach.openshop.server.service.entity.PlatformPayment;
+import com.openteach.openshop.server.service.entity.Supplier;
+import com.openteach.openshop.server.service.entity.Order.OrderStatus;
+import com.openteach.openshop.server.service.entity.Order.PaymentStatus;
+import com.openteach.openshop.server.service.entity.Order.ShippingStatus;
+import com.openteach.openshop.server.service.entity.OrderItem.PlatformPaymentStatus;
+import com.openteach.openshop.server.service.entity.Supplier.Level;
+import com.openteach.openshop.server.service.service.AdminService;
+import com.openteach.openshop.server.service.service.MessageService;
+import com.openteach.openshop.server.service.service.OrderItemService;
+import com.openteach.openshop.server.service.service.PlatformPaymentService;
+import com.openteach.openshop.server.service.service.ProductService;
+import com.openteach.openshop.server.service.service.RoleService;
+import com.openteach.openshop.server.service.service.SupplierService;
 
 /**
  * 供应商

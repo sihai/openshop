@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505FE9AC1EF84674A2205BC0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052F6A6825374252A3C0AECC /* libPods.a */; };
 		8F6F1414199BC84B00299551 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F1413199BC84B00299551 /* Foundation.framework */; };
 		8F6F1416199BC84B00299551 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F1415199BC84B00299551 /* CoreGraphics.framework */; };
 		8F6F1418199BC84B00299551 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6F1417199BC84B00299551 /* UIKit.framework */; };
@@ -36,7 +37,7 @@
 		8F6F1487199BC8EC00299551 /* others_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1478199BC8EC00299551 /* others_32x32.png */; };
 		8F6F1488199BC8EC00299551 /* shoes_25x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1479199BC8EC00299551 /* shoes_25x25.png */; };
 		8F6F1489199BC8EC00299551 /* shoes_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F147A199BC8EC00299551 /* shoes_32x32.png */; };
-		8F6F148C199BC8FF00299551 /* JSBridgeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F148B199BC8FF00299551 /* JSBridgeWebView.m */; };
+		8F6F148C199BC8FF00299551 /* JSBridgeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F148B199BC8FF00299551 /* JSBridgeWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8F6F148E199BCA1A00299551 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F148D199BCA1A00299551 /* main.html */; };
 		8F6F1492199BCDB700299551 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F1491199BCDB700299551 /* User.m */; };
 		8F6F1496199BD63000299551 /* flexslider.css in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1494199BD63000299551 /* flexslider.css */; };
@@ -46,6 +47,21 @@
 		8F6F149F199BD74700299551 /* jquery.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F149B199BD74700299551 /* jquery.min.js */; };
 		8F6F14A0199BD74700299551 /* site.js in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F149C199BD74700299551 /* site.js */; };
 		8F6F14A2199C973A00299551 /* jsbridge.js in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F14A1199C973A00299551 /* jsbridge.js */; };
+		8F6F14A5199CF99300299551 /* JSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F14A4199CF99300299551 /* JSBridge.m */; };
+		8F6F14A7199D0DE800299551 /* main.js in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F14A6199D0DE800299551 /* main.js */; };
+		8F6F14A8199D249600299551 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F14A6199D0DE800299551 /* main.js */; };
+		8F6F14A9199D24AB00299551 /* jquery-ui-1.8.16.custom.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F1499199BD74700299551 /* jquery-ui-1.8.16.custom.min.js */; };
+		8F6F14AA199D24AB00299551 /* jquery.flexslider.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F149A199BD74700299551 /* jquery.flexslider.js */; };
+		8F6F14AB199D24AB00299551 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F149B199BD74700299551 /* jquery.min.js */; };
+		8F6F14AC199D24AB00299551 /* site.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F149C199BD74700299551 /* site.js */; };
+		8F6F14AD199D24AB00299551 /* jsbridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F14A1199C973A00299551 /* jsbridge.js */; };
+		8F77154519AAAC670080AC91 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F77154419AAAC670080AC91 /* HttpClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8F77154819AAB0080080AC91 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F77154719AAB0080080AC91 /* HttpRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8F77154D19AF2A2E0080AC91 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F77154C19AF2A2E0080AC91 /* DeviceUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8FDD528319A9D99300F264FF /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD528219A9D99300F264FF /* ApiClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8FDD528619A9DBB600F264FF /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD528519A9DBB600F264FF /* ApiRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8FDD528919A9DBC800F264FF /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD528819A9DBC800F264FF /* ApiResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8FDD528C19A9DE2900F264FF /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDD528B19A9DE2900F264FF /* Configuration.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052F6A6825374252A3C0AECC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6F1410199BC84B00299551 /* openshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6F1413199BC84B00299551 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F6F1415199BC84B00299551 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,6 +122,26 @@
 		8F6F149B199BD74700299551 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
 		8F6F149C199BD74700299551 /* site.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = site.js; sourceTree = "<group>"; };
 		8F6F14A1199C973A00299551 /* jsbridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsbridge.js; sourceTree = "<group>"; };
+		8F6F14A3199CF99300299551 /* JSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBridge.h; sourceTree = "<group>"; };
+		8F6F14A4199CF99300299551 /* JSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBridge.m; sourceTree = "<group>"; };
+		8F6F14A6199D0DE800299551 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		8F77154319AAAC670080AC91 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		8F77154419AAAC670080AC91 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		8F77154619AAB0080080AC91 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		8F77154719AAB0080080AC91 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		8F77154919AAB1A00080AC91 /* HttpRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequestDelegate.h; sourceTree = "<group>"; };
+		8F77154B19AF2A2E0080AC91 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
+		8F77154C19AF2A2E0080AC91 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
+		8FDD528119A9D99300F264FF /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		8FDD528219A9D99300F264FF /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		8FDD528419A9DBB600F264FF /* ApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiRequest.h; sourceTree = "<group>"; };
+		8FDD528519A9DBB600F264FF /* ApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiRequest.m; sourceTree = "<group>"; };
+		8FDD528719A9DBC800F264FF /* ApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiResponse.h; sourceTree = "<group>"; };
+		8FDD528819A9DBC800F264FF /* ApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiResponse.m; sourceTree = "<group>"; };
+		8FDD528A19A9DE2900F264FF /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		8FDD528B19A9DE2900F264FF /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		8FDD528D19A9E77600F264FF /* ApiRequestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiRequestDelegate.h; sourceTree = "<group>"; };
+		F6FCFF0CEC224AC798730626 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +152,7 @@
 				8F6F1416199BC84B00299551 /* CoreGraphics.framework in Frameworks */,
 				8F6F1418199BC84B00299551 /* UIKit.framework in Frameworks */,
 				8F6F1414199BC84B00299551 /* Foundation.framework in Frameworks */,
+				505FE9AC1EF84674A2205BC0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +176,7 @@
 				8F6F1438199BC84B00299551 /* openshopTests */,
 				8F6F1412199BC84B00299551 /* Frameworks */,
 				8F6F1411199BC84B00299551 /* Products */,
+				F6FCFF0CEC224AC798730626 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +196,7 @@
 				8F6F1415199BC84B00299551 /* CoreGraphics.framework */,
 				8F6F1417199BC84B00299551 /* UIKit.framework */,
 				8F6F1432199BC84B00299551 /* XCTest.framework */,
+				052F6A6825374252A3C0AECC /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,6 +204,9 @@
 		8F6F1419199BC84B00299551 /* openshop */ = {
 			isa = PBXGroup;
 			children = (
+				8F77154A19AF2A150080AC91 /* utils */,
+				8F77154119AAABE40080AC91 /* network */,
+				8FDD528019A9D94A00F264FF /* api */,
 				8F6F148F199BCD6900299551 /* entity */,
 				8F6F148A199BC8FF00299551 /* JSBridgeWebView.h */,
 				8F6F148B199BC8FF00299551 /* JSBridgeWebView.m */,
@@ -174,6 +217,8 @@
 				8F6F1429199BC84B00299551 /* MainViewController.m */,
 				8F6F142B199BC84B00299551 /* Images.xcassets */,
 				8F6F141A199BC84B00299551 /* Supporting Files */,
+				8F6F14A3199CF99300299551 /* JSBridge.h */,
+				8F6F14A4199CF99300299551 /* JSBridge.m */,
 			);
 			path = openshop;
 			sourceTree = "<group>";
@@ -270,6 +315,7 @@
 		8F6F1498199BD67100299551 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				8F6F14A6199D0DE800299551 /* main.js */,
 				8F6F1499199BD74700299551 /* jquery-ui-1.8.16.custom.min.js */,
 				8F6F149A199BD74700299551 /* jquery.flexslider.js */,
 				8F6F149B199BD74700299551 /* jquery.min.js */,
@@ -279,6 +325,51 @@
 			path = js;
 			sourceTree = "<group>";
 		};
+		8F77154119AAABE40080AC91 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				8F77154219AAABF10080AC91 /* http */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		8F77154219AAABF10080AC91 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				8F77154319AAAC670080AC91 /* HttpClient.h */,
+				8F77154419AAAC670080AC91 /* HttpClient.m */,
+				8F77154619AAB0080080AC91 /* HttpRequest.h */,
+				8F77154719AAB0080080AC91 /* HttpRequest.m */,
+				8F77154919AAB1A00080AC91 /* HttpRequestDelegate.h */,
+			);
+			name = http;
+			sourceTree = "<group>";
+		};
+		8F77154A19AF2A150080AC91 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F77154B19AF2A2E0080AC91 /* DeviceUtils.h */,
+				8F77154C19AF2A2E0080AC91 /* DeviceUtils.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		8FDD528019A9D94A00F264FF /* api */ = {
+			isa = PBXGroup;
+			children = (
+				8FDD528119A9D99300F264FF /* ApiClient.h */,
+				8FDD528219A9D99300F264FF /* ApiClient.m */,
+				8FDD528419A9DBB600F264FF /* ApiRequest.h */,
+				8FDD528519A9DBB600F264FF /* ApiRequest.m */,
+				8FDD528719A9DBC800F264FF /* ApiResponse.h */,
+				8FDD528819A9DBC800F264FF /* ApiResponse.m */,
+				8FDD528A19A9DE2900F264FF /* Configuration.h */,
+				8FDD528B19A9DE2900F264FF /* Configuration.m */,
+				8FDD528D19A9E77600F264FF /* ApiRequestDelegate.h */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,9 +377,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F6F1442199BC84B00299551 /* Build configuration list for PBXNativeTarget "openshop" */;
 			buildPhases = (
+				F081646887664B5991A5CAB6 /* Check Pods Manifest.lock */,
 				8F6F140C199BC84B00299551 /* Sources */,
 				8F6F140D199BC84B00299551 /* Frameworks */,
 				8F6F140E199BC84B00299551 /* Resources */,
+				3C28BD01752449E586570F01 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,6 +448,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6F14A9199D24AB00299551 /* jquery-ui-1.8.16.custom.min.js in Resources */,
+				8F6F14AA199D24AB00299551 /* jquery.flexslider.js in Resources */,
+				8F6F14AB199D24AB00299551 /* jquery.min.js in Resources */,
+				8F6F14AC199D24AB00299551 /* site.js in Resources */,
+				8F6F14AD199D24AB00299551 /* jsbridge.js in Resources */,
+				8F6F14A8199D249600299551 /* main.js in Resources */,
 				8F6F1484199BC8EC00299551 /* more_25x25.png in Resources */,
 				8F6F148E199BCA1A00299551 /* main.html in Resources */,
 				8F6F147B199BC8EC00299551 /* list.html in Resources */,
@@ -389,21 +488,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C28BD01752449E586570F01 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F081646887664B5991A5CAB6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F6F140C199BC84B00299551 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FDD528319A9D99300F264FF /* ApiClient.m in Sources */,
+				8F77154819AAB0080080AC91 /* HttpRequest.m in Sources */,
 				8F6F14A2199C973A00299551 /* jsbridge.js in Sources */,
+				8FDD528C19A9DE2900F264FF /* Configuration.m in Sources */,
 				8F6F1492199BCDB700299551 /* User.m in Sources */,
 				8F6F142A199BC84B00299551 /* MainViewController.m in Sources */,
+				8F6F14A7199D0DE800299551 /* main.js in Sources */,
 				8F6F149F199BD74700299551 /* jquery.min.js in Sources */,
 				8F6F1424199BC84B00299551 /* AppDelegate.m in Sources */,
+				8F77154D19AF2A2E0080AC91 /* DeviceUtils.m in Sources */,
 				8F6F149E199BD74700299551 /* jquery.flexslider.js in Sources */,
 				8F6F1420199BC84B00299551 /* main.m in Sources */,
 				8F6F14A0199BD74700299551 /* site.js in Sources */,
 				8F6F149D199BD74700299551 /* jquery-ui-1.8.16.custom.min.js in Sources */,
+				8F6F14A5199CF99300299551 /* JSBridge.m in Sources */,
+				8FDD528919A9DBC800F264FF /* ApiResponse.m in Sources */,
 				8F6F148C199BC8FF00299551 /* JSBridgeWebView.m in Sources */,
+				8FDD528619A9DBB600F264FF /* ApiRequest.m in Sources */,
+				8F77154519AAAC670080AC91 /* HttpClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +666,7 @@
 		};
 		8F6F1443199BC84B00299551 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6FCFF0CEC224AC798730626 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -538,6 +680,7 @@
 		};
 		8F6F1444199BC84B00299551 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6FCFF0CEC224AC798730626 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -608,6 +751,7 @@
 				8F6F1444199BC84B00299551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F6F1445199BC84B00299551 /* Build configuration list for PBXNativeTarget "openshopTests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +760,7 @@
 				8F6F1447199BC84B00299551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

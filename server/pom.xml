@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.openteach.openshop</groupId>
+	<groupId>com.openteach.openshop.server</groupId>
 	<artifactId>server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -9,13 +9,15 @@
 	<url>http://www.openteach.com</url>
 	
 	<modules>
+		<module>service</module>
+		<module>api</module>
 		<module>biz</module>
 		<module>webapp</module>
 	</modules>
   
 	<properties>
-    		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    		<java.version>1.6</java.version>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<java.version>1.6</java.version>
 		<java.encoding>UTF-8</java.encoding>
 		<org.springframework.version>3.2.2.RELEASE</org.springframework.version>
 		<ibatis.version>2.3.0</ibatis.version>
@@ -34,6 +36,7 @@
 		<lucene-analyzers.version>3.5.0</lucene-analyzers.version>
 		<matrix.version>0.0.1-SNAPSHOT</matrix.version>
 		<sox.version>0.0.1-SNAPSHOT</sox.version>
+		<fastjson.version>1.1.15</fastjson.version>
 		<downloadSources>true</downloadSources>
 	</properties>
   
@@ -53,11 +56,20 @@
 				<version>${org.springframework.version}</version>
 				<scope>test</scope>
 			</dependency>
-			
+			<dependency>
+                                <groupId>${project.groupId}</groupId>
+                                <artifactId>service</artifactId>
+                                <version>${project.version}</version>
+                        </dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>biz</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+                                <artifactId>api</artifactId>
+                                <version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-lang</groupId>
@@ -143,7 +155,7 @@
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
-				<version>2.5</version>
+				<version>3.0</version>
 				<scope>provided</scope>
 			</dependency>
 			
@@ -158,6 +170,11 @@
 			    <artifactId>json-lib</artifactId>  
 			    <version>2.4</version>  
 			    <classifier>jdk15</classifier>  
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
 			</dependency>
 			<dependency>
 			    <groupId>org.apache.velocity</groupId>
@@ -295,12 +312,6 @@
 			<dependency>
 				<groupId>org.apache.shiro</groupId>
 				<artifactId>shiro-web</artifactId>
-				<version>1.2.2</version>
-			</dependency>
-            
-            <dependency>
-				<groupId>org.apache.shiro</groupId>
-				<artifactId>shiro-spring</artifactId>
 				<version>1.2.2</version>
 			</dependency>
 			

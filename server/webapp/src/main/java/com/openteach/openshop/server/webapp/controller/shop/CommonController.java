@@ -6,7 +6,6 @@
 package com.openteach.openshop.server.webapp.controller.shop;
 
 import java.awt.image.BufferedImage;
-import java.security.interfaces.RSAPublicKey;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +17,6 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -26,12 +24,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.entity.Area;
-import com.openteach.openshop.server.biz.service.AreaService;
-import com.openteach.openshop.server.biz.service.CaptchaService;
-import com.openteach.openshop.server.biz.service.RSAService;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.biz.SecurityBO;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.entity.Area;
+import com.openteach.openshop.server.service.service.AreaService;
+import com.openteach.openshop.server.service.service.CaptchaService;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Controller - 共用
@@ -43,12 +41,12 @@ import com.openteach.openshop.server.biz.util.SettingUtils;
 @RequestMapping("/common")
 public class CommonController {
 
-	@Resource(name = "rsaServiceImpl")
-	private RSAService rsaService;
 	@Resource(name = "areaServiceImpl")
 	private AreaService areaService;
 	@Resource(name = "captchaServiceImpl")
 	private CaptchaService captchaService;
+	@Resource(name = "securityBO")
+	private SecurityBO securityBO;
 
 	/**
 	 * 网站关闭
@@ -69,11 +67,7 @@ public class CommonController {
 	@RequestMapping(value = "/public_key", method = RequestMethod.GET)
 	public @ResponseBody
 	Map<String, String> publicKey(HttpServletRequest request) {
-		RSAPublicKey publicKey = rsaService.generateKey(request);
-		Map<String, String> data = new HashMap<String, String>();
-		data.put("modulus", Base64.encodeBase64String(publicKey.getModulus().toByteArray()));
-		data.put("exponent", Base64.encodeBase64String(publicKey.getPublicExponent().toByteArray()));
-		return data;
+		return securityBO.allocPublicKey(request);
 	}
 
 	/**

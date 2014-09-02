@@ -25,22 +25,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.CommonAttributes;
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.Setting;
-import com.openteach.openshop.server.biz.entity.Area;
-import com.openteach.openshop.server.biz.entity.Member;
-import com.openteach.openshop.server.biz.entity.MemberAttribute;
-import com.openteach.openshop.server.biz.entity.BaseEntity.Save;
-import com.openteach.openshop.server.biz.entity.Member.Gender;
-import com.openteach.openshop.server.biz.entity.MemberAttribute.Type;
-import com.openteach.openshop.server.biz.service.AdminService;
-import com.openteach.openshop.server.biz.service.AreaService;
-import com.openteach.openshop.server.biz.service.MemberAttributeService;
-import com.openteach.openshop.server.biz.service.MemberRankService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.util.SettingUtils;
+import com.openteach.openshop.server.service.CommonAttributes;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.entity.Area;
+import com.openteach.openshop.server.service.entity.Member;
+import com.openteach.openshop.server.service.entity.MemberAttribute;
+import com.openteach.openshop.server.service.entity.BaseEntity.Save;
+import com.openteach.openshop.server.service.entity.Member.Gender;
+import com.openteach.openshop.server.service.entity.MemberAttribute.Type;
+import com.openteach.openshop.server.service.service.AdminService;
+import com.openteach.openshop.server.service.service.AreaService;
+import com.openteach.openshop.server.service.service.MemberAttributeService;
+import com.openteach.openshop.server.service.service.MemberRankService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * Controller - 会员

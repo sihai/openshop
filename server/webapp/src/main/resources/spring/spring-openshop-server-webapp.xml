@@ -5,7 +5,11 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
 	default-lazy-init="true">
-
+	
+	<context:property-placeholder location="classpath*:/openshop.properties" ignore-resource-not-found="true" ignore-unresolvable="true" />
+	
+	<import resource="classpath*:/spring/spring-openshop-server-service.xml" />
+	<import resource="classpath*:/spring/spring-openshop-server-api.xml" />
 	<import resource="classpath*:/spring/spring-openshop-server-biz.xml" />
 	
 	<context:component-scan base-package="com.openteach.openshop.server.webapp" use-default-filters="false">
@@ -20,16 +24,17 @@
 			<mvc:mapping path="/order/**" />
 			<mvc:mapping path="/member/**" />
 			<mvc:mapping path="/cart/list.jhtml" />
-			<bean id="memberInterceptor" class="com.openteach.openshop.server.biz.interceptor.MemberInterceptor" />
+			<bean id="memberInterceptor" class="com.openteach.openshop.server.service.interceptor.MemberInterceptor" />
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<mvc:exclude-mapping path="/payment/**" />
-			<bean id="tokenInterceptor" class="com.openteach.openshop.server.biz.interceptor.TokenInterceptor" />
+			<mvc:exclude-mapping path="/api/**" />
+			<bean id="tokenInterceptor" class="com.openteach.openshop.server.service.interceptor.TokenInterceptor" />
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/**" />
-			<bean id="executeTimeInterceptor" class="com.openteach.openshop.server.biz.interceptor.ExecuteTimeInterceptor" />
+			<bean id="executeTimeInterceptor" class="com.openteach.openshop.server.service.interceptor.ExecuteTimeInterceptor" />
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/**" />
@@ -39,23 +44,22 @@
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
+			<!--
+			<mvc:exclude-mapping path="/api/**" />
+			-->
 			<bean id="openSessionInViewInterceptor" class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor">
 				<property name="entityManagerFactory" ref="entityManagerFactory" />
 			</bean>
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/**" />
-			<bean id="listInterceptor" class="com.openteach.openshop.server.biz.interceptor.ListInterceptor" />
+			<bean id="listInterceptor" class="com.openteach.openshop.server.service.interceptor.ListInterceptor" />
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/admin/**" />
-			<bean id="logInterceptor" class="com.openteach.openshop.server.biz.interceptor.LogInterceptor" />
+			<bean id="logInterceptor" class="com.openteach.openshop.server.service.interceptor.LogInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
-
-	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-		<property name="validationMessageSource" ref="messageSource" />
-	</bean>
 
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
 		<property name="contentType" value="text/html; charset=UTF-8" />

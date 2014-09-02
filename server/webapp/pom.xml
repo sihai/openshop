@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.openteach.openshop</groupId>
+		<groupId>com.openteach.openshop.server</groupId>
 		<artifactId>server</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
@@ -14,9 +14,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.openteach.openshop</groupId>
+			<groupId>com.openteach.openshop.server</groupId>
 			<artifactId>biz</artifactId>
 		</dependency>
+		<dependency>
+             <groupId>com.openteach.openshop.server</groupId>
+             <artifactId>api</artifactId>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>

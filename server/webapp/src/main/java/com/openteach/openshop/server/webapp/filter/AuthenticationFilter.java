@@ -5,14 +5,11 @@
  */
 package com.openteach.openshop.server.webapp.filter;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import javax.annotation.Resource;
-import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -20,16 +17,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.shiro.authz.UnauthenticatedException;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
 import org.apache.shiro.web.util.WebUtils;
 
-import com.openteach.openshop.server.biz.AuthenticationToken;
-import com.openteach.openshop.server.biz.Principal;
-import com.openteach.openshop.server.biz.AuthenticationToken.TokenType;
-import com.openteach.openshop.server.biz.service.RSAService;
+import com.openteach.openshop.server.api.security.RSAUtils;
+import com.openteach.openshop.server.service.AuthenticationToken;
+import com.openteach.openshop.server.service.AuthenticationToken.TokenType;
+import com.openteach.openshop.server.service.Principal;
 
 /**
  * Filter - 权限认证
@@ -58,9 +54,6 @@ public class AuthenticationFilter extends FormAuthenticationFilter {
 
 	/** "验证码"参数名称 */
 	private String captchaParam = DEFAULT_CAPTCHA_PARAM;
-
-	@Resource(name = "rsaServiceImpl")
-	private RSAService rsaService;
 	
 	private TokenType tokenType = TokenType.ADMIN;
 	
@@ -129,8 +122,8 @@ public class AuthenticationFilter extends FormAuthenticationFilter {
 	@Override
 	protected String getPassword(ServletRequest servletRequest) {
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
-		String password = rsaService.decryptParameter(enPasswordParam, request);
-		rsaService.removePrivateKey(request);
+		String password = RSAUtils.decryptParameter(enPasswordParam, request);
+		RSAUtils.removePrivateKey(request);
 		return password;
 	}
 

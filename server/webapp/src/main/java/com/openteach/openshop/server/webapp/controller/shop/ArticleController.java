@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.ResourceNotFoundException;
-import com.openteach.openshop.server.biz.entity.ArticleCategory;
-import com.openteach.openshop.server.biz.service.ArticleCategoryService;
-import com.openteach.openshop.server.biz.service.ArticleService;
-import com.openteach.openshop.server.biz.service.SearchService;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.ResourceNotFoundException;
+import com.openteach.openshop.server.service.entity.ArticleCategory;
+import com.openteach.openshop.server.service.service.ArticleCategoryService;
+import com.openteach.openshop.server.service.service.ArticleService;
+import com.openteach.openshop.server.service.service.SearchService;
 
 /**
  * Controller - 文章

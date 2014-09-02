@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Specification;
-import com.openteach.openshop.server.biz.entity.SpecificationValue;
-import com.openteach.openshop.server.biz.entity.Specification.Type;
-import com.openteach.openshop.server.biz.service.SpecificationService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Specification;
+import com.openteach.openshop.server.service.entity.SpecificationValue;
+import com.openteach.openshop.server.service.entity.Specification.Type;
+import com.openteach.openshop.server.service.service.SpecificationService;
 
 /**
  * Controller - 规格

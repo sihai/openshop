@@ -16,10 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
-import com.openteach.openshop.server.biz.entity.Payment;
-import com.openteach.openshop.server.biz.entity.PluginConfig;
-import com.openteach.openshop.server.biz.plugin.PaymentPlugin;
-import com.openteach.openshop.server.biz.util.WebUtils;
+import com.openteach.openshop.server.service.entity.Payment;
+import com.openteach.openshop.server.service.entity.PluginConfig;
+import com.openteach.openshop.server.service.plugin.PaymentPlugin;
+import com.openteach.openshop.server.service.util.WebUtils;
 
 /**
  * Plugin - 易宝支付

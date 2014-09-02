@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
 	<display-name>openshop</display-name>
 	<description>openshop V1.0</description>
@@ -24,6 +24,7 @@
 			<param-name>forceEncoding</param-name>
 			<param-value>true</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -37,26 +38,31 @@
 			<param-name>toEncoding</param-name>
 			<param-value>UTF-8</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
 		<filter-name>siteStatusFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
 		<filter-name>accessDeniedFilter</filter-name>
 		<filter-class>com.openteach.openshop.server.webapp.filter.AccessDeniedFilter</filter-class>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
 		<filter-name>adminShiroFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<async-supported>true</async-supported>
 	</filter>
 	
 	<filter>
 		<filter-name>supplierShiroFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -66,6 +72,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>area</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -75,6 +82,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>article</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -84,6 +92,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>product</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -93,6 +102,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>brand</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -102,6 +112,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>promotion</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -111,6 +122,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>review</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -120,6 +132,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>consultation</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -129,6 +142,7 @@
 			<param-name>cacheName</param-name>
 			<param-value>friendLink</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
@@ -138,11 +152,19 @@
 			<param-name>cacheName</param-name>
 			<param-value>productCategory</param-value>
 		</init-param>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter>
 		<filter-name>compressingFilter</filter-name>
 		<filter-class>com.planetj.servlet.filter.compression.CompressingFilter</filter-class>
+		<async-supported>true</async-supported>
+	</filter>
+	
+	<filter>
+		<filter-name>requestContextFilter</filter-name>
+		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+		<async-supported>true</async-supported>
 	</filter>
 
 	<filter-mapping>
@@ -295,6 +317,11 @@
 		<filter-name>compressingFilter</filter-name>
 		<url-pattern>*.jhtml</url-pattern>
 	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>requestContextFilter</filter-name>
+		<url-pattern>/api/*.jhtml</url-pattern>
+	</filter-mapping>
 
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
@@ -304,6 +331,7 @@
 			<param-value>classpath*:/spring/spring-openshop-server-webapp.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
+		<async-supported>true</async-supported>
 	</servlet>
 
 	<servlet-mapping>
@@ -311,6 +339,10 @@
 		<url-pattern>*.jhtml</url-pattern>
 	</servlet-mapping>
 
+	<listener>
+    	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+   	</listener>
+   
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>

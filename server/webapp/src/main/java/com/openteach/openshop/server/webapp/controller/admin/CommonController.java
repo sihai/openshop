@@ -29,13 +29,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.ServletContextAware;
 
-import com.openteach.openshop.server.biz.entity.Area;
-import com.openteach.openshop.server.biz.service.AreaService;
-import com.openteach.openshop.server.biz.service.CaptchaService;
-import com.openteach.openshop.server.biz.service.MemberService;
-import com.openteach.openshop.server.biz.service.MessageService;
-import com.openteach.openshop.server.biz.service.OrderService;
-import com.openteach.openshop.server.biz.service.ProductService;
+import com.openteach.openshop.server.service.entity.Area;
+import com.openteach.openshop.server.service.service.AreaService;
+import com.openteach.openshop.server.service.service.CaptchaService;
+import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.MessageService;
+import com.openteach.openshop.server.service.service.OrderService;
+import com.openteach.openshop.server.service.service.ProductService;
 
 /**
  * Controller - 共用

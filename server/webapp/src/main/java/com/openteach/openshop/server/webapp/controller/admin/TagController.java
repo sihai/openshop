@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.Pageable;
-import com.openteach.openshop.server.biz.entity.Tag;
-import com.openteach.openshop.server.biz.entity.BaseEntity.Save;
-import com.openteach.openshop.server.biz.entity.Tag.Type;
-import com.openteach.openshop.server.biz.service.TagService;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Pageable;
+import com.openteach.openshop.server.service.entity.Tag;
+import com.openteach.openshop.server.service.entity.BaseEntity.Save;
+import com.openteach.openshop.server.service.entity.Tag.Type;
+import com.openteach.openshop.server.service.service.TagService;
 
 /**
  * Controller - 标签

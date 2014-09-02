@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.openteach.openshop.server.biz.FileInfo;
-import com.openteach.openshop.server.biz.Message;
-import com.openteach.openshop.server.biz.FileInfo.FileType;
-import com.openteach.openshop.server.biz.FileInfo.OrderType;
-import com.openteach.openshop.server.biz.service.FileService;
-import com.openteach.openshop.server.biz.util.JsonUtils;
+import com.openteach.openshop.server.service.FileInfo;
+import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.FileInfo.FileType;
+import com.openteach.openshop.server.service.FileInfo.OrderType;
+import com.openteach.openshop.server.service.service.FileService;
+import com.openteach.openshop.server.service.util.JsonUtils;
 
 /**
  * Controller - 文件处理
