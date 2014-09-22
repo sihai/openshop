@@ -13,7 +13,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.AreaDao;
+import com.openteach.openshop.server.service.dao.AreaDAO;
 import com.openteach.openshop.server.service.entity.Area;
 import com.openteach.openshop.server.service.service.AreaService;
 
@@ -27,10 +27,10 @@ import com.openteach.openshop.server.service.service.AreaService;
 public class AreaServiceImpl extends BaseServiceImpl<Area, Long> implements AreaService {
 
 	@Resource(name = "areaDaoImpl")
-	private AreaDao areaDao;
+	private AreaDAO areaDao;
 
 	@Resource(name = "areaDaoImpl")
-	public void setBaseDao(AreaDao areaDao) {
+	public void setBaseDao(AreaDAO areaDao) {
 		super.setBaseDao(areaDao);
 	}
 

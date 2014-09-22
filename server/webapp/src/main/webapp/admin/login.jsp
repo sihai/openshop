@@ -5,12 +5,12 @@
 <%@page import="org.apache.commons.codec.binary.Base64"%>
 <%@page import="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"%>
 <%@page import="org.springframework.context.ApplicationContext"%>
-<%@page import="com.openteach.openshop.Setting"%>
+<%@page import="com.openteach.openshop.server.service.Setting"%>
 <%@page import="com.openteach.openshop.server.service.util.SettingUtils"%>
 <%@page import="com.openteach.openshop.server.service.util.SpringUtils"%>
-<%@page import="com.openteach.openshop.Setting.CaptchaType"%>
-<%@page import="com.openteach.openshop.Setting.AccountLockType"%>
-<%@page import="com.openteach.openshop.server.service.service.RSAService"%>
+<%@page import="com.openteach.openshop.server.service.Setting.CaptchaType"%>
+<%@page import="com.openteach.openshop.server.service.Setting.AccountLockType"%>
+<%@page import="com.openteach.openshop.server.api.security.RSAUtils"%>
 <%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <%
 String base = request.getContextPath();
@@ -34,8 +34,7 @@ response.sendRedirect(base + "/admin/common/main.jhtml");
 <%
 	if (applicationContext != null) {
     
-	RSAUtils rsaService = SpringUtils.getBean("rsaServiceImpl", RSAUtils.class);
-	RSAPublicKey publicKey = rsaService.generateKey(request);
+	RSAPublicKey publicKey = RSAUtils.generateKey(request);
 	String modulus = Base64.encodeBase64String(publicKey.getModulus().toByteArray());
 	String exponent = Base64.encodeBase64String(publicKey.getPublicExponent().toByteArray());
 	

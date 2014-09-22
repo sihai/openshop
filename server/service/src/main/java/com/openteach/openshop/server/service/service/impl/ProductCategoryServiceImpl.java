@@ -14,7 +14,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.ProductCategoryDao;
+import com.openteach.openshop.server.service.dao.ProductCategoryDAO;
 import com.openteach.openshop.server.service.entity.ProductCategory;
 import com.openteach.openshop.server.service.service.ProductCategoryService;
 
@@ -28,10 +28,10 @@ import com.openteach.openshop.server.service.service.ProductCategoryService;
 public class ProductCategoryServiceImpl extends BaseServiceImpl<ProductCategory, Long> implements ProductCategoryService {
 
 	@Resource(name = "productCategoryDaoImpl")
-	private ProductCategoryDao productCategoryDao;
+	private ProductCategoryDAO productCategoryDao;
 
 	@Resource(name = "productCategoryDaoImpl")
-	public void setBaseDao(ProductCategoryDao productCategoryDao) {
+	public void setBaseDao(ProductCategoryDAO productCategoryDao) {
 		super.setBaseDao(productCategoryDao);
 	}
 

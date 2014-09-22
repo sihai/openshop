@@ -1,29 +1,19 @@
-var pageNumber = 1;
-var pageSize = 40;
-
-$(document)
-		.ready(
-				function() {
-
-					window.jsbridge
-							.callHandler(
-									'callApi',
-									'com.openteach.openshop.server.product.list',
-									'0.0.1',
-									{
-										'cat_id' : $.getParameter('cat_id'),
-										'page_number': pageNumber,
-										'page_size': pageSize
-									},
-									function(response) {
-										console
-												.log(
-														'Got response from com.openteach.openshop.server.product.list',
-														response);
-										if (response.succeed) {
-											//
-										} else {
-											// TODO
-										}
-									});
-				});
+$(document).ready(function() {
+	var catIds = null;
+	var keyword = null;
+	var str = $.getParameter('cat_ids');
+	if(str) {
+		catIds = str.split(",");
+	}
+	str = $.getParameter('keyword');
+	if(str) {
+		keyword = decodeURIComponent(str);
+		$('#keyword').val(keyword);
+	}
+	
+	search(catIds, keyword, pageNumber, pageSize);
+	
+	loadmore(function() {
+		search(catIds, keyword, ++pageNumber, pageSize);
+	});
+});

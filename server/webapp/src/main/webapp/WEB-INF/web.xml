@@ -356,13 +356,16 @@
 	</session-config>
 
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>/home.html</welcome-file>
+		<welcome-file>/index.jsp</welcome-file>
 	</welcome-file-list>
 
+	<!--
 	<error-page>
 		<error-code>404</error-code>
-		<location>/common/resource_not_found.jhtml</location>
+		<location>/home.html</location>
 	</error-page>
+	-->
+	
 
 </web-app>

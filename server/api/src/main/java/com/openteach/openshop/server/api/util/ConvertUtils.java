@@ -1,6 +1,13 @@
 package com.openteach.openshop.server.api.util;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.util.Date;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.time.DateUtils;
+
+import com.openteach.openshop.server.service.CommonAttributes;
 
 /**
  * 
@@ -90,7 +97,11 @@ public abstract class ConvertUtils {
 			return null;
 		}
 		Class c = v.getClass();
-		if(c == Long.class) {
+		if(c == Short.class) {
+			return Long.valueOf((Short)v);
+		} else if(c == Integer.class) {
+			return Long.valueOf((Integer)v);
+		} else if(c == Long.class) {
 			return (Long)v;
 		} else if(c == String.class) {
 			try {
@@ -115,6 +126,8 @@ public abstract class ConvertUtils {
 		Class c = v.getClass();
 		if(c == Float.class) {
 			return (Float)v;
+		} else if(c == Double.class) {
+			return Float.valueOf(((Double)v).floatValue());
 		} else if(c == String.class) {
 			try {
 				return Float.valueOf((String)v);
@@ -136,7 +149,9 @@ public abstract class ConvertUtils {
 			return null;
 		}
 		Class c = v.getClass();
-		if(c == Double.class) {
+		if(c == Float.class) {
+			return Double.valueOf(((Float)v).doubleValue());
+		} else if(c == Double.class) {
 			return (Double)v;
 		} else if(c == String.class) {
 			try {
@@ -159,7 +174,11 @@ public abstract class ConvertUtils {
 			return null;
 		}
 		Class c = v.getClass();
-		if(c == BigDecimal.class) {
+		if(c == Float.class) {
+			return new BigDecimal((Float)v);
+		} else if(c == Double.class) {
+			return new BigDecimal((Double)v);
+		} else if(c == BigDecimal.class) {
 			return (BigDecimal)v;
 		} else if(c == String.class) {
 			return BigDecimal.valueOf(Double.valueOf((String)v));
@@ -183,5 +202,20 @@ public abstract class ConvertUtils {
 		} else {
 			return String.valueOf(v);
 		}
+	}
+	
+	/**
+	 * 
+	 * @param v
+	 * @param format
+	 * @return
+	 * @throws ParseException
+	 */
+	public static Date asDate(Object v, String format) throws ParseException {
+		String s = asString(v);
+		if(StringUtils.isBlank(s)) {
+			return null;
+		}
+		return DateUtils.parseDate(s, CommonAttributes.DATE_PATTERNS);
 	}
 }

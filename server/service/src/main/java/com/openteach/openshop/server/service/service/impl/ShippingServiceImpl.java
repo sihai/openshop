@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openteach.openshop.server.service.Setting;
-import com.openteach.openshop.server.service.dao.ShippingDao;
+import com.openteach.openshop.server.service.dao.ShippingDAO;
 import com.openteach.openshop.server.service.entity.Shipping;
 import com.openteach.openshop.server.service.service.ShippingService;
 import com.openteach.openshop.server.service.util.SettingUtils;
@@ -33,10 +33,10 @@ import com.openteach.openshop.server.service.util.SettingUtils;
 public class ShippingServiceImpl extends BaseServiceImpl<Shipping, Long> implements ShippingService {
 
 	@Resource(name = "shippingDaoImpl")
-	private ShippingDao shippingDao;
+	private ShippingDAO shippingDao;
 
 	@Resource(name = "shippingDaoImpl")
-	public void setBaseDao(ShippingDao shippingDao) {
+	public void setBaseDao(ShippingDAO shippingDao) {
 		super.setBaseDao(shippingDao);
 	}
 

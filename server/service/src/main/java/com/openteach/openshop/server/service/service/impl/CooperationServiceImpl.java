@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.CooperationDao;
+import com.openteach.openshop.server.service.dao.CooperationDAO;
 import com.openteach.openshop.server.service.entity.Cooperation;
 import com.openteach.openshop.server.service.service.CooperationService;
 
@@ -20,10 +20,10 @@ import com.openteach.openshop.server.service.service.CooperationService;
 public class CooperationServiceImpl extends BaseServiceImpl<Cooperation, Long> implements CooperationService {
 
 	@Resource(name = "cooperationDaoImpl")
-	private CooperationDao cooperationDao;
+	private CooperationDAO cooperationDao;
 
 	@Resource(name = "cooperationDaoImpl")
-	public void setCooperationDao(CooperationDao cooperationDao) {
+	public void setCooperationDao(CooperationDAO cooperationDao) {
 		this.setBaseDao(cooperationDao);
 		this.cooperationDao = cooperationDao;
 	}

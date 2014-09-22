@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.MessageDao;
+import com.openteach.openshop.server.service.dao.MessageDAO;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Message;
 import com.openteach.openshop.server.service.service.MessageService;
@@ -27,10 +27,10 @@ import com.openteach.openshop.server.service.service.MessageService;
 public class MessageServiceImpl extends BaseServiceImpl<Message, Long> implements MessageService {
 
 	@Resource(name = "messageDaoImpl")
-	private MessageDao messageDao;
+	private MessageDAO messageDao;
 
 	@Resource(name = "messageDaoImpl")
-	public void setBaseDao(MessageDao messageDao) {
+	public void setBaseDao(MessageDAO messageDao) {
 		super.setBaseDao(messageDao);
 	}
 

@@ -14,7 +14,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.MemberAttributeDao;
+import com.openteach.openshop.server.service.dao.MemberAttributeDAO;
 import com.openteach.openshop.server.service.entity.MemberAttribute;
 import com.openteach.openshop.server.service.service.MemberAttributeService;
 
@@ -28,10 +28,10 @@ import com.openteach.openshop.server.service.service.MemberAttributeService;
 public class MemberAttributeServiceImpl extends BaseServiceImpl<MemberAttribute, Long> implements MemberAttributeService {
 
 	@Resource(name = "memberAttributeDaoImpl")
-	private MemberAttributeDao memberAttributeDao;
+	private MemberAttributeDAO memberAttributeDao;
 
 	@Resource(name = "memberAttributeDaoImpl")
-	public void setBaseDao(MemberAttributeDao memberAttributeDao) {
+	public void setBaseDao(MemberAttributeDAO memberAttributeDao) {
 		super.setBaseDao(memberAttributeDao);
 	}
 

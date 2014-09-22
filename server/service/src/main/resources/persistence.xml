@@ -60,5 +60,6 @@
 		<class>com.openteach.openshop.server.service.entity.Tag</class>
 		<class>com.openteach.openshop.server.service.entity.PlatformPayment</class>
 		<class>com.openteach.openshop.server.service.entity.Cooperation</class>
+		<class>com.openteach.openshop.server.service.entity.Token</class>
 	</persistence-unit>
 </persistence>

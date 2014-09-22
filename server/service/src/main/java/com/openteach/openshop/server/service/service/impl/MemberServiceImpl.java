@@ -23,8 +23,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.openteach.openshop.server.service.Principal;
 import com.openteach.openshop.server.service.Setting;
-import com.openteach.openshop.server.service.dao.DepositDao;
-import com.openteach.openshop.server.service.dao.MemberDao;
+import com.openteach.openshop.server.service.dao.DepositDAO;
+import com.openteach.openshop.server.service.dao.MemberDAO;
 import com.openteach.openshop.server.service.entity.Admin;
 import com.openteach.openshop.server.service.entity.Deposit;
 import com.openteach.openshop.server.service.entity.Member;
@@ -41,12 +41,12 @@ import com.openteach.openshop.server.service.util.SettingUtils;
 public class MemberServiceImpl extends BaseServiceImpl<Member, Long> implements MemberService {
 
 	@Resource(name = "memberDaoImpl")
-	private MemberDao memberDao;
+	private MemberDAO memberDao;
 	@Resource(name = "depositDaoImpl")
-	private DepositDao depositDao;
+	private DepositDAO depositDao;
 
 	@Resource(name = "memberDaoImpl")
-	public void setBaseDao(MemberDao memberDao) {
+	public void setBaseDao(MemberDAO memberDao) {
 		super.setBaseDao(memberDao);
 	}
 

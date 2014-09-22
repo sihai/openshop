@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
-import com.openteach.openshop.server.service.dao.NavigationDao;
+import com.openteach.openshop.server.service.dao.NavigationDAO;
 import com.openteach.openshop.server.service.entity.Navigation;
 import com.openteach.openshop.server.service.entity.Navigation.Position;
 import com.openteach.openshop.server.service.service.NavigationService;
@@ -31,10 +31,10 @@ import com.openteach.openshop.server.service.service.NavigationService;
 public class NavigationServiceImpl extends BaseServiceImpl<Navigation, Long> implements NavigationService {
 
 	@Resource(name = "navigationDaoImpl")
-	private NavigationDao navigationDao;
+	private NavigationDAO navigationDao;
 
 	@Resource(name = "navigationDaoImpl")
-	public void setBaseDao(NavigationDao navigationDao) {
+	public void setBaseDao(NavigationDAO navigationDao) {
 		super.setBaseDao(navigationDao);
 	}
 

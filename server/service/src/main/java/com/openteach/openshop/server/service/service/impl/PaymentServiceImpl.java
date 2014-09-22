@@ -13,7 +13,7 @@ import javax.persistence.LockModeType;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.PaymentDao;
+import com.openteach.openshop.server.service.dao.PaymentDAO;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Order;
 import com.openteach.openshop.server.service.entity.Payment;
@@ -33,14 +33,14 @@ import com.openteach.openshop.server.service.service.PaymentService;
 public class PaymentServiceImpl extends BaseServiceImpl<Payment, Long> implements PaymentService {
 
 	@Resource(name = "paymentDaoImpl")
-	private PaymentDao paymentDao;
+	private PaymentDAO paymentDao;
 	@Resource(name = "orderServiceImpl")
 	private OrderService orderService;
 	@Resource(name = "memberServiceImpl")
 	private MemberService memberService;
 
 	@Resource(name = "paymentDaoImpl")
-	public void setBaseDao(PaymentDao paymentDao) {
+	public void setBaseDao(PaymentDAO paymentDao) {
 		super.setBaseDao(paymentDao);
 	}
 

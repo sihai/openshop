@@ -18,7 +18,7 @@ import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ConsultationDao;
+import com.openteach.openshop.server.service.dao.ConsultationDAO;
 import com.openteach.openshop.server.service.entity.Consultation;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Product;
@@ -35,12 +35,12 @@ import com.openteach.openshop.server.service.service.StaticService;
 public class ConsultationServiceImpl extends BaseServiceImpl<Consultation, Long> implements ConsultationService {
 
 	@Resource(name = "consultationDaoImpl")
-	private ConsultationDao consultationDao;
+	private ConsultationDAO consultationDao;
 	@Resource(name = "staticServiceImpl")
 	private StaticService staticService;
 
 	@Resource(name = "consultationDaoImpl")
-	public void setBaseDao(ConsultationDao consultationDao) {
+	public void setBaseDao(ConsultationDAO consultationDao) {
 		super.setBaseDao(consultationDao);
 	}
 

@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
-import com.openteach.openshop.server.service.dao.BrandDao;
+import com.openteach.openshop.server.service.dao.BrandDAO;
 import com.openteach.openshop.server.service.entity.Brand;
 import com.openteach.openshop.server.service.service.BrandService;
 
@@ -30,10 +30,10 @@ import com.openteach.openshop.server.service.service.BrandService;
 public class BrandServiceImpl extends BaseServiceImpl<Brand, Long> implements BrandService {
 
 	@Resource(name = "brandDaoImpl")
-	private BrandDao brandDao;
+	private BrandDAO brandDao;
 
 	@Resource(name = "brandDaoImpl")
-	public void setBaseDao(BrandDao brandDao) {
+	public void setBaseDao(BrandDAO brandDao) {
 		super.setBaseDao(brandDao);
 	}
 

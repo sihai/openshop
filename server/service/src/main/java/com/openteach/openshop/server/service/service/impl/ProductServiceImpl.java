@@ -31,7 +31,7 @@ import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ProductDao;
+import com.openteach.openshop.server.service.dao.ProductDAO;
 import com.openteach.openshop.server.service.entity.Attribute;
 import com.openteach.openshop.server.service.entity.Brand;
 import com.openteach.openshop.server.service.entity.Member;
@@ -61,12 +61,12 @@ public class ProductServiceImpl extends BaseServiceImpl<Product, Long> implement
 	@Resource(name = "ehCacheManager")
 	private CacheManager cacheManager;
 	@Resource(name = "productDaoImpl")
-	private ProductDao productDao;
+	private ProductDAO productDao;
 	@Resource(name = "staticServiceImpl")
 	private StaticService staticService;
 
 	@Resource(name = "productDaoImpl")
-	public void setBaseDao(ProductDao productDao) {
+	public void setBaseDao(ProductDAO productDao) {
 		super.setBaseDao(productDao);
 	}
 

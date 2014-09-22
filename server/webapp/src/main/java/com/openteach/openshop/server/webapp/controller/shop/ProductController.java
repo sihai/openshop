@@ -106,17 +106,18 @@ public class ProductController extends BaseController {
 	 * 搜索
 	 */
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public String search(String keyword, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Integer pageNumber, Integer pageSize, ModelMap model) {
+	public String search(String keyword, Long[] catIds, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Integer pageNumber, Integer pageSize, ModelMap model) {
 		if (StringUtils.isEmpty(keyword)) {
 			return ERROR_VIEW;
 		}
 		Pageable pageable = new Pageable(pageNumber, pageSize);
 		model.addAttribute("orderTypes", OrderType.values());
 		model.addAttribute("productKeyword", keyword);
+		model.addAttribute("catIds", catIds);
 		model.addAttribute("startPrice", startPrice);
 		model.addAttribute("endPrice", endPrice);
 		model.addAttribute("orderType", orderType);
-		model.addAttribute("page", searchService.search(keyword, startPrice, endPrice, orderType, pageable));
+		model.addAttribute("page", searchService.search(keyword, catIds, startPrice, endPrice, orderType, pageable));
 		return "shop/product/newSearch";
 	}
 

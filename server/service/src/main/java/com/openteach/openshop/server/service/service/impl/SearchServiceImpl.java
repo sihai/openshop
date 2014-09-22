@@ -34,8 +34,8 @@ import org.wltea.analyzer.lucene.IKAnalyzer;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ArticleDao;
-import com.openteach.openshop.server.service.dao.ProductDao;
+import com.openteach.openshop.server.service.dao.ArticleDAO;
+import com.openteach.openshop.server.service.dao.ProductDAO;
 import com.openteach.openshop.server.service.entity.Article;
 import com.openteach.openshop.server.service.entity.Product;
 import com.openteach.openshop.server.service.entity.Product.OrderType;
@@ -57,9 +57,9 @@ public class SearchServiceImpl implements SearchService {
 	@PersistenceContext
 	protected EntityManager entityManager;
 	@Resource(name = "articleDaoImpl")
-	private ArticleDao articleDao;
+	private ArticleDAO articleDao;
 	@Resource(name = "productDaoImpl")
-	private ProductDao productDao;
+	private ProductDAO productDao;
 
 	public void index() {
 		index(Article.class);
@@ -171,36 +171,57 @@ public class SearchServiceImpl implements SearchService {
 
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly = true)
-	public Page<Product> search(String keyword, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Pageable pageable) {
-		if (StringUtils.isEmpty(keyword)) {
+	public Page<Product> search(String keyword, Long[] catIds, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Pageable pageable) {
+		/*
+		if (StringUtils.isEmpty(keyword) && (null == catIds || catIds.length == 0)) {
 			return new Page<Product>();
 		}
+		*/
 		if (pageable == null) {
 			pageable = new Pageable();
 		}
 		try {
-			String text = QueryParser.escape(keyword);
-			TermQuery snQuery = new TermQuery(new Term("sn", text));
-			Query keywordQuery = new QueryParser(Version.LUCENE_35, "keyword", new IKAnalyzer()).parse(text);
-			QueryParser nameParser = new QueryParser(Version.LUCENE_35, "name", new IKAnalyzer());
-			nameParser.setDefaultOperator(QueryParser.AND_OPERATOR);
-			Query nameQuery = nameParser.parse(text);
-			FuzzyQuery nameFuzzyQuery = new FuzzyQuery(new Term("name", text), FUZZY_QUERY_MINIMUM_SIMILARITY);
-			TermQuery introductionQuery = new TermQuery(new Term("introduction", text));
+			
+			BooleanQuery query = new BooleanQuery();
+			
+			if(StringUtils.isNotBlank(keyword)) {
+				String text = QueryParser.escape(keyword);
+				TermQuery snQuery = new TermQuery(new Term("sn", text));
+				Query keywordQuery = new QueryParser(Version.LUCENE_35, "keyword", new IKAnalyzer()).parse(text);
+				QueryParser nameParser = new QueryParser(Version.LUCENE_35, "name", new IKAnalyzer());
+				nameParser.setDefaultOperator(QueryParser.AND_OPERATOR);
+				Query nameQuery = nameParser.parse(text);
+				FuzzyQuery nameFuzzyQuery = new FuzzyQuery(new Term("name", text), FUZZY_QUERY_MINIMUM_SIMILARITY);
+				TermQuery introductionQuery = new TermQuery(new Term("introduction", text));
+				
+				BooleanQuery textQuery = new BooleanQuery();
+				textQuery.add(snQuery, Occur.SHOULD);
+				textQuery.add(keywordQuery, Occur.SHOULD);
+				textQuery.add(nameQuery, Occur.SHOULD);
+				textQuery.add(nameFuzzyQuery, Occur.SHOULD);
+				textQuery.add(introductionQuery, Occur.SHOULD);
+				
+				query.add(textQuery, Occur.MUST);
+			}
+			
 			TermQuery isMarketableQuery = new TermQuery(new Term("isMarketable", "true"));
 			TermQuery isListQuery = new TermQuery(new Term("isList", "true"));
 			TermQuery isGiftQuery = new TermQuery(new Term("isGift", "false"));
-			BooleanQuery textQuery = new BooleanQuery();
-			BooleanQuery query = new BooleanQuery();
-			textQuery.add(snQuery, Occur.SHOULD);
-			textQuery.add(keywordQuery, Occur.SHOULD);
-			textQuery.add(nameQuery, Occur.SHOULD);
-			textQuery.add(nameFuzzyQuery, Occur.SHOULD);
-			textQuery.add(introductionQuery, Occur.SHOULD);
+			
 			query.add(isMarketableQuery, Occur.MUST);
 			query.add(isListQuery, Occur.MUST);
 			query.add(isGiftQuery, Occur.MUST);
-			query.add(textQuery, Occur.MUST);
+			
+			if(null != catIds && catIds.length > 0) {
+				BooleanQuery cquery = new BooleanQuery();
+				for(Long catId : catIds) {
+					cquery.add(new TermQuery(new Term("productCategoryId", catId.toString())), Occur.SHOULD);
+				}
+				cquery.setMinimumNumberShouldMatch(1);
+				
+				query.add(cquery, Occur.MUST);
+			}
+			
 			if (startPrice != null && endPrice != null && startPrice.compareTo(endPrice) > 0) {
 				BigDecimal temp = startPrice;
 				startPrice = endPrice;

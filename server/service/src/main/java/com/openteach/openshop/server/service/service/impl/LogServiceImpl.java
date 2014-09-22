@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.LogDao;
+import com.openteach.openshop.server.service.dao.LogDAO;
 import com.openteach.openshop.server.service.entity.Log;
 import com.openteach.openshop.server.service.service.LogService;
 
@@ -23,10 +23,10 @@ import com.openteach.openshop.server.service.service.LogService;
 public class LogServiceImpl extends BaseServiceImpl<Log, Long> implements LogService {
 
 	@Resource(name = "logDaoImpl")
-	private LogDao logDao;
+	private LogDAO logDao;
 
 	@Resource(name = "logDaoImpl")
-	public void setBaseDao(LogDao logDao) {
+	public void setBaseDao(LogDAO logDao) {
 		super.setBaseDao(logDao);
 	}
 

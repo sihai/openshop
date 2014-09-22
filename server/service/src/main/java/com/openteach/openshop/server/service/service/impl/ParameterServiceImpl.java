@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.ParameterDao;
+import com.openteach.openshop.server.service.dao.ParameterDAO;
 import com.openteach.openshop.server.service.entity.Parameter;
 import com.openteach.openshop.server.service.service.ParameterService;
 
@@ -23,7 +23,7 @@ import com.openteach.openshop.server.service.service.ParameterService;
 public class ParameterServiceImpl extends BaseServiceImpl<Parameter, Long> implements ParameterService {
 
 	@Resource(name = "parameterDaoImpl")
-	public void setBaseDao(ParameterDao parameterDao) {
+	public void setBaseDao(ParameterDAO parameterDao) {
 		super.setBaseDao(parameterDao);
 	}
 

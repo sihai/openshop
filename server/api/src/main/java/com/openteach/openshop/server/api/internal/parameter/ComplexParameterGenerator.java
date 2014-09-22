@@ -2,6 +2,7 @@ package com.openteach.openshop.server.api.internal.parameter;
 
 import com.openteach.openshop.server.api.ApiContext;
 import com.openteach.openshop.server.api.ApiRequest;
+import com.openteach.openshop.server.api.ErrorCode;
 import com.openteach.openshop.server.api.exception.ParameterGeneratedException;
 
 /**
@@ -43,7 +44,7 @@ public class ComplexParameterGenerator implements ParameterGenerator {
 			}
 			return o;
 		} catch (NoSuchMethodException e) {
-			throw new IllegalArgumentException(e);
+			throw new ParameterGeneratedException(ErrorCode.WRONG_BIZ_PARAMETER, clazz.getName());
 		}
 	}
 

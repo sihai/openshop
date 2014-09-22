@@ -11,7 +11,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.RoleDao;
+import com.openteach.openshop.server.service.dao.RoleDAO;
 import com.openteach.openshop.server.service.entity.Role;
 import com.openteach.openshop.server.service.service.RoleService;
 
@@ -25,7 +25,7 @@ import com.openteach.openshop.server.service.service.RoleService;
 public class RoleServiceImpl extends BaseServiceImpl<Role, Long> implements RoleService {
 
 	@Resource(name = "roleDaoImpl")
-	public void setBaseDao(RoleDao roleDao) {
+	public void setBaseDao(RoleDAO roleDao) {
 		super.setBaseDao(roleDao);
 	}
 

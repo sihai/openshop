@@ -11,7 +11,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.AdDao;
+import com.openteach.openshop.server.service.dao.AdDAO;
 import com.openteach.openshop.server.service.entity.Ad;
 import com.openteach.openshop.server.service.service.AdService;
 
@@ -25,7 +25,7 @@ import com.openteach.openshop.server.service.service.AdService;
 public class AdServiceImpl extends BaseServiceImpl<Ad, Long> implements AdService {
 
 	@Resource(name = "adDaoImpl")
-	public void setBaseDao(AdDao adDao) {
+	public void setBaseDao(AdDAO adDao) {
 		super.setBaseDao(adDao);
 	}
 

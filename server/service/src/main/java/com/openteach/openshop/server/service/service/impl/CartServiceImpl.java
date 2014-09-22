@@ -19,9 +19,9 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.openteach.openshop.server.service.Principal;
-import com.openteach.openshop.server.service.dao.CartDao;
-import com.openteach.openshop.server.service.dao.CartItemDao;
-import com.openteach.openshop.server.service.dao.MemberDao;
+import com.openteach.openshop.server.service.dao.CartDAO;
+import com.openteach.openshop.server.service.dao.CartItemDAO;
+import com.openteach.openshop.server.service.dao.MemberDAO;
 import com.openteach.openshop.server.service.entity.Cart;
 import com.openteach.openshop.server.service.entity.CartItem;
 import com.openteach.openshop.server.service.entity.Member;
@@ -39,14 +39,14 @@ import com.openteach.openshop.server.service.util.WebUtils;
 public class CartServiceImpl extends BaseServiceImpl<Cart, Long> implements CartService {
 
 	@Resource(name = "cartDaoImpl")
-	private CartDao cartDao;
+	private CartDAO cartDao;
 	@Resource(name = "cartItemDaoImpl")
-	private CartItemDao cartItemDao;
+	private CartItemDAO cartItemDao;
 	@Resource(name = "memberDaoImpl")
-	private MemberDao memberDao;
+	private MemberDAO memberDao;
 
 	@Resource(name = "cartDaoImpl")
-	public void setBaseDao(CartDao cartDao) {
+	public void setBaseDao(CartDAO cartDao) {
 		super.setBaseDao(cartDao);
 	}
 

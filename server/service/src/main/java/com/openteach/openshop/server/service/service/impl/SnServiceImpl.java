@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.SnDao;
+import com.openteach.openshop.server.service.dao.SnDAO;
 import com.openteach.openshop.server.service.entity.Sn.Type;
 import com.openteach.openshop.server.service.service.SnService;
 
@@ -24,7 +24,7 @@ import com.openteach.openshop.server.service.service.SnService;
 public class SnServiceImpl implements SnService {
 
 	@Resource(name = "snDaoImpl")
-	private SnDao snDao;
+	private SnDAO snDao;
 
 	@Transactional
 	public String generate(Type type) {

@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Principal;
-import com.openteach.openshop.server.service.dao.AdminDao;
+import com.openteach.openshop.server.service.dao.AdminDAO;
 import com.openteach.openshop.server.service.entity.Admin;
 import com.openteach.openshop.server.service.entity.Role;
 import com.openteach.openshop.server.service.service.AdminService;
@@ -32,10 +32,10 @@ import com.openteach.openshop.server.service.service.AdminService;
 public class AdminServiceImpl extends BaseServiceImpl<Admin, Long> implements AdminService {
 
 	@Resource(name = "adminDaoImpl")
-	private AdminDao adminDao;
+	private AdminDAO adminDao;
 
 	@Resource(name = "adminDaoImpl")
-	public void setBaseDao(AdminDao adminDao) {
+	public void setBaseDao(AdminDAO adminDao) {
 		super.setBaseDao(adminDao);
 	}
 

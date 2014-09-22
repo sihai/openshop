@@ -213,26 +213,50 @@
 		</url>
 	
 		<url>
+			<loc>http://www.aigechibaole.com:8080/static/product/content/201409/8.html</loc>
+			<lastmod>2014-09-06</lastmod>
+			<changefreq>weekly</changefreq>
+			<priority>0.6</priority>
+		</url>
+		<url>
+			<loc>http://www.aigechibaole.com:8080/static/product/content/201409/7.html</loc>
+			<lastmod>2014-09-06</lastmod>
+			<changefreq>weekly</changefreq>
+			<priority>0.6</priority>
+		</url>
+		<url>
+			<loc>http://www.aigechibaole.com:8080/static/product/content/201409/6.html</loc>
+			<lastmod>2014-09-06</lastmod>
+			<changefreq>weekly</changefreq>
+			<priority>0.6</priority>
+		</url>
+		<url>
+			<loc>http://www.aigechibaole.com:8080/static/product/content/201409/5.html</loc>
+			<lastmod>2014-09-06</lastmod>
+			<changefreq>weekly</changefreq>
+			<priority>0.6</priority>
+		</url>
+		<url>
 			<loc>http://www.aigechibaole.com:8080/static/product/content/201407/4.html</loc>
-			<lastmod>2014-09-02</lastmod>
+			<lastmod>2014-09-04</lastmod>
 			<changefreq>weekly</changefreq>
 			<priority>0.6</priority>
 		</url>
 		<url>
 			<loc>http://www.aigechibaole.com:8080/static/product/content/201407/3.html</loc>
-			<lastmod>2014-07-30</lastmod>
+			<lastmod>2014-09-04</lastmod>
 			<changefreq>weekly</changefreq>
 			<priority>0.6</priority>
 		</url>
 		<url>
 			<loc>http://www.aigechibaole.com:8080/static/product/content/201407/2.html</loc>
-			<lastmod>2014-07-27</lastmod>
+			<lastmod>2014-09-04</lastmod>
 			<changefreq>weekly</changefreq>
 			<priority>0.6</priority>
 		</url>
 		<url>
 			<loc>http://www.aigechibaole.com:8080/static/product/content/201407/1.html</loc>
-			<lastmod>2014-07-27</lastmod>
+			<lastmod>2014-09-16</lastmod>
 			<changefreq>weekly</changefreq>
 			<priority>0.6</priority>
 		</url>

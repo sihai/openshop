@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.CouponDao;
+import com.openteach.openshop.server.service.dao.CouponDAO;
 import com.openteach.openshop.server.service.entity.Coupon;
 import com.openteach.openshop.server.service.service.CouponService;
 
@@ -26,10 +26,10 @@ import com.openteach.openshop.server.service.service.CouponService;
 public class CouponServiceImpl extends BaseServiceImpl<Coupon, Long> implements CouponService {
 
 	@Resource(name = "couponDaoImpl")
-	private CouponDao couponDao;
+	private CouponDAO couponDao;
 
 	@Resource(name = "couponDaoImpl")
-	public void setBaseDao(CouponDao couponDao) {
+	public void setBaseDao(CouponDAO couponDao) {
 		super.setBaseDao(couponDao);
 	}
 

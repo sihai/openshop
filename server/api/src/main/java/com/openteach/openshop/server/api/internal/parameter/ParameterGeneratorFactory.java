@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -69,20 +70,22 @@ public abstract class ParameterGeneratorFactory {
 	 * @return
 	 */
 	private static ParameterGenerator newGenerator(Class clazz, ParameterType type, String name, boolean required, boolean ecrypted) {
-		if(Boolean.class == clazz) {
+		if(boolean.class == clazz || Boolean.class == clazz) {
 			return new BooleanParameterGenerator(type, name, required);
-		} else if(Short.class == clazz) {
+		} else if(short.class == clazz || Short.class == clazz) {
 			return new ShortParameterGenerator(type, name, required);
-		} else if(Integer.class == clazz) {
+		} else if(int.class == clazz || Integer.class == clazz) {
 			return new IntegerParameterGenerator(type, name, required);
-		} else if(Long.class == clazz) {
+		} else if(long.class == clazz || Long.class == clazz) {
 			return new LongParameterGenerator(type, name, required);
-		} else if(Float.class == clazz) {
+		} else if(float.class == clazz || Float.class == clazz) {
 			return new FloatParameterGenerator(type, name, required);
-		} else if(Double.class == clazz) {
+		} else if(double.class == clazz || Double.class == clazz) {
 			return new DoubleParameterGenerator(type, name, required);
 		} else if(BigDecimal.class == clazz) {
 			return new BigDecimalParameterGenerator(type, name, required);
+		} else if(Date.class == clazz) {
+			return new DateParameterGenerator(type, name, required);
 		} else if (String.class == clazz) {
 			return new StringParameterGenerator(type, name, required, ecrypted);
 		} else if(Enum.class.isAssignableFrom(clazz)) {

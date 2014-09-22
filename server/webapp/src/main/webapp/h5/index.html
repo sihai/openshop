@@ -20,40 +20,40 @@
                 <ul class="navigation">
                 
                     <li class="active">
-                    	<a href="#">
+                    	<a class="mainmenu" href="#">
                     		<span class="nav_icon home"></span>首页
                     	</a>
                     </li>
                     
                     <li class="dropdown">
-                    	<a href="#">
+                    	<a class="mainmenu" href="#">
                     		<span class="nav_icon about"></span>
                     		产品列表
                     	</a>
                         <!--Submenu-->
-                        <ul id="submenu">
-                            <li> <a href="/h5/category.html?cat_id=1">衣服（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=2">衣服（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=3">鞋子（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=4">鞋子（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=5">包包（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=6">包包（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=7">化妆品（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=8">化妆品（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=9">其他（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=10">其他（女士）</a></li>
+                        <ul class="submenu">
+                            <li> <a href="/h5/category.html?cat_ids=1">衣服（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=2">衣服（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=3">鞋子（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=4">鞋子（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=5">包包（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=6">包包（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=7">化妆品（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=8">化妆品（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=9">其他（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=10">其他（女士）</a></li>
                         </ul>
                    	</li>
                    
                     <li>
-                    	<a href="blog.html">
+                    	<a  class="mainmenu" href="blog.html">
                         	<span class="nav_icon blog"></span> 关于我们
                        	</a>
                     </li>
                         
                     <li class="dropdown">
-                    	<a href="#"><span class="nav_icon contact"></span>我的定制</a>
-                    	<ul id="submenu">
+                    	<a class="mainmenu" href="#"><span class="nav_icon contact"></span>我的定制</a>
+                    	<ul class="submenu">
                     		<li> <a href="/h5/login.html">登录</a></li>
                     		<li> <a href="/h5/i/i.html">我的定制</a></li>
                     		<li> <a href="/h5/logout.html">登出</a></li>
@@ -61,14 +61,14 @@
                     </li>
                         
                     <li class="nav_search">
-                    	<a href="#"></a>
+                    	<a class="mainmenu" href="#"></a>
                     </li>
                 </ul>
                 <!--Search starts-->
 			<div id="search">
-				<form class="search" action="about.html">
-					<fieldset class=" ">
-						<input type="text" placeholder="search" class="text ">
+				<form id="search-form-s" class="search" action="/h5/search.html" method="get">
+					<fieldset class="search">
+						<input id="keyword-s" name="keyword" type="text" placeholder="search" class="text ">
 						<input type="submit" value="search" class="submit">
 					</fieldset>
 				</form>
@@ -141,12 +141,13 @@
         <script src="/assets/h5/js/openshopjssdk.js"></script>
         
         <!-- Script Controls -->
-        <script src="/assets/h5/js/site.js"></script>
         <script type="text/javascript">
             /* Slideshow Control */		
             jQuery('.flexslider').flexslider();
             
         </script>
+        <script src="/assets/h5/js/base.js"></script>
+        <script src="/assets/h5/js/site.js"></script>
         <script src="/assets/h5/js/index.js"></script>
     </body>
 </html>

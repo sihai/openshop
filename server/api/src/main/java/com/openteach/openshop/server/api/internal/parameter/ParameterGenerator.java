@@ -10,6 +10,10 @@ import com.openteach.openshop.server.api.exception.ParameterGeneratedException;
  */
 public interface ParameterGenerator {
 
+	String DATE_FORMAT = "yyyy-MM-dd";
+	
+	String DATETIME_FORMAT= "yyyy-MM-dd  HH:mm:ss";
+	
 	/**
 	 * 
 	 * @param ac

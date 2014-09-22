@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.ParameterGroupDao;
+import com.openteach.openshop.server.service.dao.ParameterGroupDAO;
 import com.openteach.openshop.server.service.entity.ParameterGroup;
 import com.openteach.openshop.server.service.service.ParameterGroupService;
 
@@ -23,7 +23,7 @@ import com.openteach.openshop.server.service.service.ParameterGroupService;
 public class ParameterGroupServiceImpl extends BaseServiceImpl<ParameterGroup, Long> implements ParameterGroupService {
 
 	@Resource(name = "parameterGroupDaoImpl")
-	public void setBaseDao(ParameterGroupDao parameterGroupDao) {
+	public void setBaseDao(ParameterGroupDAO parameterGroupDao) {
 		super.setBaseDao(parameterGroupDao);
 	}
 

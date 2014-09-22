@@ -20,40 +20,40 @@
                 <ul class="navigation">
                 
                     <li>
-                    	<a href="#">
+                    	<a class="mainmenu" href="/h5/index.html">
                     		<span class="nav_icon home"></span>首页
                     	</a>
                     </li>
                     
                     <li class="dropdown active">
-                    	<a href="#">
+                    	<a class="mainmenu" href="#">
                     		<span class="nav_icon about"></span>
                     		产品列表
                     	</a>
                         <!--Submenu-->
-                        <ul id="submenu">
-                            <li> <a href="/h5/category.html?cat_id=1">衣服（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=2">衣服（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=3">鞋子（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=4">鞋子（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=5">包包（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=6">包包（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=7">化妆品（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=8">化妆品（女士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=9">其他（男士）</a></li>
-                            <li> <a href="/h5/category.html?cat_id=10">其他（女士）</a></li>
+                        <ul class="submenu">
+                            <li> <a href="/h5/category.html?cat_ids=1">衣服（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=2">衣服（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=3">鞋子（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=4">鞋子（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=5">包包（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=6">包包（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=7">化妆品（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=8">化妆品（女士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=9">其他（男士）</a></li>
+                            <li> <a href="/h5/category.html?cat_ids=10">其他（女士）</a></li>
                         </ul>
                    	</li>
                    
                     <li>
-                    	<a href="blog.html">
+                    	<a class="mainmenu" href="blog.html">
                         	<span class="nav_icon blog"></span> 关于我们
                        	</a>
                     </li>
                         
                     <li class="dropdown">
-                    	<a href="#"><span class="nav_icon contact"></span>我的定制</a>
-                    	<ul id="submenu">
+                    	<a class="mainmenu" href="#"><span class="nav_icon contact"></span>我的定制</a>
+                    	<ul class="submenu">
                     		<li> <a href="/h5/login.html">登录</a></li>
                     		<li> <a href="/h5/i/i.html">我的定制</a></li>
                     		<li> <a href="/h5/logout.html">登出</a></li>
@@ -61,14 +61,14 @@
                     </li>
                         
                     <li class="nav_search">
-                    	<a href="#"></a>
+                    	<a class="mainmenu" href="#"></a>
                     </li>
                 </ul>
                 <!--Search starts-->
 			<div id="search">
-				<form class="search" action="about.html">
-					<fieldset class=" ">
-						<input type="text" placeholder="search" class="text ">
+				<form id="search-form-s" class="search" action="/h5/search.html">
+					<fieldset class="search">
+						<input id="keyword-s" name="keyword" type="text" placeholder="search" class="text ">
 						<input type="submit" value="search" class="submit">
 					</fieldset>
 				</form>
@@ -97,19 +97,27 @@
                 </div>
                 <!--Block Ends-->
                 
-                <!--Block Starts-->
-                <div class="block_module paper_bh_white">
-                    <h2>Moby elite2.0 has arrived.</h2>
-                    <img class="stretch" alt="" src="/assets/h5/images/moby_banner.jpg" />
-                    <div class="content_container">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident...</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                        <p class="center"><a href="#" class="grey_bt_big btn"><span class="app"></span>Get moby elite now</a></p>
-                    </div>
+                
+                <div id="product-list">
+                	<!--Block Starts-->
+                	<!--
+                	<div class="block_module paper_bh_white">
+                    	<h2>Moby elite2.0 has arrived.</h2>
+                    	<div style="padding:8px 8px;">
+                    		<img class="stretch" alt="" src="/assets/h5/images/moby_banner.jpg" />
+                    	</div>
+                    	<h2>定制价格：￥1222</h2>
+                    	<div class="content_container">
+                        	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident...</p>
+                        	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        	<p class="center"><a href="#" class="grey_bt_big btn"><span class="app"></span>Get moby elite now</a></p>
+                    	</div>
+                	</div>
+                	-->
+                	
+                <!--Block Ends-->
                 </div>
                 
-                
-                <!--Block Ends-->
                 <!--Block Starts-->
                 <div class="block_module paper_bh_white hiring"> <span class="tape_stick"></span>
                     <h2>We are hiring !</h2>
@@ -146,12 +154,14 @@
         <script src="/assets/h5/js/openshopjssdk.js"></script>
         
         <!-- Script Controls -->
-        <script src="/assets/h5/js/site.js"></script>
         <script type="text/javascript">
             /* Slideshow Control */		
             jQuery('.flexslider').flexslider();
             
         </script>
+        <script src="/assets/h5/js/base.js"></script>
+        <script src="/assets/h5/js/site.js"></script>
+        <script src="/assets/h5/js/load-more.js"></script>
         <script src="/assets/h5/js/category.js"></script>
     </body>
 </html>

@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.ShippingMethodDao;
+import com.openteach.openshop.server.service.dao.ShippingMethodDAO;
 import com.openteach.openshop.server.service.entity.ShippingMethod;
 import com.openteach.openshop.server.service.service.ShippingMethodService;
 
@@ -23,7 +23,7 @@ import com.openteach.openshop.server.service.service.ShippingMethodService;
 public class ShippingMethodServiceImpl extends BaseServiceImpl<ShippingMethod, Long> implements ShippingMethodService {
 
 	@Resource(name = "shippingMethodDaoImpl")
-	public void setBaseDao(ShippingMethodDao shippingMethodDao) {
+	public void setBaseDao(ShippingMethodDAO shippingMethodDao) {
 		super.setBaseDao(shippingMethodDao);
 	}
 

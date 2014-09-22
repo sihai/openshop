@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ReceiverDao;
+import com.openteach.openshop.server.service.dao.ReceiverDAO;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Receiver;
 import com.openteach.openshop.server.service.service.ReceiverService;
@@ -27,10 +27,10 @@ import com.openteach.openshop.server.service.service.ReceiverService;
 public class ReceiverServiceImpl extends BaseServiceImpl<Receiver, Long> implements ReceiverService {
 
 	@Resource(name = "receiverDaoImpl")
-	private ReceiverDao receiverDao;
+	private ReceiverDAO receiverDao;
 
 	@Resource(name = "receiverDaoImpl")
-	public void setBaseDao(ReceiverDao receiverDao) {
+	public void setBaseDao(ReceiverDAO receiverDao) {
 		super.setBaseDao(receiverDao);
 	}
 

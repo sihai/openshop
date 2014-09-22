@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.DeliveryCenterDao;
+import com.openteach.openshop.server.service.dao.DeliveryCenterDAO;
 import com.openteach.openshop.server.service.entity.DeliveryCenter;
 import com.openteach.openshop.server.service.service.DeliveryCenterService;
 
@@ -24,10 +24,10 @@ import com.openteach.openshop.server.service.service.DeliveryCenterService;
 public class DeliveryCenterServiceImpl extends BaseServiceImpl<DeliveryCenter, Long> implements DeliveryCenterService {
 
 	@Resource(name = "deliveryCenterDaoImpl")
-	private DeliveryCenterDao deliveryCenterDao;
+	private DeliveryCenterDAO deliveryCenterDao;
 
 	@Resource(name = "deliveryCenterDaoImpl")
-	public void setBaseDao(DeliveryCenterDao DeliveryCenterDao) {
+	public void setBaseDao(DeliveryCenterDAO DeliveryCenterDao) {
 		super.setBaseDao(DeliveryCenterDao);
 	}
 

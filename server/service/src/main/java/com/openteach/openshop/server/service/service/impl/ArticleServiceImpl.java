@@ -25,7 +25,7 @@ import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ArticleDao;
+import com.openteach.openshop.server.service.dao.ArticleDAO;
 import com.openteach.openshop.server.service.entity.Article;
 import com.openteach.openshop.server.service.entity.ArticleCategory;
 import com.openteach.openshop.server.service.entity.Tag;
@@ -47,12 +47,12 @@ public class ArticleServiceImpl extends BaseServiceImpl<Article, Long> implement
 	@Resource(name = "ehCacheManager")
 	private CacheManager cacheManager;
 	@Resource(name = "articleDaoImpl")
-	private ArticleDao articleDao;
+	private ArticleDAO articleDao;
 	@Resource(name = "staticServiceImpl")
 	private StaticService staticService;
 
 	@Resource(name = "articleDaoImpl")
-	public void setBaseDao(ArticleDao articleDao) {
+	public void setBaseDao(ArticleDAO articleDao) {
 		super.setBaseDao(articleDao);
 	}
 

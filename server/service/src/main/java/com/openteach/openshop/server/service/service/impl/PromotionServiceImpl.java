@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
-import com.openteach.openshop.server.service.dao.PromotionDao;
+import com.openteach.openshop.server.service.dao.PromotionDAO;
 import com.openteach.openshop.server.service.entity.Promotion;
 import com.openteach.openshop.server.service.service.PromotionService;
 
@@ -30,10 +30,10 @@ import com.openteach.openshop.server.service.service.PromotionService;
 public class PromotionServiceImpl extends BaseServiceImpl<Promotion, Long> implements PromotionService {
 
 	@Resource(name = "promotionDaoImpl")
-	private PromotionDao promotionDao;
+	private PromotionDAO promotionDao;
 
 	@Resource(name = "promotionDaoImpl")
-	public void setBaseDao(PromotionDao promotionDao) {
+	public void setBaseDao(PromotionDAO promotionDao) {
 		super.setBaseDao(promotionDao);
 	}
 

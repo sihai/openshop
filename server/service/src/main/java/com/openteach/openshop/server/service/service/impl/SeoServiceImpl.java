@@ -12,7 +12,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.SeoDao;
+import com.openteach.openshop.server.service.dao.SeoDAO;
 import com.openteach.openshop.server.service.entity.Seo;
 import com.openteach.openshop.server.service.entity.Seo.Type;
 import com.openteach.openshop.server.service.service.SeoService;
@@ -27,10 +27,10 @@ import com.openteach.openshop.server.service.service.SeoService;
 public class SeoServiceImpl extends BaseServiceImpl<Seo, Long> implements SeoService {
 
 	@Resource(name = "seoDaoImpl")
-	private SeoDao seoDao;
+	private SeoDAO seoDao;
 
 	@Resource(name = "seoDaoImpl")
-	public void setBaseDao(SeoDao seoDao) {
+	public void setBaseDao(SeoDAO seoDao) {
 		super.setBaseDao(seoDao);
 	}
 

@@ -14,6 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openteach.openshop.server.api.ApiContext;
 import com.openteach.openshop.server.api.ErrorCode;
 import com.openteach.openshop.server.api.Result;
@@ -27,7 +28,7 @@ import com.openteach.openshop.server.api.annotation.Sort;
  */
 @Component("defaultValidator")
 public class DeafultValidator implements Validator, ApplicationContextAware {
-
+	
 	private ApplicationContext applicationContext;
 	
 	private Validator[] vs;

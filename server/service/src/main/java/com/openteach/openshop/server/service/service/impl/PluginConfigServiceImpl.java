@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.PluginConfigDao;
+import com.openteach.openshop.server.service.dao.PluginConfigDAO;
 import com.openteach.openshop.server.service.entity.PluginConfig;
 import com.openteach.openshop.server.service.service.PluginConfigService;
 
@@ -24,10 +24,10 @@ import com.openteach.openshop.server.service.service.PluginConfigService;
 public class PluginConfigServiceImpl extends BaseServiceImpl<PluginConfig, Long> implements PluginConfigService {
 
 	@Resource(name = "pluginConfigDaoImpl")
-	private PluginConfigDao pluginConfigDao;
+	private PluginConfigDAO pluginConfigDao;
 
 	@Resource(name = "pluginConfigDaoImpl")
-	public void setBaseDao(PluginConfigDao pluginConfigDao) {
+	public void setBaseDao(PluginConfigDAO pluginConfigDao) {
 		super.setBaseDao(pluginConfigDao);
 	}
 

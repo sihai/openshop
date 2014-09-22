@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.PaymentMethodDao;
+import com.openteach.openshop.server.service.dao.PaymentMethodDAO;
 import com.openteach.openshop.server.service.entity.PaymentMethod;
 import com.openteach.openshop.server.service.service.PaymentMethodService;
 
@@ -23,7 +23,7 @@ import com.openteach.openshop.server.service.service.PaymentMethodService;
 public class PaymentMethodServiceImpl extends BaseServiceImpl<PaymentMethod, Long> implements PaymentMethodService {
 
 	@Resource(name = "paymentMethodDaoImpl")
-	public void setBaseDao(PaymentMethodDao paymentMethodDao) {
+	public void setBaseDao(PaymentMethodDAO paymentMethodDao) {
 		super.setBaseDao(paymentMethodDao);
 	}
 

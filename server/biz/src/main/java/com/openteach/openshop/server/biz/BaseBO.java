@@ -1,5 +1,6 @@
 package com.openteach.openshop.server.biz;
 
+import java.math.BigDecimal;
 import java.util.Set;
 
 import javax.annotation.Resource;
@@ -10,6 +11,8 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import com.openteach.openshop.server.service.Message;
+import com.openteach.openshop.server.service.Setting;
+import com.openteach.openshop.server.service.util.SettingUtils;
 
 /**
  * 
@@ -74,4 +77,26 @@ public class BaseBO {
 		}
 	}
 
+	/**
+	 * 货币格式化
+	 * 
+	 * @param amount
+	 *            金额
+	 * @param showSign
+	 *            显示标志
+	 * @param showUnit
+	 *            显示单位
+	 * @return 货币格式化
+	 */
+	protected String currency(BigDecimal amount, boolean showSign, boolean showUnit) {
+		Setting setting = SettingUtils.get();
+		String price = setting.setScale(amount).toString();
+		if (showSign) {
+			price = setting.getCurrencySign() + price;
+		}
+		if (showUnit) {
+			price += setting.getCurrencyUnit();
+		}
+		return price;
+	}
 }

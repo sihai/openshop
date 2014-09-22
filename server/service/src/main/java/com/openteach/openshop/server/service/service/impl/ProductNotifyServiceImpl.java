@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ProductNotifyDao;
+import com.openteach.openshop.server.service.dao.ProductNotifyDAO;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Product;
 import com.openteach.openshop.server.service.entity.ProductNotify;
@@ -31,12 +31,12 @@ import com.openteach.openshop.server.service.service.ProductNotifyService;
 public class ProductNotifyServiceImpl extends BaseServiceImpl<ProductNotify, Long> implements ProductNotifyService {
 
 	@Resource(name = "productNotifyDaoImpl")
-	ProductNotifyDao productNotifyDao;
+	ProductNotifyDAO productNotifyDao;
 	@Resource(name = "mailServiceImpl")
 	MailService mailService;
 
 	@Resource(name = "productNotifyDaoImpl")
-	public void setBaseDao(ProductNotifyDao ProductNotifyDao) {
+	public void setBaseDao(ProductNotifyDAO ProductNotifyDao) {
 		super.setBaseDao(ProductNotifyDao);
 	}
 

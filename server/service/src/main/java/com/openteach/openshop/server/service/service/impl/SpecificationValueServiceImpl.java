@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.SpecificationValueDao;
+import com.openteach.openshop.server.service.dao.SpecificationValueDAO;
 import com.openteach.openshop.server.service.entity.SpecificationValue;
 import com.openteach.openshop.server.service.service.SpecificationValueService;
 
@@ -23,7 +23,7 @@ import com.openteach.openshop.server.service.service.SpecificationValueService;
 public class SpecificationValueServiceImpl extends BaseServiceImpl<SpecificationValue, Long> implements SpecificationValueService {
 
 	@Resource(name = "specificationValueDaoImpl")
-	public void setBaseDao(SpecificationValueDao specificationValueDao) {
+	public void setBaseDao(SpecificationValueDAO specificationValueDao) {
 		super.setBaseDao(specificationValueDao);
 	}
 

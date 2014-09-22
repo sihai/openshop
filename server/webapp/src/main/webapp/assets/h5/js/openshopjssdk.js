@@ -1,7 +1,7 @@
 ;
 (function() {
 
-	var gateway = 'http://127.0.0.1:8080/api/do.jhtml';
+	var gateway = 'http://www.openshop.com:8080/api/do.jhtml';
 	var appkey = 'openshop.client.h5.appkey';
 	var deviceId = 'openshop.client.h5.deviceId';
 	var deviceName = 'openshop.client.h5.deviceName';
@@ -25,7 +25,7 @@
 			
 				//alert(handlerName + " " + apiName + " " + apiVersion + " " + parameters + " " + callback);
 				if('callApi' == handlerName) {
-					$.ajax( {
+					jQuery.ajax( {
 						 url: gateway,
 						 type: 'post',
 						 timeout: 10000,

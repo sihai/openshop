@@ -27,11 +27,11 @@ import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import com.openteach.openshop.server.service.Template;
-import com.openteach.openshop.server.service.dao.ArticleDao;
-import com.openteach.openshop.server.service.dao.BrandDao;
-import com.openteach.openshop.server.service.dao.ProductCategoryDao;
-import com.openteach.openshop.server.service.dao.ProductDao;
-import com.openteach.openshop.server.service.dao.PromotionDao;
+import com.openteach.openshop.server.service.dao.ArticleDAO;
+import com.openteach.openshop.server.service.dao.BrandDAO;
+import com.openteach.openshop.server.service.dao.ProductCategoryDAO;
+import com.openteach.openshop.server.service.dao.ProductDAO;
+import com.openteach.openshop.server.service.dao.PromotionDAO;
 import com.openteach.openshop.server.service.entity.Article;
 import com.openteach.openshop.server.service.entity.Brand;
 import com.openteach.openshop.server.service.entity.Product;
@@ -63,15 +63,15 @@ public class StaticServiceImpl implements StaticService, ServletContextAware {
 	@Resource(name = "templateServiceImpl")
 	private TemplateService templateService;
 	@Resource(name = "productCategoryDaoImpl")
-	private ProductCategoryDao productCategoryDao;
+	private ProductCategoryDAO productCategoryDao;
 	@Resource(name = "articleDaoImpl")
-	private ArticleDao articleDao;
+	private ArticleDAO articleDao;
 	@Resource(name = "productDaoImpl")
-	private ProductDao productDao;
+	private ProductDAO productDao;
 	@Resource(name = "brandDaoImpl")
-	private BrandDao brandDao;
+	private BrandDAO brandDao;
 	@Resource(name = "promotionDaoImpl")
-	private PromotionDao promotionDao;
+	private PromotionDAO promotionDao;
 
 	public void setServletContext(ServletContext servletContext) {
 		this.servletContext = servletContext;

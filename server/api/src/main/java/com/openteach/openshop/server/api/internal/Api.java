@@ -13,19 +13,22 @@ public interface Api  {
 		
 		/**
 		 * 
+		 * @param api
 		 */
-		void onCompleted();
+		void onCompleted(Api api);
 		
 		/**
 		 * 
+		 * @param api
 		 * @param t
 		 */
-		void onException(Throwable t);
+		void onException(Api api, Throwable t);
 		
 		/**
 		 * 
+		 * @param api
 		 */
-		void onTimeout();
+		void onTimeout(Api api);
 	}
 	
 	/**

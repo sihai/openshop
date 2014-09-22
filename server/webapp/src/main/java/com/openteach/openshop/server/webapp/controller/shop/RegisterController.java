@@ -91,7 +91,8 @@ public class RegisterController extends BaseController {
 	@RequestMapping(value = "/submit", method = RequestMethod.POST)
 	public @ResponseBody
 	Message submit(String captchaId, String captcha, String username, String email, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
-		return userBO.register(captchaId, captcha, username, email, request, response, session);
+		//return userBO.register(captchaId, captcha, username, email, request, response, session);
+		return null;
 	}
 
 }

@@ -23,6 +23,7 @@ import org.hibernate.search.annotations.Index;
 import org.hibernate.search.annotations.Resolution;
 import org.hibernate.search.annotations.Store;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -79,6 +80,7 @@ public abstract class BaseEntity implements Serializable {
 	 * @return ID
 	 */
 	@JsonProperty
+	@JSONField
 	@DocumentId
 	@Id
 	// MySQL/SQLServer: @GeneratedValue(strategy = GenerationType.AUTO)

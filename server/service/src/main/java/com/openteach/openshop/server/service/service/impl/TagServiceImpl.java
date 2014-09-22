@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
-import com.openteach.openshop.server.service.dao.TagDao;
+import com.openteach.openshop.server.service.dao.TagDAO;
 import com.openteach.openshop.server.service.entity.Tag;
 import com.openteach.openshop.server.service.entity.Tag.Type;
 import com.openteach.openshop.server.service.service.TagService;
@@ -31,10 +31,10 @@ import com.openteach.openshop.server.service.service.TagService;
 public class TagServiceImpl extends BaseServiceImpl<Tag, Long> implements TagService {
 
 	@Resource(name = "tagDaoImpl")
-	private TagDao tagDao;
+	private TagDAO tagDao;
 
 	@Resource(name = "tagDaoImpl")
-	public void setBaseDao(TagDao tagDao) {
+	public void setBaseDao(TagDAO tagDao) {
 		super.setBaseDao(tagDao);
 	}
 

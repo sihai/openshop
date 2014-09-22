@@ -18,7 +18,9 @@ import org.springframework.stereotype.Component;
 import com.openteach.openshop.server.api.annotation.Param;
 import com.openteach.openshop.server.api.annotation.Params;
 import com.openteach.openshop.server.api.biz.BizExecutor;
+import com.openteach.openshop.server.api.interceptor.Interceptor;
 import com.openteach.openshop.server.api.internal.DefaultApi;
+import com.openteach.openshop.server.api.internal.EntityManagerFactoryAccessorHelper;
 import com.openteach.openshop.server.api.internal.parameter.ParameterGeneratorFactory;
 import com.openteach.openshop.server.api.internal.parameter.ParameterMetadata;
 import com.openteach.openshop.server.api.internal.parameter.ParametersMetadata;
@@ -38,6 +40,18 @@ public class AnnotationApiRepository implements ApiRepository, ApplicationContex
 	
 	@Resource(name = "bizExecutor")
 	private BizExecutor bizExecutor;
+	
+	/**
+	 * 
+	 */
+	@Resource(name = "defaultInterceptor")
+	private Interceptor interceptor;
+	
+	/**
+	 * 
+	 */
+	@Resource(name = "entityManagerFactoryAccessorHelper")
+	private EntityManagerFactoryAccessorHelper entityManagerFactoryAccessorHelper;
 	
 	/**
 	 * 
@@ -123,6 +137,6 @@ public class AnnotationApiRepository implements ApiRepository, ApplicationContex
 				}
 			}
 		}
-		return new DefaultApi(bizExecutor, o, m, new ParametersMetadata(pms));
+		return new DefaultApi(bizExecutor, o, m, new ParametersMetadata(pms), interceptor, entityManagerFactoryAccessorHelper);
 	}
 }

@@ -52,7 +52,7 @@
 &lt;p&gt;十三、信息内容的所有权&lt;br /&gt;本网站定义的信息内容包括: 文字、软件、声音、相片、录象、图表；在广告中全部内容；本网站为用户提供的其它信息。所有这些内容受版权、商标、标签和其它财产所有权法律的保护。所以，用户只能在本网站和广告商授权下才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的派生产品。本站所有的文章版权归原文作者和本站共同所有，任何人需要转载本站的文章，必须征得原文作者或本站授权。&lt;/p&gt;
 &lt;p&gt;十四、法律&lt;br /&gt;本协议的订立、执行和解释及争议的解决均应适用中华人民共和国的法律。用户和本网站一致同意服从本网站所在地有管辖权的法院管辖。如发生本网站服务条款与中华人民共和国法律相抵触时，则这些条款将完全按法律规定重新解释，而其它条款则依旧保持对用户的约束力。&lt;/p&gt;"/> 
 	<setting name="isEmailLogin" value="true" />
-	<setting name="captchaTypes" value="memberLogin,memberRegister,adminLogin,supplierLogin,review,consultation,findPassword,resetPassword,cooperation,other" />
+	<setting name="captchaTypes" value="memberLogin,memberRegister,adminLoginxx,supplierLogin,review,consultation,findPassword,resetPassword,cooperation,other" />
 	<setting name="accountLockTypes" value="member,admin" />
 	<setting name="accountLockCount" value="5" />
 	<setting name="accountLockTime" value="10" />
@@ -100,6 +100,7 @@
 	<setting name="isCnzzEnabled" value="false" />
 	<setting name="cnzzSiteId" value="" />
 	<setting name="cnzzPassword" value="" />
+	<setting name="resetPasswordTokenExpiredTime" value="86400" />
 	
 	<logConfig operation="系统设置" urlPattern="/admin/setting/update.jhtml" />
 	<logConfig operation="添加管理员" urlPattern="/admin/admin/save.jhtml" />

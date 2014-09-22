@@ -18,8 +18,8 @@ import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.ProductDao;
-import com.openteach.openshop.server.service.dao.ReviewDao;
+import com.openteach.openshop.server.service.dao.ProductDAO;
+import com.openteach.openshop.server.service.dao.ReviewDAO;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Product;
 import com.openteach.openshop.server.service.entity.Review;
@@ -37,14 +37,14 @@ import com.openteach.openshop.server.service.service.StaticService;
 public class ReviewServiceImpl extends BaseServiceImpl<Review, Long> implements ReviewService {
 
 	@Resource(name = "reviewDaoImpl")
-	private ReviewDao reviewDao;
+	private ReviewDAO reviewDao;
 	@Resource(name = "productDaoImpl")
-	private ProductDao productDao;
+	private ProductDAO productDao;
 	@Resource(name = "staticServiceImpl")
 	private StaticService staticService;
 
 	@Resource(name = "reviewDaoImpl")
-	public void setBaseDao(ReviewDao reviewDao) {
+	public void setBaseDao(ReviewDAO reviewDao) {
 		super.setBaseDao(reviewDao);
 	}
 

@@ -158,6 +158,8 @@ public class Setting implements Serializable {
 		/** 注册会员 */
 		member
 	}
+	
+	public static final long DEAFULT_TOKEN_EXPIRED_TIME = 86400;
 
 	/** 缓存名称 */
 	public static final String CACHE_NAME = "setting";
@@ -404,6 +406,8 @@ public class Setting implements Serializable {
 
 	/** CNZZ统计密码 */
 	private String cnzzPassword;
+	
+	private long resetPasswordTokenExpiredTime = DEAFULT_TOKEN_EXPIRED_TIME;
 
 	/**
 	 * 获取网站名称
@@ -2160,5 +2164,12 @@ public class Setting implements Serializable {
 		}
 		return amount.setScale(getPriceScale(), roundingMode);
 	}
+	
+	public long getResetPasswordTokenExpiredTime() {
+		return resetPasswordTokenExpiredTime;
+	}
 
+	public void setResetPasswordTokenExpiredTime(long resetPasswordTokenExpiredTime) {
+		this.resetPasswordTokenExpiredTime = resetPasswordTokenExpiredTime;
+	}
 }

@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Filter;
 import com.openteach.openshop.server.service.Order;
-import com.openteach.openshop.server.service.dao.FriendLinkDao;
+import com.openteach.openshop.server.service.dao.FriendLinkDAO;
 import com.openteach.openshop.server.service.entity.FriendLink;
 import com.openteach.openshop.server.service.entity.FriendLink.Type;
 import com.openteach.openshop.server.service.service.FriendLinkService;
@@ -31,10 +31,10 @@ import com.openteach.openshop.server.service.service.FriendLinkService;
 public class FriendLinkServiceImpl extends BaseServiceImpl<FriendLink, Long> implements FriendLinkService {
 
 	@Resource(name = "friendLinkDaoImpl")
-	public FriendLinkDao friendLinkDao;
+	public FriendLinkDAO friendLinkDao;
 
 	@Resource(name = "friendLinkDaoImpl")
-	public void setBaseDao(FriendLinkDao friendLinkDao) {
+	public void setBaseDao(FriendLinkDAO friendLinkDao) {
 		super.setBaseDao(friendLinkDao);
 	}
 

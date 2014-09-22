@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.OrderItemDao;
+import com.openteach.openshop.server.service.dao.OrderItemDAO;
 import com.openteach.openshop.server.service.entity.OrderItem;
 import com.openteach.openshop.server.service.entity.PlatformPayment;
 import com.openteach.openshop.server.service.entity.Supplier;
@@ -37,7 +37,7 @@ import com.openteach.openshop.server.service.service.SupplierService;
 @Service("orderItemServiceImpl")
 public class OrderItemServiceImpl extends BaseServiceImpl<OrderItem, Long> implements OrderItemService {
 
-	private OrderItemDao orderItemDao;
+	private OrderItemDAO orderItemDao;
 	@Resource(name = "supplierService")
 	private SupplierService supplierService;
 	@Resource(name = "platformPaymentService")
@@ -45,7 +45,7 @@ public class OrderItemServiceImpl extends BaseServiceImpl<OrderItem, Long> imple
 	
 	
 	@Resource(name = "orderItemDaoImpl")
-	public void setOrderItemDao(OrderItemDao orderItemDao) {
+	public void setOrderItemDao(OrderItemDAO orderItemDao) {
 		super.setBaseDao(orderItemDao);
 		this.orderItemDao = orderItemDao;
 	}

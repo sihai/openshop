@@ -24,20 +24,20 @@ import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
 import com.openteach.openshop.server.service.Setting;
 import com.openteach.openshop.server.service.Setting.StockAllocationTime;
-import com.openteach.openshop.server.service.dao.CartDao;
-import com.openteach.openshop.server.service.dao.CouponCodeDao;
-import com.openteach.openshop.server.service.dao.DepositDao;
-import com.openteach.openshop.server.service.dao.MemberDao;
-import com.openteach.openshop.server.service.dao.MemberRankDao;
-import com.openteach.openshop.server.service.dao.OrderDao;
-import com.openteach.openshop.server.service.dao.OrderItemDao;
-import com.openteach.openshop.server.service.dao.OrderLogDao;
-import com.openteach.openshop.server.service.dao.PaymentDao;
-import com.openteach.openshop.server.service.dao.ProductDao;
-import com.openteach.openshop.server.service.dao.RefundsDao;
-import com.openteach.openshop.server.service.dao.ReturnsDao;
-import com.openteach.openshop.server.service.dao.ShippingDao;
-import com.openteach.openshop.server.service.dao.SnDao;
+import com.openteach.openshop.server.service.dao.CartDAO;
+import com.openteach.openshop.server.service.dao.CouponCodeDAO;
+import com.openteach.openshop.server.service.dao.DepositDAO;
+import com.openteach.openshop.server.service.dao.MemberDAO;
+import com.openteach.openshop.server.service.dao.MemberRankDAO;
+import com.openteach.openshop.server.service.dao.OrderDAO;
+import com.openteach.openshop.server.service.dao.OrderItemDAO;
+import com.openteach.openshop.server.service.dao.OrderLogDAO;
+import com.openteach.openshop.server.service.dao.PaymentDAO;
+import com.openteach.openshop.server.service.dao.ProductDAO;
+import com.openteach.openshop.server.service.dao.RefundsDAO;
+import com.openteach.openshop.server.service.dao.ReturnsDAO;
+import com.openteach.openshop.server.service.dao.ShippingDAO;
+import com.openteach.openshop.server.service.dao.SnDAO;
 import com.openteach.openshop.server.service.entity.Admin;
 import com.openteach.openshop.server.service.entity.Cart;
 import com.openteach.openshop.server.service.entity.CartItem;
@@ -82,38 +82,38 @@ import com.openteach.openshop.server.service.util.SettingUtils;
 public class OrderServiceImpl extends BaseServiceImpl<Order, Long> implements OrderService {
 
 	@Resource(name = "orderDaoImpl")
-	private OrderDao orderDao;
+	private OrderDAO orderDao;
 	@Resource(name = "orderItemDaoImpl")
-	private OrderItemDao orderItemDao;
+	private OrderItemDAO orderItemDao;
 	@Resource(name = "orderLogDaoImpl")
-	private OrderLogDao orderLogDao;
+	private OrderLogDAO orderLogDao;
 	@Resource(name = "cartDaoImpl")
-	private CartDao cartDao;
+	private CartDAO cartDao;
 	@Resource(name = "couponCodeDaoImpl")
-	private CouponCodeDao couponCodeDao;
+	private CouponCodeDAO couponCodeDao;
 	@Resource(name = "snDaoImpl")
-	private SnDao snDao;
+	private SnDAO snDao;
 	@Resource(name = "memberDaoImpl")
-	private MemberDao memberDao;
+	private MemberDAO memberDao;
 	@Resource(name = "memberRankDaoImpl")
-	private MemberRankDao memberRankDao;
+	private MemberRankDAO memberRankDao;
 	@Resource(name = "productDaoImpl")
-	private ProductDao productDao;
+	private ProductDAO productDao;
 	@Resource(name = "depositDaoImpl")
-	private DepositDao depositDao;
+	private DepositDAO depositDao;
 	@Resource(name = "paymentDaoImpl")
-	private PaymentDao paymentDao;
+	private PaymentDAO paymentDao;
 	@Resource(name = "refundsDaoImpl")
-	private RefundsDao refundsDao;
+	private RefundsDAO refundsDao;
 	@Resource(name = "shippingDaoImpl")
-	private ShippingDao shippingDao;
+	private ShippingDAO shippingDao;
 	@Resource(name = "returnsDaoImpl")
-	private ReturnsDao returnsDao;
+	private ReturnsDAO returnsDao;
 	@Resource(name = "staticServiceImpl")
 	private StaticService staticService;
 
 	@Resource(name = "orderDaoImpl")
-	public void setBaseDao(OrderDao orderDao) {
+	public void setBaseDao(OrderDAO orderDao) {
 		super.setBaseDao(orderDao);
 	}
 

@@ -39,7 +39,7 @@ public class MemberInterceptor extends HandlerInterceptorAdapter {
 	private static final String MEMBER_ATTRIBUTE_NAME = "member";
 
 	/** 默认登录URL */
-	private static final String DEFAULT_LOGIN_URL = "/login.jhtml";
+	private static final String DEFAULT_LOGIN_URL = "/login.html";
 
 	/** 登录URL */
 	private String loginUrl = DEFAULT_LOGIN_URL;

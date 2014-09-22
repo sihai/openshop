@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.DepositDao;
+import com.openteach.openshop.server.service.dao.DepositDAO;
 import com.openteach.openshop.server.service.entity.Deposit;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.service.DepositService;
@@ -27,10 +27,10 @@ import com.openteach.openshop.server.service.service.DepositService;
 public class DepositServiceImpl extends BaseServiceImpl<Deposit, Long> implements DepositService {
 
 	@Resource(name = "depositDaoImpl")
-	private DepositDao depositDao;
+	private DepositDAO depositDao;
 
 	@Resource(name = "depositDaoImpl")
-	public void setBaseDao(DepositDao depositDao) {
+	public void setBaseDao(DepositDAO depositDao) {
 		super.setBaseDao(depositDao);
 	}
 

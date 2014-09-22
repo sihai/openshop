@@ -7,6 +7,8 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.json.JSONObject;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openteach.openshop.server.api.async.AsyncException;
 import com.openteach.openshop.server.api.async.AsyncKey;
 import com.openteach.openshop.server.api.async.ConnectionPool;
@@ -33,6 +36,12 @@ public class DefaultApiExecutor implements ApiExecutor {
 	private static final Log logger = LogFactory.getLog(DefaultApiExecutor.class);
 
 	public static final long DEFAULT_SERVLET_TIMEOUT = 1000 * 15;
+	
+	private static final ObjectMapper mapper;
+	
+	static {
+		mapper = new ObjectMapper();
+	}
 	
 	/**
 	 * 
@@ -115,7 +124,9 @@ public class DefaultApiExecutor implements ApiExecutor {
 	 * @param apiContext
 	 */
 	private void bridgeSpringContext(ApiContext apiContext) {
+		// 
 		apiContext.getSpringContextHolder().setRequestAttributes(RequestContextHolder.getRequestAttributes());
+		// 
 	}
 	
 	/**
@@ -220,7 +231,7 @@ public class DefaultApiExecutor implements ApiExecutor {
 				for(Map.Entry<String, String> e : apiContext.getResponse().getHeaders().entrySet()) {
 					((HttpServletResponse)apiContext.getAsyncContext().getAsyncContext().getResponse()).addHeader(e.getKey(), e.getValue());
 				}
-				apiContext.getAsyncContext().getAsyncContext().getResponse().getWriter().write(JSON.toJSONString(apiContext.getResponse().getResult()));
+				apiContext.getAsyncContext().getAsyncContext().getResponse().getWriter().write(mapper.writeValueAsString(apiContext.getResponse().getResult())/*JSON.toJSONString(apiContext.getResponse().getResult())*/);
 				apiContext.getAsyncContext().getAsyncContext().getResponse().getWriter().flush();
 			}
 		} catch (IOException e) {
@@ -250,12 +261,12 @@ public class DefaultApiExecutor implements ApiExecutor {
 		}
 		
 		@Override
-		public void onCompleted() {
+		public void onCompleted(Api api) {
 			response(apiContext);
 		}
 
 		@Override
-		public void onException(Throwable t) {
+		public void onException(Api api, Throwable t) {
 			if(t instanceof ApiException) {
 				apiContext.getResponse().setResult(ResultFactory.failed(((ApiException)t).getErrorCode(), ((ApiException)t).getErrorMsg()));
 			} else {
@@ -265,7 +276,7 @@ public class DefaultApiExecutor implements ApiExecutor {
 		}
 
 		@Override
-		public void onTimeout() {
+		public void onTimeout(Api api) {
 			apiContext.getResponse().setResult(ResultFactory.failed(ErrorCode.BIZ_TIMEOUT, "biz timeout"));
 			response(apiContext);
 		}

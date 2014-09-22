@@ -12,7 +12,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.AdPositionDao;
+import com.openteach.openshop.server.service.dao.AdPositionDAO;
 import com.openteach.openshop.server.service.entity.AdPosition;
 import com.openteach.openshop.server.service.service.AdPositionService;
 
@@ -26,10 +26,10 @@ import com.openteach.openshop.server.service.service.AdPositionService;
 public class AdPositionServiceImpl extends BaseServiceImpl<AdPosition, Long> implements AdPositionService {
 
 	@Resource(name = "adPositionDaoImpl")
-	private AdPositionDao adPositionDao;
+	private AdPositionDAO adPositionDao;
 
 	@Resource(name = "adPositionDaoImpl")
-	public void setBaseDao(AdPositionDao adPositionDao) {
+	public void setBaseDao(AdPositionDAO adPositionDao) {
 		super.setBaseDao(adPositionDao);
 	}
 

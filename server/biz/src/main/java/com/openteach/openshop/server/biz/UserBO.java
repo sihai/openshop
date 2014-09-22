@@ -1,8 +1,6 @@
 package com.openteach.openshop.server.biz;
 
 import java.math.BigDecimal;
-import java.text.ParseException;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -24,7 +22,6 @@ import org.apache.commons.lang.time.DateUtils;
 import org.springframework.stereotype.Component;
 
 import com.openteach.openshop.server.api.security.RSAUtils;
-import com.openteach.openshop.server.service.CommonAttributes;
 import com.openteach.openshop.server.service.Message;
 import com.openteach.openshop.server.service.Principal;
 import com.openteach.openshop.server.service.Setting;
@@ -35,15 +32,18 @@ import com.openteach.openshop.server.service.entity.BaseEntity.Save;
 import com.openteach.openshop.server.service.entity.Cart;
 import com.openteach.openshop.server.service.entity.Member;
 import com.openteach.openshop.server.service.entity.Member.Gender;
-import com.openteach.openshop.server.service.entity.MemberAttribute;
-import com.openteach.openshop.server.service.entity.MemberAttribute.Type;
+import com.openteach.openshop.server.service.entity.Token;
 import com.openteach.openshop.server.service.service.AreaService;
 import com.openteach.openshop.server.service.service.CaptchaService;
 import com.openteach.openshop.server.service.service.CartService;
+import com.openteach.openshop.server.service.service.MailService;
 import com.openteach.openshop.server.service.service.MemberAttributeService;
 import com.openteach.openshop.server.service.service.MemberRankService;
 import com.openteach.openshop.server.service.service.MemberService;
+import com.openteach.openshop.server.service.service.TemplateService;
+import com.openteach.openshop.server.service.service.TokenService;
 import com.openteach.openshop.server.service.util.SettingUtils;
+import com.openteach.openshop.server.service.util.TokenUtils;
 import com.openteach.openshop.server.service.util.WebUtils;
 
 /**
@@ -66,20 +66,31 @@ public class UserBO extends BaseBO {
 	private CartService cartService;
 	@Resource(name = "areaServiceImpl")
 	private AreaService areaService;
+	@Resource(name = "tokenService")
+	private TokenService tokenService;
+	@Resource(name = "mailServiceImpl")
+	private MailService mailService;
+	@Resource(name = "templateServiceImpl")
+	private TemplateService templateService;
 	
 	/**
 	 * 
-	 * @param username
 	 * @param email
+	 * @param password
+	 * @param username
+	 * @param telephone
+	 * @param birthday
+	 * @param gender
+	 * @param areaid
+	 * @param address
 	 * @param request
 	 * @param response
 	 * @param session
 	 * @return
 	 */
-	public Message register(String username, String email, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
-		String password = RSAUtils.decryptParameter("enPassword", request);
-		RSAUtils.removePrivateKey(request);
+	public Message register(String email, String password, String username, String telephone, Date birthday, Gender gender, Long areaid, String address, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
 		Setting setting = SettingUtils.get();
+		
 		if (!setting.getIsRegisterEnabled()) {
 			return Message.error("shop.register.disabled");
 		}
@@ -99,50 +110,15 @@ public class UserBO extends BaseBO {
 			return Message.error("shop.register.emailExist");
 		}
 
+		
 		Member member = new Member();
-		List<MemberAttribute> memberAttributes = memberAttributeService.findList();
-		for (MemberAttribute memberAttribute : memberAttributes) {
-			String parameter = request.getParameter("memberAttribute_" + memberAttribute.getId());
-			if (memberAttribute.getType() == Type.name || memberAttribute.getType() == Type.address || memberAttribute.getType() == Type.zipCode || memberAttribute.getType() == Type.phone || memberAttribute.getType() == Type.mobile || memberAttribute.getType() == Type.text || memberAttribute.getType() == Type.select) {
-				if (memberAttribute.getIsRequired() && StringUtils.isEmpty(parameter)) {
-					return Message.error("shop.common.invalid");
-				}
-				member.setAttributeValue(memberAttribute, parameter);
-			} else if (memberAttribute.getType() == Type.gender) {
-				Gender gender = StringUtils.isNotEmpty(parameter) ? Gender.valueOf(parameter) : null;
-				if (memberAttribute.getIsRequired() && gender == null) {
-					return Message.error("shop.common.invalid");
-				}
-				member.setGender(gender);
-			} else if (memberAttribute.getType() == Type.birth) {
-				try {
-					Date birth = StringUtils.isNotEmpty(parameter) ? DateUtils.parseDate(parameter, CommonAttributes.DATE_PATTERNS) : null;
-					if (memberAttribute.getIsRequired() && birth == null) {
-						return Message.error("shop.common.invalid");
-					}
-					member.setBirth(birth);
-				} catch (ParseException e) {
-					return Message.error("shop.common.invalid");
-				}
-			} else if (memberAttribute.getType() == Type.area) {
-				Area area = StringUtils.isNotEmpty(parameter) ? areaService.find(Long.valueOf(parameter)) : null;
-				if (area != null) {
-					member.setArea(area);
-				} else if (memberAttribute.getIsRequired()) {
-					return Message.error("shop.common.invalid");
-				}
-			} else if (memberAttribute.getType() == Type.checkbox) {
-				String[] parameterValues = request.getParameterValues("memberAttribute_" + memberAttribute.getId());
-				List<String> options = parameterValues != null ? Arrays.asList(parameterValues) : null;
-				if (memberAttribute.getIsRequired() && (options == null || options.isEmpty())) {
-					return Message.error("shop.common.invalid");
-				}
-				member.setAttributeValue(memberAttribute, options);
-			}
-		}
-		member.setUsername(username.toLowerCase());
+		
+		member.setUsername(username);
 		member.setPassword(DigestUtils.md5Hex(password));
 		member.setEmail(email);
+		member.setGender(gender);
+		member.setBirth(birthday);
+		member.setPhone(telephone);
 		member.setPoint(setting.getRegisterPoint());
 		member.setAmount(new BigDecimal(0));
 		member.setBalance(new BigDecimal(0));
@@ -156,6 +132,13 @@ public class UserBO extends BaseBO {
 		member.setSafeKey(null);
 		member.setMemberRank(memberRankService.findDefault());
 		member.setFavoriteProducts(null);
+		
+		Area area = areaService.find(areaid);
+		if (area != null) {
+			member.setArea(area);
+		}
+		member.setAddress(address);
+		
 		memberService.save(member);
 
 		Cart cart = cartService.getCurrent();
@@ -184,24 +167,6 @@ public class UserBO extends BaseBO {
 		}
 		
 		return Message.success("shop.register.success");
-	}
-	
-	/**
-	 * 
-	 * @param captchaId
-	 * @param captcha
-	 * @param username
-	 * @param email
-	 * @param request
-	 * @param response
-	 * @param session
-	 * @return
-	 */
-	public Message register(String captchaId, String captcha, String username, String email, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
-		if (!captchaService.isValid(CaptchaType.memberRegister, captchaId, captcha)) {
-			return Message.error("shop.captcha.invalid");
-		}
-		return register(username, email, request, response, session);
 	}
 	
 	/**
@@ -441,6 +406,71 @@ public class UserBO extends BaseBO {
 			WebUtils.addCookie(request, response, Member.NAME_COOKIE_NAME, member.getName());
 		}
 
+		return SUCCESS_MESSAGE;
+	}
+	
+	/**
+	 * 
+	 * @param email
+	 * @param request
+	 * @param response
+	 * @param session
+	 * @return
+	 */
+	public Message findPassword(String email, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+		Member m = memberService.findByEmail(email);
+		if(null == m) {
+			return Message.error("openshop.user.notExists", null);
+		}
+		
+		String s = TokenUtils.random();
+		Token t = new Token();
+		t.setContent(s);
+		t.setType(Token.Type.RESET_PASSWORD);
+		t.setContext(email);
+		Setting setting = SettingUtils.get();
+		StringBuilder sb = new StringBuilder(setting.getSiteUrl());
+		sb.append("/resetpassword.html?").append("token=").append(s);
+		tokenService.save(t);
+		
+		Map<String, Object> c = new HashMap<String, Object>();
+		c.put("username", m.getUsername());
+		c.put("url", sb.toString());
+		
+		// send mail
+		mailService.send(email, "私人定制俱乐部 | 重置密码", templateService.get("findPasswordMail").getTemplatePath(), c, true);
+		return SUCCESS_MESSAGE;
+	}
+	
+	/**
+	 * 
+	 * @param token
+	 * @param password
+	 * @param request
+	 * @param response
+	 * @param session
+	 * @return
+	 */
+	public Message resetPassword(String token, String password, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+		Token t = tokenService.findByContentAndType(token, Token.Type.RESET_PASSWORD);
+		if(null == t) {
+			return Message.error("openshop.user.password.reset.token.notExists", null);
+		}
+		if(t.isUsed()) {
+			return Message.error("openshop.user.password.reset.token.used", null);
+		}
+ 		Setting setting = SettingUtils.get();
+		if(t.getCreateDate().getTime() + setting.getResetPasswordTokenExpiredTime() * 1000 < System.currentTimeMillis()) {
+			return Message.error("openshop.user.password.reset.token.expired", null);
+		}
+		Member m = memberService.findByEmail(t.getContext());
+		if(null == m) {
+			return Message.error("openshop.user.password.reset.token.wrong", null);
+		}
+		m.setPassword(DigestUtils.md5Hex(password));
+		memberService.update(m);
+		t.setUsed(true);
+		tokenService.update(t);
 		return SUCCESS_MESSAGE;
 	}
 }

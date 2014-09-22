@@ -13,7 +13,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.openteach.openshop.server.service.dao.MemberRankDao;
+import com.openteach.openshop.server.service.dao.MemberRankDAO;
 import com.openteach.openshop.server.service.entity.MemberRank;
 import com.openteach.openshop.server.service.service.MemberRankService;
 
@@ -27,10 +27,10 @@ import com.openteach.openshop.server.service.service.MemberRankService;
 public class MemberRankServiceImpl extends BaseServiceImpl<MemberRank, Long> implements MemberRankService {
 
 	@Resource(name = "memberRankDaoImpl")
-	private MemberRankDao memberRankDao;
+	private MemberRankDAO memberRankDao;
 
 	@Resource(name = "memberRankDaoImpl")
-	public void setBaseDao(MemberRankDao memberRankDao) {
+	public void setBaseDao(MemberRankDAO memberRankDao) {
 		super.setBaseDao(memberRankDao);
 	}
 

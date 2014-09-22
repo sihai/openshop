@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.openteach.openshop.server.service.dao.ReturnsDao;
+import com.openteach.openshop.server.service.dao.ReturnsDAO;
 import com.openteach.openshop.server.service.entity.Returns;
 import com.openteach.openshop.server.service.service.ReturnsService;
 
@@ -23,7 +23,7 @@ import com.openteach.openshop.server.service.service.ReturnsService;
 public class ReturnsServiceImpl extends BaseServiceImpl<Returns, Long> implements ReturnsService {
 
 	@Resource(name = "returnsDaoImpl")
-	public void setBaseDao(ReturnsDao returnsDao) {
+	public void setBaseDao(ReturnsDAO returnsDao) {
 		super.setBaseDao(returnsDao);
 	}
 

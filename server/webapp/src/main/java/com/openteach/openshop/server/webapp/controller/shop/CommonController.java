@@ -135,5 +135,4 @@ public class CommonController {
 	public String resourceNotFound() {
 		return "/shop/common/resource_not_found";
 	}
-
 }

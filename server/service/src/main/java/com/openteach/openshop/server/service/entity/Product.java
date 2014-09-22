@@ -58,6 +58,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 import org.wltea.analyzer.lucene.IKSimilarity;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.openteach.openshop.server.service.BigDecimalNumericFieldBridge;
 import com.openteach.openshop.server.service.CommonAttributes;
@@ -383,6 +384,7 @@ public class Product extends BaseEntity {
 	 * @return 编号
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.UN_TOKENIZED)
 	@Pattern(regexp = "^[0-9a-zA-Z_-]+$")
 	@Length(max = 100)
@@ -407,6 +409,7 @@ public class Product extends BaseEntity {
 	 * @return 名称
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.TOKENIZED, analyzer = @Analyzer(impl = IKAnalyzer.class))
 	@NotEmpty
 	@Length(max = 200)
@@ -431,6 +434,7 @@ public class Product extends BaseEntity {
 	 * @return 全称
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.NO)
 	@Column(nullable = false)
 	public String getFullName() {
@@ -453,6 +457,7 @@ public class Product extends BaseEntity {
 	 * @return 销售价
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.UN_TOKENIZED)
 	@NumericField
 	@FieldBridge(impl = BigDecimalNumericFieldBridge.class)
@@ -525,6 +530,7 @@ public class Product extends BaseEntity {
 	 * @return 展示图片
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.NO)
 	@Length(max = 200)
 	public String getImage() {
@@ -547,6 +553,7 @@ public class Product extends BaseEntity {
 	 * @return 单位
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.NO)
 	@Length(max = 200)
 	public String getUnit() {
@@ -740,6 +747,7 @@ public class Product extends BaseEntity {
 	 * @return 是否为赠品
 	 */
 	@JsonProperty
+	@JSONField
 	@Field(store = Store.YES, index = Index.UN_TOKENIZED)
 	@NotNull
 	@Column(nullable = false)
@@ -1565,6 +1573,16 @@ public class Product extends BaseEntity {
 	public ProductCategory getProductCategory() {
 		return productCategory;
 	}
+	
+	@NotNull
+	@Field(store = Store.YES, index = Index.UN_TOKENIZED)
+	public Long getProductCategoryId() {
+		return productCategory.getId();
+	}
+	
+	public void setProductCategoryId(Long catId) {
+		
+	}
 
 	/**
 	 * 设置商品分类
@@ -1662,6 +1680,8 @@ public class Product extends BaseEntity {
 	 * 
 	 * @return
 	 */
+	@JsonProperty
+	@JSONField
 	@Length(max = 200)
 	public String getRecommendReason() {
 		return recommendReason;
@@ -2085,6 +2105,7 @@ public class Product extends BaseEntity {
 	 * @return 缩略图
 	 */
 	@JsonProperty
+	@JSONField
 	@Transient
 	public String getThumbnail() {
 		if (getProductImages() != null && !getProductImages().isEmpty()) {

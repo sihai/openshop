@@ -103,4 +103,27 @@ public class ProductBO extends BaseBO {
 		}
 		return page;
 	}
+	
+	/**
+	 * 
+	 * @param keyword
+	 * @param catIds
+	 * @param startPrice
+	 * @param endPrice
+	 * @param orderType
+	 * @param pageable
+	 * @return
+	 */
+	public Page<Product> search(String keyword, Long[] catIds, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Pageable pageable) {
+		return searchService.search(keyword, catIds, startPrice, endPrice, orderType, pageable);
+	}
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Product get(Long id) {
+		return productService.find(id);
+	}
 }

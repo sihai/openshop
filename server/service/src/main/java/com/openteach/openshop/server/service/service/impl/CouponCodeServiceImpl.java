@@ -16,8 +16,8 @@ import org.springframework.util.Assert;
 
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
-import com.openteach.openshop.server.service.dao.CouponCodeDao;
-import com.openteach.openshop.server.service.dao.MemberDao;
+import com.openteach.openshop.server.service.dao.CouponCodeDAO;
+import com.openteach.openshop.server.service.dao.MemberDAO;
 import com.openteach.openshop.server.service.entity.Coupon;
 import com.openteach.openshop.server.service.entity.CouponCode;
 import com.openteach.openshop.server.service.entity.Member;
@@ -33,12 +33,12 @@ import com.openteach.openshop.server.service.service.CouponCodeService;
 public class CouponCodeServiceImpl extends BaseServiceImpl<CouponCode, Long> implements CouponCodeService {
 
 	@Resource(name = "couponCodeDaoImpl")
-	private CouponCodeDao couponCodeDao;
+	private CouponCodeDAO couponCodeDao;
 	@Resource(name = "memberDaoImpl")
-	private MemberDao memberDao;
+	private MemberDAO memberDao;
 
 	@Resource(name = "couponCodeDaoImpl")
-	public void setBaseDao(CouponCodeDao couponCodeDao) {
+	public void setBaseDao(CouponCodeDAO couponCodeDao) {
 		super.setBaseDao(couponCodeDao);
 	}
 

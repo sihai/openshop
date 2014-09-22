@@ -18,8 +18,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
-import com.openteach.openshop.server.service.dao.GoodsDao;
-import com.openteach.openshop.server.service.dao.ProductDao;
+import com.openteach.openshop.server.service.dao.GoodsDAO;
+import com.openteach.openshop.server.service.dao.ProductDAO;
 import com.openteach.openshop.server.service.entity.Goods;
 import com.openteach.openshop.server.service.entity.Product;
 import com.openteach.openshop.server.service.service.GoodsService;
@@ -35,14 +35,14 @@ import com.openteach.openshop.server.service.service.StaticService;
 public class GoodsServiceImpl extends BaseServiceImpl<Goods, Long> implements GoodsService {
 
 	@Resource(name = "goodsDaoImpl")
-	private GoodsDao goodsDao;
+	private GoodsDAO goodsDao;
 	@Resource(name = "productDaoImpl")
-	private ProductDao productDao;
+	private ProductDAO productDao;
 	@Resource(name = "staticServiceImpl")
 	private StaticService staticService;
 
 	@Resource(name = "goodsDaoImpl")
-	public void setBaseDao(GoodsDao goodsDao) {
+	public void setBaseDao(GoodsDAO goodsDao) {
 		super.setBaseDao(goodsDao);
 	}
 

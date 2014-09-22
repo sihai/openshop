@@ -95,6 +95,8 @@ public interface SearchService {
 	 * 
 	 * @param keyword
 	 *            关键词
+	 * @param catIds
+	 * 			  类目
 	 * @param startPrice
 	 *            最低价格
 	 * @param endPrice
@@ -105,6 +107,5 @@ public interface SearchService {
 	 *            分页信息
 	 * @return 商品分页
 	 */
-	Page<Product> search(String keyword, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Pageable pageable);
-
+	Page<Product> search(String keyword, Long[] catIds, BigDecimal startPrice, BigDecimal endPrice, OrderType orderType, Pageable pageable);
 }

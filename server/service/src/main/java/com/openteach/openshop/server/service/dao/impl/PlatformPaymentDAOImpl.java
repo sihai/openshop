@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import com.openteach.openshop.server.service.Page;
 import com.openteach.openshop.server.service.Pageable;
 import com.openteach.openshop.server.service.dao.PlatformPaymentDAO;
-import com.openteach.openshop.server.service.dao.SnDao;
+import com.openteach.openshop.server.service.dao.SnDAO;
 import com.openteach.openshop.server.service.entity.PlatformPayment;
 import com.openteach.openshop.server.service.entity.Supplier;
 import com.openteach.openshop.server.service.entity.Sn.Type;
@@ -28,7 +28,7 @@ import com.openteach.openshop.server.service.entity.Sn.Type;
 public class PlatformPaymentDAOImpl extends BaseDAOImpl<PlatformPayment, Long> implements PlatformPaymentDAO {
 
 	@Resource(name = "snDaoImpl")
-	private SnDao snDao;
+	private SnDAO snDao;
 	
 	@Override
 	public void persist(PlatformPayment entity) {
