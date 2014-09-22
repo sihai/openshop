@@ -1,0 +1,51 @@
+/*-- CLEAR --*/
+.clearfix:before,.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+/*-- INPUT --*/
+body.customer-account-create input[type="radio"], body.customer-account-create input[type="checkbox"]{display:none}
+body.customer-account-create input[type="radio"] + label span:first-child,
+body.customer-account-create input[type="checkbox"] + label span:first-child{background: url('/assets/new/images/sprite.png') no-repeat}
+body.customer-account-create input[type="radio"] + label span:first-child{background-position: -69px -347px}
+body.customer-account-create input[type="checkbox"] + label span:first-child{background-position: -9px -346px}
+body.customer-account-create input[type="radio"]:checked + label span{background-position:-99px -347px}
+body.customer-account-create input[type="checkbox"]:checked + label span{background-position:-39px -346px}
+body.customer-account-create input[type="radio"] + label span:first-child,
+body.customer-account-create input[type="checkbox"] + label span:first-child{float:left;display:inline-block;width:19px;height:19px;margin:-2px 10px 0 0;vertical-align:middle;cursor:pointer}
+/*-- CONTENEDORES --*/
+body.customer-account-create .col-main{padding:0!important}
+body.customer-account-create .account-create{margin-top:140px}
+body.customer-account-create{font-family: 'proxima_nova_regular',verdana;width:788px;margin:auto;cursor:default;color:#1B1B1B}
+body.customer-account-create input{clear:right;float:right;max-height:200px;margin:5px 0;padding:10px 20px;width:230px;border:1px solid #D5D5D5;border-radius:3px;webkit-border-radius:3px;moz-border-radius:3px;-o-border-radius:3px}
+body.customer-account-create label{clear:left;cursor:pointer;float:left;text-align:right;padding:17px 0;font:14px 'proxima_nova_regular',verdana;width:110px}
+body.customer-account-create h2.legend{padding:30px 0;font:24px 'proxima_nova_light',verdana}
+body.customer-account-create .titlecheck{padding-top:85px;top:0;position:fixed;background-color:#fff;z-index:200;width:788px;padding-bottom:10px;border-bottom:1px solid #CCC}
+body.customer-account-create .titlecheck h1{float:left;font: 36px 'proxima_nova_light'}
+body.customer-account-create .titlecheck .login-link{margin-top:12px;float:right;font:14px 'proxima_nova_regular'}
+body.customer-account-create .button:hover{color:#7FC940;background-color:#1b1b1b}
+html body.customer-account-create .button{margin-left:10px;cursor:pointer;border:0 none;text-decoration:none;text-transform:uppercase;padding:12px 20px 10px 20px;display:inline;border-radius:4px;webkit-border-radius:4px;moz-border-radius:4px;-o-border-radius:4px}
+body.customer-account-create #gender{margin-left:14px;float:left}
+body.customer-account-create .inputbox{float:right}
+body.customer-account-create .buttons-set .back-link{font-size:14px;color:#000;float:left}
+body.customer-account-create .buttons-set button{float:right}
+body.customer-account-create .required_fields{float:right;font:14px 'proxima_nova_regular',verdana}
+body.customer-account-create .account-create-description{font-size:14px;margin:20px 0}
+body.customer-account-create .buttons-set{clear:both;margin:20px 0;padding:20px 0;border-top:1px solid #D5D5D5}
+body.customer-account-create .gender{width:90px;float:left}
+body.customer-account-create .dob-month input,body.customer-account-create .dob-day input,body.customer-account-create .dob-year input{text-align:center;width:40px!important}
+body.customer-account-create .dob-month, body.customer-account-create .dob-day, body.customer-account-create .dob-year{margin-right:12.5px;float:left}
+body.customer-account-create .dob-year{margin:0!important}
+body.customer-account-create div.fieldset ul > li{width:50%;float:left}
+body.customer-account-create ul li div.customer-dob{float:right}
+
+body.customer-account-create label[for="month"]{height:17px}
+
+body.customer-account-create label[for="confirmation"],
+body.customer-account-create label[for="month"]{padding:8px 0!important}
+
+body.customer-account-create #countrySelectBoxItContainer,
+body.customer-account-create #region_idSelectBoxItContainer{margin:5px 0 0 0!important}
+body.customer-account-create #gender label{text-align:left}
+body.customer-account-create #adress_registrer > li{clear:right}
+body.customer-account-create #street_2{margin-top:7px}
+

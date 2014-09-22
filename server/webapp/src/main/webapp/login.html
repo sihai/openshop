@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>
+            私人定制俱乐部 | 会员登录
+        </title>
+        <meta name="description" content="Satorisan es una nueva marca de calzado con tendencia urbana que diseña para personas que no siguen las tendencias preestablecidas, ni las modas sobreexplotadas, y que no tienen miedo de probar algo diferente porque saben lo que les gusta."
+        />
+        <meta name="keywords" content="Satorisan, Zapatillas" />
+        <meta name="robots" content="INDEX,FOLLOW" />
+        <link rel="icon" href="/assets/new/images/favicon.png"
+        type="image/x-icon" />
+        <link rel="shortcut icon" href="/assets/new/images/favicon.png"
+        type="image/x-icon" />
+        <!--[if lt IE 7]>
+            <script type="text/javascript">
+                //<![CDATA[
+                var BLANK_URL = '/blank.html';
+                var BLANK_IMG = '/assets/new/images/spacer.gif';
+                //]]>
+                
+            </script>
+        <![endif]-->
+        
+       	<script src='/assets/new/js/vars.js'></script>
+        <script src='/assets/new/js/jquery-1.8.3.min.js'></script>
+        <script src='/assets/new/js/jquery-ui-1.8.23.custom.min.js'></script>
+        <script src='/assets/new/js/jquery.selectBoxIt.min.js'></script>
+        <script src='/assets/new/js/jquery.fileinput.js'></script>
+        <script src='/assets/new/js/jquery.nicescroll.min.js'></script>
+        <script src='/assets/new/js/main.js'></script>
+        <script src="/assets/h5/js/openshopjssdk.js"></script>
+        <script src="/assets/h5/js/openshopjssdk-init.js"></script>
+        
+        <script type="text/javascript" src="/assets/h5/js/jsbn.js"></script>
+		<script type="text/javascript" src="/assets/h5/js/prng4.js"></script>
+		<script type="text/javascript" src="/assets/h5/js/rng.js"></script>
+		<script type="text/javascript" src="/assets/h5/js/rsa.js"></script>
+		<script type="text/javascript" src="/assets/h5/js/base64.js"></script>
+		
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/styles.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/myaccount.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/orders.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/address.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/login.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/register.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/helpdesk.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/bootstrap.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/jquery-ui-1.9.1.custom.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/jquery.selectBoxIt.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/checkout.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/base/default/css/widgets.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/base/default/css/storelocator.css"
+        media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/print.css"
+        media="print" />
+        <script type="text/javascript" src="/assets/new/js/prototype.js"></script>
+        <script type="text/javascript" src="/assets/new/js/ccard.js"></script>
+        <script type="text/javascript" src="/assets/new/js/validation.js"></script>
+        <script type="text/javascript" src="/assets/new/js/builder.js"></script>
+        <script type="text/javascript" src="/assets/new/js/effects.js"></script>
+        <script type="text/javascript" src="/assets/new/js/dragdrop.js"></script>
+        <script type="text/javascript" src="/assets/new/js/controls.js"></script>
+        <script type="text/javascript" src="/assets/new/js/slider.js"></script>
+        <script type="text/javascript" src="/assets/new/js/js.js"></script>
+        <script type="text/javascript" src="/assets/new/js/form.js"></script>
+        <script type="text/javascript" src="/assets/new/js/menu.js"></script>
+        <script type="text/javascript" src="/assets/new/js/translate.js"></script>
+        <script type="text/javascript" src="/assets/new/js/cookies.js"></script>
+        <script type="text/javascript" src="/assets/new/js/captcha.js"></script>
+        <!--[if lt IE 8]>
+            <link rel="stylesheet" type="text/css" href="/assets/new/skin/frontend/default/openshop/css/styles-ie.css"
+            media="all" />
+        <![endif]-->
+        <!--[if lt IE 7]>
+            <script type="text/javascript" src="/assets/new/js/ds-sleight.js">
+            </script>
+            <script type="text/javascript" src="/assets/new/skin/frontend/base/default/js/ie6.js">
+            </script>
+        <![endif]-->
+        <script type="text/javascript">
+            //<![CDATA[
+            Mage.Cookies.path = '/';
+            Mage.Cookies.domain = '.openshop.com';
+            //]]>
+            
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            optionalZipCountries = ["IE", "PA", "HK", "MO"];
+            //]]>
+            
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            window.HDUSeed = 'f3c1798609815a33e0388eed9f3f7b57';
+            window.HDUSeedIntId = setInterval(function() {
+                if (document.observe) {
+                    document.observe('dom:loaded',
+                    function() {
+                        for (var i = 0; i < document.forms.length; i++) {
+                            if (document.forms[i].getAttribute('action') && document.forms[i].getAttribute('action').match('contacts/index/post')) {
+                                var el = document.createElement('input');
+                                el.type = ('hidden');
+                                el.name = 'hdu_seed';
+                                el.value = window.HDUSeed;
+                                document.forms[i].appendChild(el);
+
+                            }
+                        }
+                    });
+                    clearInterval(window.HDUSeedIntId)
+                }
+            },
+            100)
+            //]]>
+            
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            var Translator = new Translate({
+            	"请输入6个以上的字符。 前后空格不算。": "请输入6个以上的字符。 前后空格不算。"
+            });
+            //]]>
+            
+        </script>
+        <link rel="stylesheet" href="/assets/new/css/enhanced.css"
+        />
+        <script type="text/javascript">
+            if (parent) {
+                if (parent.user) {
+                    parent.user.updateCart('0');
+                    parent.user.updateLogin('0', 'international');
+                }
+            }
+            //$.noConflict();
+            jQuery.noConflict();
+
+            var MAGENTO_LANGUAGE_LOCALE = 'en_US';
+            var MAGENTO_LANGUAGE = 'en';
+        </script>
+    </head>
+    
+    <body class="  customer-account-login lang-en international ">
+        <!-- BEGIN GOOGLE ANALYTICS CODEs -->
+        <script type="text/javascript">
+            //<![CDATA[
+            var _gaq = _gaq || [];
+
+            _gaq.push(['_setAccount', 'UA-38603141-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl': 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+            //]]>
+            
+        </script>
+        <!-- END GOOGLE ANALYTICS CODE -->
+        <div class="wrapper">
+            <noscript>
+                <div class="global-site-notice noscript">
+                    <div class="notice-inner">
+                        <p>
+                            <strong>
+                                JavaScript seems to be disabled in your browser.
+                            </strong>
+                            <br />
+                            You must have JavaScript enabled in your browser to utilize the functionality
+                            of this website.
+                        </p>
+                    </div>
+                </div>
+            </noscript>
+            <div class="page">
+                <div class="main-container col1-layout">
+                    <div class="main">
+                        <div class="col-main">
+                            <div class="account-login">
+                                <div class="page-title">
+                                    <h1>
+                                        登录 | 注册
+                                    </h1>
+                                </div>
+                                <form method="post" id="login-form">
+                                    <div class="col2-set clearfix">
+                                        <div class="col-1 new-users">
+                                            <div class="content">
+                                                <h2>
+                                                    没有帐号
+                                                </h2>
+                                                <p>
+                                                    注册"私人定制俱乐部"帐号，您可以更快的定制或购买到我们的产品，
+                                                    因为我们已经存储了您的信息，您也可以跟踪您的订单，也可以了解到我们最新的活动，最新产品的信息。
+                                                    <br/>
+                                                    <strong>我们会严格保密您的信息。</strong>
+                                                </p>
+                                            </div>
+                                            <div class="buttons-set">
+                                                <button type="button" title="Create an Account" class="button" onclick="window.location='/register.html';"
+                                                href="/register.html';">
+                                                    创建新的帐号
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 registered-users clearfix">
+                                            <div class="content clearfix">
+                                                <h2>
+                                                    已有帐号
+                                                </h2>
+                                                <p id="error-msg">
+                                                    
+                                                </p>
+                                                <ul class="form-list clearfix">
+                                                	
+                                                    <li class="clearfix">
+                                                        <label for="email" class="required">
+                                                            用户名/邮箱 *
+                                                        </label>
+                                                        <div class="input-box">
+                                                            <input type="text" name="username-or-email" value="" id="username-or-email" class="input-text required-entry" title="用户名/邮箱" />
+                                                        </div>
+                                                    </li>
+                                                    <li class="clearfix">
+                                                        <label for="pass" class="required">
+                                                            密码 *
+                                                        </label>
+                                                        <div class="input-box">
+                                                            <input type="password" name="password" class="input-text required-entry validate-password" id="password" title="密码" />
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div id="window-overlay" class="window-overlay" style="display:none;">
+                                                </div>
+                                                <div id="remember-me-popup" class="remember-me-popup" style="display:none;">
+                                                    <div class="remember-me-popup-head">
+                                                        <h3>
+                                                            What's this?
+                                                        </h3>
+                                                        <a href="#" class="remember-me-popup-close" title="Close">
+                                                            Close
+                                                        </a>
+                                                    </div>
+                                                    <div class="remember-me-popup-body">
+                                                        <p>
+                                                            Checking &quot;Remember Me&quot; will let you access your shopping cart
+                                                            on this computer when you are logged out
+                                                        </p>
+                                                        <div class="remember-me-popup-close-button a-right">
+                                                            <a href="#" class="remember-me-popup-close button" title="Close">
+                                                                <span>
+                                                                    Close
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <script type="text/javascript">
+												//<![CDATA[
+												    function toggleRememberMepopup(event){
+												        if($('remember-me-popup')){
+												            var viewportHeight = document.viewport.getHeight(),
+												                docHeight      = $$('body')[0].getHeight(),
+												                height         = docHeight > viewportHeight ? docHeight : viewportHeight;
+												            $('remember-me-popup').toggle();
+												            $('window-overlay').setStyle({ height: height + 'px' }).toggle();
+												        }
+												        Event.stop(event);
+												    }
+												
+												    document.observe("dom:loaded", function() {
+												        new Insertion.Bottom($$('body')[0], $('window-overlay'));
+												        new Insertion.Bottom($$('body')[0], $('remember-me-popup'));
+												
+												        $$('.remember-me-popup-close').each(function(element){
+												            Event.observe(element, 'click', toggleRememberMepopup);
+												        })
+												        $$('#remember-me-box a').each(function(element) {
+												            Event.observe(element, 'click', toggleRememberMepopup);
+												        });
+												    });
+												//]]>
+												</script>
+                                                <p class="required">
+                                                    * 必填项目
+                                                </p>
+                                            </div>
+                                            <div class="buttons-set">
+                                                <a href="/forgotpassword.html" class="f-left">
+                                                    忘记您的密码?
+                                                </a>
+                                                <button type="submit" class="button has-validation" title="登录" name="send" id="send2">
+                                                    登录
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col2-set">
+                                    <div class="col-1 new-users">
+                                    <div class="buttons-set">
+                                    <button type="button" title="Create an Account" class="button" onclick="window.location='http://satorisan.com/international/customer/account/create/';"><span><span>Create an Account</span></span></button>
+                                    </div>
+                                    </div>
+                                    <div class="col-2 registered-users">
+                                    <div class="buttons-set">
+                                    <a href="http://satorisan.com/international/customer/account/forgotpassword/" class="f-left">Forgot Your Password?</a>
+                                    <button type="submit" class="button" title="Login" name="send" id="send2"><span><span>Login</span></span></button>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    -->
+                                </form>
+                                <script type="text/javascript">
+                                    //<![CDATA[
+                                    var formid = 'login-form';
+                                    var dataForm = new VarienForm(formid, true);
+                                    
+                                    var dataForm = new VarienForm(formid, true);
+                                    new Event.observe(formid, 'submit', function(e){
+                                        e.stop();
+                                        // ajax
+                                        
+                                        var username_or_email = jQuery('#username-or-email').val();
+                                       	var password = jQuery('#password').val();
+                                       	window.jsbridge.callHandler('callApi', 
+                                 				'com.openteach.openshop.server.security.publick.alloc',
+                                 				'0.0.1',
+                                 				{},
+                                 				function(response) {
+                                 					console.log('com.openteach.openshop.server.security.publick.alloc', response);
+                                 					if(response.succeed) {
+                                 						var rsaKey = new RSAKey();
+                                 						rsaKey.setPublic(b64tohex(response.data.modulus), b64tohex(response.data.exponent));
+                                 						var enPassword = hex2b64(rsaKey.encrypt(password));
+                                 						
+                                 						window.jsbridge.callHandler('callApi', 
+                                 							'com.openteach.openshop.server.user.login',
+                                 							'0.0.1',
+                                 							{
+                                 								'username_or_email': username_or_email,
+                                 								'enPassword': enPassword
+                                 							},
+                                 							function(response) {
+                                 								console.log('Got response from com.openteach.openshop.server.user.login', response);
+                                 								if(response.succeed) {
+                                 									window.location.href = '/member/i.jhtml';
+                                 								} else {
+                                 									// TODO
+                                 									jQuery('#error-msg').text(response.errorMsg);
+                                 								}
+                                 							});
+                                 					} else {
+                                 						// TODO
+                                 						jQuery('#error-msg').text(response.errorMsg);
+                                 					}
+                                 			});
+                                    });
+                                    if(parent && parent.iframeInterface) {
+                                    	parent.iframeInterface.ganalyticsTrackEvent({
+                                            name: "LOGIN"
+                                        });
+                                    }
+                                    //]]>
+                                    
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

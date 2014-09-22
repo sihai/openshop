@@ -1,0 +1,226 @@
+/*-- MY ACCOUNT DASHBOARD --*/
+body.customer-account-edit .button,
+#helpdesk-ticket-form .button-set .button.button-save,
+#helpdesk-reply-form .button-set .button.button-save{text-transform:uppercase;padding:17px 30px;display:block;border:0px;background-color:#7FC940;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;cursor:pointer;font:13px 'proxima_nova_bold',verdana}
+body.customer-account-edit .back-link{float:left}
+body.customer-account-edit .back-link a{color:#000}
+body.customer-account-edit .buttons-set .button{float:right}
+body.customer-account-edit .button-save{margin-bottom: 50px;padding:17px 30px;max-height:150px!important}
+/*-- INPUT --*/
+input[type="radio"],input[type="checkbox"]{position:absolute!important;visibility:hidden!important;width:1px!important;height:1px!important;padding:0!important;margin:0!important}
+input[type="radio"] + label span:first-child,
+input[type="checkbox"] + label span:first-child{background: url('/assets/new/images/sprite.png') no-repeat}
+input[type="radio"] + label span:first-child{background-position: -68px -347px}
+input[type="checkbox"] + label span:first-child{background-position: -8px -346px}
+input[type="radio"]:checked + label span{background-position:-98px -347px}
+input[type="checkbox"]:checked + label span{background-position:-38px -346px}
+input[type="radio"] + label span:first-child,
+input[type="checkbox"] + label span:first-child{display:inline-block;width:19px;height:19px;margin:-2px 10px 0 0;vertical-align:middle;cursor:pointer}
+/*-- CONTENEDORES --*/
+body.customer-account-edit .page-title h1{float:left;font-family:'proxima_nova_light';font-size:24px}
+.customer-account-index .page,.customer-account-edit .page,.customer-address-index .page,.helpdeskultimate-customer-view .page,.sales-order-history .page,.helpdeskultimate-customer-index .page,.customer-address-form .page,.helpdeskultimate-customer-index .page{width:790px;font-family:proxima_nova_regular;font-size:14px;color:#1b1b1b;margin:60px auto}
+.customer-account-index .page .col-main,.customer-account-edit .page .col-main,.customer-address-index .page .col-main,.helpdeskultimate-customer-view .page .col-main,.sales-order-history .page .col-main,.helpdeskultimate-customer-index .page .col-main,.customer-address-form .col-main,.helpdeskultimate-customer-index .col-main{float:left;width:790px;/*margin-left:5px*/}
+.block-account .block-title{color:#1B1B1B;font-family:'proxima_nova_light';font-size:36px;height:38px;padding-bottom:19px;padding-left:0;width:100%;border-bottom:1px solid #CCC;margin-bottom:14px}
+.block-account .block-title span.icon_account{margin-right:10px;display:inline-block;width:30px;height:30px;text-indent:-99999px;background:url('/assets/new/images/sprite.png') -18px -226px no-repeat;}
+.block-account .block-content li{float:left;width:167px;height:27px;margin-right:10px;background-color:#f2f9ec;padding-top:13px;color:#333;font-family:'proxima_nova_regular';font-size:14px;padding-left:23px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.block-account .block-content li.current{background-color:#7fc940;cursor:default}
+.block-account .block-content li a{color:#333;text-decoration:none}
+.block-account{position:fixed;top:0;width:790px;padding-top:80px;background:#FFF;padding-bottom:10px;display:none;}
+.helpdeskultimate-customer-index .col-main,.my-account,.helpdeskultimate-customer-view .col-main{margin-top:137px}
+.customer-account-index .main .col-left,.customer-account-index .col2-left-layout .col-main{float:none}
+.sales-order-history .page .page-title h1 span, 
+.helpdeskultimate-customer-index .page .page-title h1 span,
+.helpdeskultimate-customer-view  .page .page-title h1 span{color:#1B1B1B;font-family:'proxima_nova_light';font-size:24px}
+.sales-order-history .page .page-title h1 span{color:#1B1B1B;font-family:'proxima_nova_light';font-size:24px}
+.helpdeskultimate-customer-index .page .page-title h2 span,
+.helpdeskultimate-customer-view .page .group-select h2 span{color:#1B1B1B;font-family:'proxima_nova_light';font-size:18px}
+.sales-order-history #my-orders-table{width:790px}
+.sales-order-history #my-orders-table tr{min-height:50px;padding:20px 0}
+.sales-order-history #my-orders-table tbody tr{background-color:#f7f7f7}
+.sales-order-history #my-orders-table tbody .odd{background-color:#f2f9ec}
+.helpdeskultimate-customer-index .page .page-title h1{margin-bottom:33px}
+.helpdeskultimate-customer-index .page .col-main .no-tickets p{font-family:'proxima_nova_regular';font-size:14px;color:#1b1b1b}
+.helpdeskultimate-customer-index .page .col-main .no-tickets{margin-top:-14px;}
+.helpdeskultimate-customer-index .page .col-main #fieldsets h3.legend{font-family:'proxima_nova_light';font-size:18px;margin-top: 26px; margin-bottom:15px;}
+.block-account .block-content li.menu-link-7,.customer-account-edit .my-account .fieldset ul li .customer-dob input#year{margin-right:0}
+.block-account .menu-link-2,.block-account .menu-link-6,.block-account .menu-link-8,.sales-order-history .page .buttons-set{display:none}
+body.sales-order-history .limiter .selectboxit-container,
+body.helpdeskultimate-customer-index .limiter .selectboxit-container,
+body.sales-order-history ul.selectboxit-options,
+body.helpdeskultimate-customer-index .limiter ul.selectboxit-options,
+body.sales-order-history .pager .selectboxit-container{vertical-align:middle;float:none!important;min-width:90px!important;width:100px!important}
+body.sales-order-history .limiter,
+body.helpdeskultimate-customer-index .limiter,body.sales-order-history .pages{font-family:'proxima_nova_bold';margin-top:-37px;float:right}
+body.helpdeskultimate-customer-index .limiter label{margin-right:10px}
+body.sales-order-history .selectboxit-text,
+body.helpdeskultimate-customer-index .limiter .selectboxit-text{width:30px!important}
+body.sales-order-history table#my-orders-table tbody tr{min-height:60px!important}
+body.sales-order-history .customer-dob div:first-child{margin:0!important}
+body.customer-account-edit .dob-day input,
+body.customer-account-edit .dob-year input,
+body.customer-account-edit .dob-month input{float:right;text-align:center;width:40px!important}
+body.customer-account-edit .dob-day,
+body.customer-account-edit .dob-year,
+body.customer-account-edit .dob-month{margin-left:12.5px;float:left}
+/*body.onestepcheckout-index-index .dob-day,
+body.onestepcheckout-index-index .dob-year,
+body.onestepcheckout-index-index .dob-month{margin-right:0.5px}*/
+body.customer-address-index .col-2.addresses-additional{/*display:none*/}
+body.helpdeskultimate-customer-index .fields.ab1{margin-top:-40px!important;margin-bottom:7px!important}
+body.sales-order-history .limiter .selectboxit-container,body.sales-order-history .pages .selectboxit-container{height:40px;margin-bottom:9px!important}
+body.sales-order-history .limiter label,.sales-order-history .pages label{font-family:'proxima_nova_bold';margin:0 10px 0 30px!important}
+/*-- EDIT ACCOUNT --*/
+body.customer-account-edit .form-list .input-box{float:right}
+body.customer-account-edit #passwords label{padding-top:15px}
+body.customer-account-edit #gender_li .input-box{float:left;margin-left:15px}
+body.customer-account-edit #passwords li.fields{height:auto!important}
+body.customer-account-edit .newsletter-account h2{padding:5px 0 30px 0!important}
+body.customer-account-edit #newsletter-account #input-box{float:left}
+/*body.customer-account-edit .required{float:right;margin-top:7px}*/
+
+body.lang-es.customer-account-edit li label[for="month"]{padding-top:8px!important}
+
+body.customer-account-edit li label[for="lastname"]{padding-top:30px!important}
+body.customer-account-edit .my-account .fieldset{border-bottom:1px solid #ccc;padding:20px 0}
+body.customer-account-edit .my-account .fieldset h2.legend{font-family:'proxima_nova_light';font-size:18px;padding:5px 0 15px 0}
+body.customer-account-edit .my-account .fieldset ul{width:780px;margin:0;float:right;padding:0}
+body.customer-account-edit .my-account .fieldset ul li{font-family:'proxima_nova_regular';font-size:14px;color:#1b1b1b;float:left;width:380px}
+body.customer-account-edit .my-account .fieldset ul li.fields{height:155px;margin-right:20px}
+body.customer-account-edit .my-account .fieldset ul li label{cursor:pointer;float:left;margin-right:5px;width:90px;text-align:right;padding-top:15px}
+body.customer-account-edit .my-account .fieldset ul li input{max-height:200px;margin:5px 0;padding:10px 20px;width:230px;border:1px solid #D5D5D5;border-radius:3px;webkit-border-radius:3px;moz-border-radius:3px;-o-border-radius:3px;}
+body.customer-account-edit .my-account .fieldset ul li .gender input{width:15px}
+body.customer-account-edit .my-account .fieldset ul li .gender{float:left;width:90px}
+body.customer-account-edit .my-account .fieldset ul li .gender label{width:80px;float:left;text-align:left}
+span#order_idSelectBoxItText{max-width:238px!important;padding:0!important}
+body.customer-account-edit .pager p.amount{float:left}
+/*-- PAGINADO --*/
+body.sales-order-history .pages strong{cursor:default;font-weight:normal;margin-right:20px}
+body.sales-order-history .pages ol{float:right}
+body.sales-order-history .pages ol > li{display:inline}
+body.sales-order-history .pages ol li.current{cursor:default;padding:3px 7px;font-family:'proxima_nova_bold';border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;background-color:#7fc940;color:#fff}
+body.sales-order-history .pages li a{padding:3px 7px;text-decoration:none;color:#000}
+body.sales-order-history .pages .previous,body.sales-order-history .pages .next{padding:0;display:block;background:url('/assets/new/images/sprite.png') no-repeat}
+body.sales-order-history .pages .previous span,body.sales-order-history .pages .next span{display:inline-block;text-indent:-99999px}
+body.sales-order-history .pages .previous{background-position:-56px -311px}
+body.sales-order-history .pages .next{background-position:-74px -311px}
+body.sales-order-history .pages li.arrows_pager{display:inline-block;width:15px;height:15px}
+/*--*/
+#z{cursor:pointer;position:absolute;top:17px;right:0;padding:5px 17px;color:#333;background-color:#ccc;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+}
+
+#myaccount_logout span{font:12px 'proxima_nova_regular',verdana}
+
+body .customfile-button:hover{color:#fff;background-color:#333}
+/*
+body.customer-account-edit .buttons-set{margin-bottom:120px}
+*/
+.my-account .page-title .required{float:right}
+
+
+/* SUBSCRIPTION LEGALS */
+
+.subscription-legals-popup-mage {
+	position: fixed;
+  	top: 0;
+  	left: 0px;
+  	width: 100%;
+  	height: auto;
+  	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  	filter: alpha(opacity=0);
+  	-moz-opacity: 0;
+  	-khtml-opacity: 0;
+  	opacity: 0;
+  	background-color: white;
+  	z-index: 205;
+  	height: 100%;
+  	overflow: auto;
+}
+
+.subscription-legals-popup-mage .subscription-info-popup-content{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  	filter: alpha(opacity=0);
+  	-moz-opacity: 0;
+  	-khtml-opacity: 0;
+  	opacity: 0;
+}
+
+.subscription-legals-popup-mage .subscription-info-popup-close{
+    width: auto;
+    height: 15px;
+    display: block;
+    border: 0;
+    background-color: #7fc940;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #1b1b1b;
+    font-family: 'proxima_nova_semibold';
+    padding: 13.5px 25px 13.5px 25px;
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    transition:all .3s ease-out;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out;
+}
+
+.subscription-legals-popup-mage .subscription-wrapper{
+  width: 790px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies{
+  font-family: 'proxima_nova_regular';
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies .region ul li {
+    list-style: disc outside none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: auto;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies p {
+    margin: 0 0 20px;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies #pol_0{
+	padding-top: 85px;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies #pol_0 h2 {
+  font-family: 'proxima_nova_light';
+  font-size: 36px;
+  color: #1B1B1B;
+  padding: 85px 0 14px 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 14px;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies #pol_0 h3 {
+    display: block;
+    font-family: 'proxima_nova_bold',verdana;
+    margin: 10px 0 0;
+    font-size:	14px;
+    font-weight: normal;
+}
+
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies #pol_1,
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies #pol_2,
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies #pol_3,
+.customer-account-edit .my-account .subscription-legals-popup-mage #policies .header-fixed {
+	display: none;
+}

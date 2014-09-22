@@ -1,0 +1,37 @@
+.customer-address-index .col-1.addresses-primary{width:790px;border-bottom:1px solid #CCC;padding-bottom:30px;margin-bottom:15px}
+.customer-address-index .col-1.addresses-primary li{float:left;width:50%;font-family:'proxima_nova_regular',verdana;font-size:14px;color:#1b1b1b;line-height:18px}
+.customer-address-index .col-1.addresses-primary li h3,.customer-address-index h3{font-family:'proxima_nova_light',verdana;font-size:18px;font-weight:400;margin-top:10px;padding:15px 0}
+.customer-address-index h3{margin-top:3px;padding:0}
+.customer-address-index .col-1.addresses-primary li p{margin-top:15px}
+.customer-address-index .col-1.addresses-primary li p a{background-color:#ccc;font-family:'proxima_nova_regular',verdana;font-size:11px;color:#1b1b1b;text-transform:uppercase;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;cursor:pointer;padding:7px 20px}
+html .customer-address-index .col-1.addresses-primary li p a:hover{background-color:#666;color:#fff}
+
+.customer-address-index button,.customer-address-form .buttons-set button{width:auto;cursor:pointer}
+
+.customer-address-form .my-account .fieldset ul li input{border:1px solid #D5D5D5;border-radius:3px 3px 3px 3px;max-height:200px;width:230px;margin:5px 0;padding:10px 20px}
+.customer-address-form .my-account .fieldset ul li label{float:left;margin-right:5px;padding-top:15px;text-align:right;width:90px}
+
+body.lang-en.customer-address-form .my-account ul li label[for="street_1"]{padding-top:5px!important}
+
+body.lang-es.customer-address-form .my-account ul li label[for="region_id"]{padding-top:6px!important}
+
+.customer-address-form #form-validate .fieldset{padding-top:30px;width:790px;height:125px}
+.customer-address-form #form-validate .fieldset .fields.country{float:none;width:790px}
+.customer-address-form #form-validate .fieldset li.street-address,.customer-address-form #form-validate .fieldset li.state{float:left;width:395px;text-align:right}
+.customer-address-form #form-validate .fieldset li.street-address-2{clear:left}
+.customer-address-form #form-validate .fieldset li.deafult{float:right;text-align:left;clear:both;display:block;height:auto;width:auto;padding-bottom:20px}
+.customer-address-form #form-validate .fieldset li.deafult.control{height:auto;width:auto;padding-bottom:20px}
+.customer-address-form #form-validate .fieldset li.deafult label{width:auto;text-align:left}
+.customer-address-form #form-validate .fieldset li.deafult strong{font-family:'proxima_nova_regular',verdana;font-size:14px;color:#1b1b1b;margin-bottom:10px;font-weight:400}
+.customer-address-form .required-title{float:right;margin-top:-15px;font-family:'proxima_nova_regular',verdana;font-size:14px;color:#1b1b1b}
+.customer-address-form .buttons-set{float:none;clear:both;padding-top:15px;margin-top:15px;border-top:1px solid #CCC;text-align:right}
+.customer-address-form #form-validate .fieldset li.deafult.deafult-2{height:35px}
+.customer-address-form #form-validate .fieldset li.deafult.deafult-2.control{height:65px}
+.customer-address-form .buttons-set button{float:right}
+.customer-address-form .buttons-set .back-link{float:right;border:0 none;cursor:pointer;display:block;text-align:center;font-family:'proxima_nova_semibold',verdana;font-size:14px;text-transform:uppercase;padding:12px 25px}
+.customer-address-form .buttons-set .back-link a{color:#1B1B1B;border-bottom:1px solid #ccc;text-decoration:none}
+.customer-address-form .buttons-set .back-link a:hover{text-decoration:none}
+.customer-address-index .addresses-list h2,.customer-address-form #form-validate .fieldset h2{display:none}
+.customer-address-form #form-validate .fieldset .fields,.customer-address-form #form-validate .fieldset .fields.country .field{float:left;text-align:right;width:395px}
+.customer-address-form #form-validate .fieldset li.deafult div{display: none;}
+.customer-address-form #form-validate .fieldset li.deafult.control div{display: block;}

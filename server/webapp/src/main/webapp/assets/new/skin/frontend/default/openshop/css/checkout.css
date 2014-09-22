@@ -1,0 +1,189 @@
+#onestepcheckout_popup_overlay{display: none;}
+.onestepcheckout-coupons {position: relative;}
+.onestepcheckout-coupons .error-cupon {color: #C72D2D; padding: 11px; position: absolute; text-align: center;  top: 6px;}
+.onestepcheckout-coupons .error-cupon.en {margin-left: 120px;  width: 206px;}
+.onestepcheckout-coupons .error-cupon.es { margin-left: 70px;  width: 215px;}
+.onestepcheckout-toc-terms {
+	
+
+}
+
+#onestepcheckout-toc-popup {
+	background-color: white;
+    height: 100%;
+    /*left: 110px;*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 800px;
+    z-index: 210;
+}
+
+#onestepcheckout-toc-popup  .page-style {
+	overflow: auto;
+	height: 600px;
+	line-height: 18px;
+}
+
+#onestepcheckout-toc-popup  .page-style a{
+	color:#7FC940;
+	text-decoration: none;
+}
+
+#onestepcheckout-toc-popup  .page-style a:hover {
+	color: #1B1B1B;
+}
+
+#onestepcheckout-toc-popup  .page-style p,
+#onestepcheckout-toc-popup  .page-style h2 {
+	margin-top: 15px;
+}
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper {
+	 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper h1{
+	border-bottom: 1px solid #CCCCCC;
+    color: #1B1B1B;
+    font-family: 'proxima_nova_light';
+    font-size: 36px;
+    padding: 89px 0 10px;
+    width: 100%;
+}
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper .onestepcheckout-toc-terms {
+	color: #333333;
+    font-family: 'proxima_nova_regular';
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-top: 10px;	
+}
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper .close{
+	background: none;
+    cursor: pointer;
+    float: none;
+    margin-right: 0px;
+    text-indent: 0px;
+
+    background-color: #7FC940;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    bottom: 10px;
+
+    cursor: pointer;
+    display: block;
+    font-family: 'proxima_nova_semibold';
+    font-size: 14px;
+    height: 15px;
+    padding: 13.5px 25px;
+    position: fixed;
+    /*right: 0;*/
+    left:756px;
+    text-transform: uppercase;
+    top: 90px;
+    transition: all 0.3s ease-out 0s;
+    width: auto;
+}
+
+.lang-en #onestepcheckout-toc-popup .onestepcheckout-popup-wrapper .close{left:821px;}
+
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper .close a{
+	color: #1B1B1B;
+	text-decoration: none;
+}
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper .close:hover {color:#7FC940;background-color:#1b1b1b!important}
+
+#onestepcheckout-toc-popup .onestepcheckout-popup-wrapper .close:hover a {color:#7FC940}
+
+
+#onestepcheckout-toc-popup #policies{
+  font-family: 'proxima_nova_regular';
+  font-size: 14px;
+  color: #333;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+#onestepcheckout-toc-popup #policies .region ul li {
+    list-style: disc outside none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: auto;
+}
+
+#onestepcheckout-toc-popup #policies p {
+    margin: 0 0 20px;
+} 
+
+#onestepcheckout-toc-popup #policies #pol_3{
+   /* padding-top: 85px;*/
+   position: relative;
+}
+
+#onestepcheckout-toc-popup #policies #pol_3 h2 {
+  font-family: 'proxima_nova_light';
+  font-size: 36px;
+  color: #1B1B1B;
+  padding: 85px 0 14px 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 14px;
+}
+
+#onestepcheckout-toc-popup #policies #pol_3 h3 {
+    display: block;
+    font-family: 'proxima_nova_bold',verdana;
+    margin: 10px 0 0;
+    font-size:  14px;
+    font-weight: normal;
+}
+
+#onestepcheckout-toc-popup #policies #pol_1,
+#onestepcheckout-toc-popup #policies #pol_2,
+#onestepcheckout-toc-popup #policies #pol_0,
+#onestepcheckout-toc-popup #policies .header-fixed {
+    display: none;
+}
+
+
+body.paypal-redirection { background-color: #FFF; }
+
+#onestepcheckout-toc-popup #policies #pol_3 h2{
+  width: 800px;
+  position: fixed;
+  background-color: white;
+}
+
+#onestepcheckout-toc-popup #policies #pol_3 .padding-checkout{
+  display: block;
+  padding-top: 175px;
+}
+
+
+div#payment_form_servired_standard table.first{clear:both;margin-left:30px}
+
+body.servired-standard-redirect .col-right{
+  display: none;
+}
+
+body.servired-standard-redirect .col-wrapper center p{
+  text-align: center;
+}
+
+body.servired-standard-redirect .col-wrapper input.button{
+  margin-top:50px;
+  height: 50px;
+  border: 0 none;
+}

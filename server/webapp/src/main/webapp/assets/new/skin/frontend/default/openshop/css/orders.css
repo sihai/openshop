@@ -1,0 +1,41 @@
+#my-orders-table tr > td:first-child,#my-orders-table tr > th:first-child{width:140px;padding-left:30px}
+#my-orders-table tbody tr.first.last,#my-orders-table tbody tr{height:55px}
+#my-orders-table tr > td:first-child + td + td{width:140px}
+#my-orders-table thead{color:#1B1B1B;font-family:proxima_nova_regular;font-size:10px;text-transform:uppercase}
+#my-orders-table a,#my-orders-table a:hover{color:#1B1B1B;text-decoration:none;border-bottom:1px solid #D5D5D5;line-height:12px;display:inline-block;text-transform:uppercase}
+.sales-order-history .pager{position:relative;margin-top:10px;margin-bottom:25px}
+#my-orders-table tbody tr.clear{height:10px}
+#my-orders-table tbody tr.clear-even{height:0}
+.sales-order-view .page{width:790px;font-family:proxima_nova_regular;font-size:14px;color:#1b1b1b;position:relative;margin:60px auto}
+.sales-order-view .col-main{float:left;width:790px;margin-left:5px}
+.sales-order-view .page-title .link-print,.sales-order-view .back-link{background-color:#7FC940;border:0 none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;cursor:pointer;display:block;height:30px;width:170px;text-align:center;color:#1B1B1B;font-family:proxima_nova_semibold;font-size:14px;text-transform:uppercase;text-decoration:none;padding-top:12px}
+.sales-order-view .back-link{width:230px}
+.sales-order-view .back-link a{text-decoration:none;color:#1B1B1B}
+.sales-order-view .order-items.order-details{margin-top:15px}
+.sales-order-view .col2-set.order-info-box,.sales-order-view .order-info{height:155px;border-bottom:1px solid #CCC;padding-top:15px}
+.sales-order-view .order-info{height:45px;margin-bottom:15px;font-family:proxima_nova_semibold;font-size:16px;padding-bottom:15px}
+.sales-order-view .col2-set.order-info-box strong{font-weight:400}
+.sales-order-view .order-date{font-family:proxima_nova_bold;font-size:15px;border-bottom:1px solid #CCC;padding-bottom:15px}
+.sales-order-view #my-orders-table thead tr > th + th + th,.sales-order-view #my-orders-table tr > td:first-child + td + td,.sales-order-view #my-orders-table tr > td:first-child + td + td + td,.sales-order-view #my-orders-table tr > td:first-child + td + td + td + td{text-align:left!important}
+.sales-order-view #my-orders-table thead tr > th + th + th + th,.sales-order-view #my-orders-table tr > td:first-child + td + td + td{width:74px}
+.sales-order-view #my-orders-table thead tr > th + th + th + th + th,.sales-order-view #my-orders-table tr > td:first-child + td + td + td + td{width:60px;padding-right:20px;text-align:right!important}
+.sales-order-view .page-title .link-print{position:absolute;right:0;top:170px}
+.sales-order-view #my-orders-table{width:790px}
+.sales-order-view #my-orders-table tr{min-height:50px;padding:20px 0}
+.sales-order-view #my-orders-table tbody{background-color:#f7f7f7;margin-bottom:5px;border-bottom:10px solid #FFF;height:70px}
+.sales-order-view #my-orders-table tbody.odd{background-color:#f2f9ec}
+.sales-order-view #my-orders-table tfoot{border:0 none;color:#1B1B1B;font-family:proxima_nova_semibold;font-size:14px;height:35px}
+.sales-order-view #my-orders-table tfoot tr{height:35px}
+.sales-order-view #my-orders-table tfoot .price{font-family:proxima_nova_bold;font-size:18px}
+.sales-order-view .buttons-set{margin-top:-50px}
+.customer-account-edit .my-account #form-validate .newsletter-account{margin-bottom:20px;padding-bottom:25px}
+.checkout-onepage-success .page{text-align:left;width:790px;margin:0 auto;padding:10px 0}
+.checkout-onepage-success .col-main{border:0 solid #DDD;float:left;width:790px;padding:10px 0}
+
+body.checkout-onepage-success .titlecheck{border-bottom:1px solid #ccc;width:100%;margin-bottom:20px;padding:60px 0 10px}
+body.checkout-onepage-success .titlecheck h1{float:left;color:#1B1B1B;font-family:'proxima_nova_light',helvetica;font-size:36px}
+body.checkout-onepage-success .titlecheck .buttons-set{float:right}
+body.checkout-onepage-success .sub-title{color:#1B1B1B;font-family:'proxima_nova_light',helvetica;font-size:24px;width:100%;padding:5px 0 15px}
+body.checkout-onepage-success p{font-family:proxima_nova_regular;font-size:14px}
+#my-orders-table tr > td:first-child + td,.sales-order-view #my-orders-table thead tr > th + th + th,.sales-order-view #my-orders-table tr > td:first-child + td + td{width:100px}
+body.checkout-onepage-success h1 span.cart{background:url('/assets/new/images/sprite.png') -90px -220px no-repeat;text-indent:-9999px;height:40px;margin:0;display:inline-block;float:left;width:40px}

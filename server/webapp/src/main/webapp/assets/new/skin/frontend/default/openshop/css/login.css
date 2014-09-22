@@ -1,0 +1,92 @@
+/**
+ * MY ACCOUNT LOGIN
+ */
+/*.col-left{border:0 solid #DDD;float:left;width:230px;padding:5px 5px 0}*/
+.col-left{border:0 solid #DDD;float:left;width:230px;padding:5px 0px 0}
+.customer-account-login .page,
+.customer-account-forgotpassword .page,
+.customer-account-resetpassword .page{width:790px;margin:60px auto}
+
+.customer-account-login .page #login-form,
+.customer-account-login .success-msg,
+.customer-account-forgotpassword .page,
+.customer-account-resetpassword .page{margin-top:60px;display:block;position:relative;font-family:'proxima_nova_regular';font-size:14px;color:#1b1b1b}
+
+.customer-account-login .success-msg{display:block;margin-top:10px;color: red;}
+
+.customer-account-login .page #login-form button{background-color:#7FC940;border:0 none;border-radius:3px 3px 3px 3px;cursor:pointer;width:200px}
+.customer-account-login .page #login-form button span{color:#1B1B1B;font-family:'proxima_nova_semibold';font-size:14px;text-transform:uppercase}
+
+.customer-account-login .page #login-form .registered-users{width:391px;background-color:#f2f9ec;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding:15px 25px 30px 25px}
+
+.customer-account-login .page #login-form .registered-users .form-list{margin-top:20px}
+.customer-account-login .page #login-form .registered-users p.required{display:none}
+.customer-account-login .page #login-form .registered-users label{float:left;text-align:right;width:85px;margin:15px 5px}
+
+.customer-account-login .page #login-form .registered-users input,
+.customer-account-forgotpassword input,
+.customer-account-resetpassword input{float:right;width:310px;height:32px;border:solid 1px #d5d5d5;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin-bottom:10px;padding:5px 15px}
+.customer-account-resetpassword input{float: none;}
+.customer-account-resetpassword .fieldset{margin-top: 20px !important;}
+.customer-account-login .page #login-form .registered-users button{float:right;width:115px}
+.customer-account-login .page #login-form .registered-users .buttons-set{clear:both}
+.customer-account-login .page #login-form .f-left{margin-left:80px;text-decoration:none;border-bottom:1px solid #D5D5D5;line-height:12px;display:inline-block;text-align:right;margin-top:11px;color:#1b1b1b}
+body.lang-en.customer-account-login .page #login-form .f-left{margin-left:110px!important}
+.customer-account-login .page #login-form .f-left:hover{border:0 none!important}
+.customer-account-login .page #login-form .new-users{width:300px;padding-top:15px}
+.customer-account-login .page #login-form .new-users .buttons-set{margin-top:25px}
+
+.customer-account-login .page .page-title > h1,
+.customer-account-forgotpassword .page .page-title h1,
+.customer-account-resetpassword .page .page-title h1{color:#1B1B1B;font-family:'proxima_nova_light';font-size:36px;height:38px;padding-bottom:14px;padding-left:0;width:100%}
+
+.customer-account-login .page #login-form h2,
+.customer-account-forgotpassword .page h2,
+.customer-account-resetpassword .page h2{color:#1B1B1B;font-family:'proxima_nova_light';font-size:24px;margin-bottom:20px}
+
+.customer-account-login .col-main,
+.customer-account-forgotpassword .col-main,
+.customer-account-resetpassword .col-main{border:0 solid #DDD}
+
+.customer-account-login .page-title,
+.customer-account-forgotpassword .page .page-title,
+.customer-account-resetpassword .page .page-title{position:relative;width:100%;border-bottom:1px solid #ccc}
+.customer-account-login #login-form .col-1{float:left;width:358px}
+.col-main{padding:12px 0!important}
+
+/*-- INPUT ERROR --*/
+li div.input-error input{
+	color:#ff0000!important;
+	border:1px solid #ff0000!important;
+	background-color:#fff2f2!important
+}
+li div.input-error input.line-2{
+	color:#000 !important;
+	border:1px solid #d5d5d5 !important;
+	background-color:#fff !important;
+}
+li div.input-error label{
+	color:#ff0000!important
+}
+
+input.validation-failed{color:#ff0000!important;border:1px solid #ff0000!important;background-color:#fff2f2!important}
+label.validation-failed{color:#ff0000!important}
+
+.validation-advice{display:none}
+.validation-advice#advice-validate-password-password,
+.validation-advice#advice-validate-cpassword-confirmation{display:block;float:left;margin-left:125px;text-align:left}
+
+/* FORGOT PASSWORD */
+.customer-account-forgotpassword input{float:left!important}
+.customer-account-forgotpassword .page .form_forgot{width:450px}
+
+.customer-account-forgotpassword .page form button{cursor:pointer;float:right;border:0 none;height:44px;width:106px;padding: 15px 15px;}
+.customer-account-forgotpassword .page form button:hover{color:#87d445!important}
+
+.customer-account-forgotpassword .page .form_forgot label{float:left;padding:15px 22px 15px 0;width:85px;}
+.customer-account-forgotpassword .page p.back-link{float:left}
+.customer-account-forgotpassword .page .buttons-set p.back-link a{color:#000}
+.customer-account-forgotpassword form#form-validate{clear:right;padding:25px 0;float:left}
+.customer-account-forgotpassword .page p.desc{clear:both;margin-top:20px}
+.customer-account-forgotpassword .page label{cursor:pointer}
+

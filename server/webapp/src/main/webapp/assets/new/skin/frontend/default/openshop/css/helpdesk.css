@@ -1,0 +1,237 @@
+
+
+.helpdeskultimate-customer-index .pager{
+	height:30px;
+	position:relative;
+}
+
+.helpdeskultimate-customer-index .pager .amount{
+	float:left;
+}
+
+.helpdeskultimate-customer-index .pager .limiter{
+	float:right;
+}
+
+.helpdeskultimate-customer-index .messages{
+	position: absolute;
+	margin-top: 30px;
+}
+
+#my-reviews-table{
+	margin-top:6px;
+}
+
+#my-reviews-table th{
+	text-transform:uppercase;
+	font-size:10px;	
+}
+
+#my-reviews-table td{
+	font-size:12px;
+	height:55px;	
+}
+
+#my-reviews-table .ticket-item{
+	border-top: 10px solid #FFFFFF;
+	cursor:pointer;
+}
+
+#my-reviews-table .ticket-item.status-1 { /* status: open */
+	background-color:#f2f9ec;
+}
+
+#my-reviews-table .ticket-item.status-2{ /* status: closed */
+	background-color:#f7f7f7;
+}
+
+#my-reviews-table .ticket-item.status-3{ /* status: waiting for customer */
+	background-color:#f2f9ec;
+}
+
+.helpdeskultimate-customer-index #fieldsets{
+	border-top:1px solid #cccccc;
+	margin-top: 13px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+#helpdesk-ticket-form{}
+
+#helpdesk-ticket-form .fields{
+	font-family:'proxima_nova_regular';
+	font-size:14px;
+	color:#1b1b1b;
+	float:left;
+	width:394px;
+}
+
+#helpdesk-ticket-form #fields-file{
+	width: 500px;
+}
+
+#helpdesk-ticket-form .fields.file,
+#helpdesk-ticket-form .button-set{
+	clear:both;
+}
+
+#helpdesk-ticket-form .fields.message{
+	clear:both;
+	width:790px;
+}
+#helpdesk-ticket-form .fields.message textarea{
+	width:624px;
+	padding:10px 20px;
+	border:1px solid #D5D5D5;
+	border-radius:3px;
+	webkit-border-radius:3px;
+	moz-border-radius:3px;
+	-o-border-radius:3px;
+	font-family:'proxima_nova_regular';
+	font-size:14px;
+}
+
+#helpdesk-ticket-form .fields label{ 
+	float:left;
+	margin-right:5px;
+	width:102px;
+	text-align:right;
+	padding-top:15px;
+	padding-right:15px;
+}
+
+#helpdesk-ticket-form .fields.message label{ 
+	padding-top:9px;
+}
+
+#helpdesk-ticket-form .fields input[type="text"]{
+	max-height:200px;
+	margin:5px 0;
+	padding:10px 20px;
+	width:230px;
+	border:1px solid #D5D5D5;
+	border-radius:3px;
+	webkit-border-radius:3px;
+	moz-border-radius:3px;
+	-o-border-radius:3px;
+}
+
+#helpdesk-ticket-form .fields input[type="file"]{
+	margin-top:13px;
+}
+
+#helpdesk-ticket-form .button-set.wrapper,
+#helpdesk-reply-form .button-set.wrapper{
+	padding-top:30px;
+}
+
+#helpdesk-ticket-form .button-set.inner,
+#helpdesk-reply-form .button-set.inner{
+	padding-top:15px;
+	border-top:1px solid #ccc;
+}
+
+#helpdesk-ticket-form .button-set .button.button-save,
+#helpdesk-reply-form .button-set .button.button-save{
+	float:right;
+}
+
+
+/* TICKET */
+
+.helpdeskultimate-customer-view .page .page-head{
+	height:60px;
+}
+
+.helpdeskultimate-customer-view .page .page-head h1{
+	position:absolute;
+}
+
+.helpdeskultimate-customer-view .page .page-head .back{
+	float:right;
+	margin-top: 8px;
+}
+
+.helpdeskultimate-customer-view .page .page-head .back a{
+	color:#1b1b1b;
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+.helpdeskultimate-customer-view .page .page-head .back a:hover{
+	text-decoration:underline;
+}
+
+.helpdeskultimate-customer-view .page .group-select{
+	height:40px;
+}
+
+.helpdeskultimate-customer-view .page .group-select h2{
+	position:absolute;
+}
+
+.helpdeskultimate-customer-view .page .group-select .status{
+	float:right;
+}
+
+.helpdeskultimate-customer-view .page .group-select .status .status-text{
+	font-family:'proxima_nova_semibold';
+}
+
+.helpdeskultimate-customer-view .page .message-row{
+	margin-bottom:20px;
+}
+
+.helpdeskultimate-customer-view .page .message-row .message-header{
+	height:22px;
+}
+
+.helpdeskultimate-customer-view .page .message-row .message-header .name{
+	position:absolute;
+	font-family:'proxima_nova_semibold';
+}
+
+.helpdeskultimate-customer-view .page .message-row .message-header .post-date{
+	float:right;
+	color:#999999;
+	font-size:11px;
+}
+
+.helpdeskultimate-customer-view .page .message-row .message-body{
+	padding:16px;
+}
+
+.helpdeskultimate-customer-view .page .message-row .message-body.odd{ background-color:#f7f7f7; }
+.helpdeskultimate-customer-view .page .message-row .message-body.even{ background-color:#f2f9ec; }
+
+.helpdeskultimate-customer-view .page .reply-group-select{
+	border-top:1px solid #ccc;
+	margin-top:10px;
+	padding-top:30px;
+}
+
+.helpdeskultimate-customer-view .page .reply-group-select h4{
+	margin-bottom:25px;	
+}
+
+#helpdesk-reply-form label{
+	width:100px;
+	float:left;
+	text-align:right;
+	padding-right:20px;
+}
+
+#helpdesk-reply-form textarea{
+	width:624px;
+	padding:10px 20px !important;
+	border:1px solid #D5D5D5;
+	border-radius:3px;
+	webkit-border-radius:3px;
+	moz-border-radius:3px;
+	-o-border-radius:3px;
+	font-family:'proxima_nova_regular';
+	font-size:14px;
+}
+
+#helpdesk-reply-form .file {margin-top:10px}
+
+body.lang-es #helpdesk-ticket-form div.ab1 label{padding-top:5px!important}

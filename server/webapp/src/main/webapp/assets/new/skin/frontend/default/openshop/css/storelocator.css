@@ -1,0 +1,79 @@
+.space{padding-bottom: 10px;}
+.stores{ height:320px; overflow:auto; }
+.page-content1{float:left; width:400px; }
+td.brdr{background:url(../images/v-line.jpg) right repeat-y;}
+.page-content2{float:left; width:300px; padding-left: 20px;}
+.page-select{/*float:left;*/padding-top:0px;vertical-align:top;}
+/*.page-select select{width: 250px;}*/
+.page-result{/*float:left; width:410px; margin-left:15px; border:solid 1px;*/}
+.page-result h3{padding-bottom: 30px; margin:0;}
+.page-result div.space{padding: 0px;}
+.page-result .shop{padding:0; margin-left:0px; margin-right:0px; float:left;}
+.page-result li.shop {width:200px;min-height: 185px; *height: 180px; padding-right: 0px; }
+.page-result .shop td.desc{padding-right: 10px;}
+.store-img{ float:left; margin-right:15px;}
+.store-address{ float:left; }
+.clear{clear:both;}
+
+.store-locator{
+	background-color:transparent;
+	height:35px;
+	text-align:center;
+	margin-bottom:8px; 
+	border:none;
+	margin-top:0px;
+	width:					632px;
+	position: 				absolute;
+	top:					25px;
+	right: 					100px;
+}
+
+
+.store-locator p{
+	clear:none;
+	color:#5c5c5c; 
+	text-transform:uppercase; 
+	font-family:'newsgoth_cn_btregular'; 
+	font-size:16px;
+	padding-top:0px;
+	margin-left: 	40px;
+}
+.store-locator  p.selector-store-left{float:left;}
+.store-locator  p.selector-store-right{float:right;}
+.store-locator .page-select select{margin-top:-4px;padding:0px;width:150px;height:30px; margin-bottom: 0; margin-left: 10px; }
+#page-content-country .stores b a{
+text-transform:inherit;
+  background: none;
+  color:#505050;
+  display: inline-block;
+  font-size: 16px;
+ /* height: 20px;*/
+  line-height: 20px;
+  margin-top: 0px;
+  padding: 0px;
+  font-family:'Arial Narrow';
+}
+
+.page-select p {
+	position: 		relative;
+}
+
+#page-content-country .stores td strong, #page-content-country .stores a {
+	font-family:	'Arial Narrow';
+	font-size: 		16px;
+	color:			#505050;
+	line-height: 	20px;
+}
+
+#page-content-country .stores td {
+	font-family:	'Arial Narrow';
+	font-size: 		16px;
+	color:			#7e7f81;
+	line-height: 	20px;
+}
+
+#page-content-country .stores a:hover {
+	color:				#7ec845;	
+}
+
+#page-content-country  ul#stores{width:800px;}
