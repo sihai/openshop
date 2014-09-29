@@ -18525,9 +18525,10 @@ Hydra.module.register( 'page-products-list', function( bus )
                     
                     productsGridDefinition = getGridDefinition(totalShoes);
 
+                    /*
                     var imagesToLoad = new Array();
                     var counter = 0;
-
+                    
                     for (var i = 0; i < DATA_JSON.length; i++)
                     {
                         if (counter < maxColumns * productsGridDefinition.rows)
@@ -18536,13 +18537,14 @@ Hydra.module.register( 'page-products-list', function( bus )
                             counter++;
                         }
                     }
-
+                    
                     if (imagesToLoad.length)
                     {
                         $.preload(imagesToLoad,
                         {
                             loaded: function(img, loaded, total)
                             {
+                            	alert(loaded + "/" + total);
                                 bus.publish('satorisan', 'preloader-update', {rate: 15 + loaded / total * 85});
                             },
                             loaded_all: function() {
@@ -18551,7 +18553,7 @@ Hydra.module.register( 'page-products-list', function( bus )
                             }
                         });
                     }
-                    else
+                    else */
                     self.appendAllProducts();
                 }
             },
