@@ -11998,7 +11998,13 @@ var FILTER_PRICES_STEPS = 12;
 
 
 var FILTER_TYPES_PRODUCTS = [];
-FILTER_TYPES_PRODUCTS["zh_cn"] = ["服装", "鞋子", "包包", "化妆品"];
+FILTER_TYPES_PRODUCTS["zh_cn"] = [
+                                  {name: "服装", id: 0}, 
+                                  {name: "鞋子", id: 1}, 
+                                  {name: "包包", id: 2}, 
+                                  {name: "化妆品", id: 3}, 
+                                  {name: "其他", id: 4}
+                                 ];
 FILTER_TYPES_PRODUCTS["en"] = ["FOOTWEAR", "ACCESORIES"];
 FILTER_TYPES_PRODUCTS["es"] = ["FOOTWEAR", "ACCESORIOS"];
 
@@ -18336,7 +18342,7 @@ Hydra.module.register( 'page-products-list', function( bus )
                     if (isActive)
                     {
                         this.stop();
-                        data.complete();
+                        if (data) data.complete();
                     }
                 }
             },
@@ -18350,7 +18356,7 @@ Hydra.module.register( 'page-products-list', function( bus )
 
                 if (!user.COME_FROM_DETAIL)
                 {
-                    user.TYPE_PRODUCT = FILTER_TYPES_PRODUCTS[CURRENT_LANGUAGE][0];
+                    user.TYPE_PRODUCT = null == user.TYPE_PRODUCT.id ? FILTER_TYPES_PRODUCTS[CURRENT_LANGUAGE][0] : user.TYPE_PRODUCT;
                     user.MODEL_ID = null;
                     user.MODEL_NAME = null;
                     user.COLOR = "";
@@ -18403,15 +18409,19 @@ Hydra.module.register( 'page-products-list', function( bus )
                     footer_text = "Discover our footwear and accessories collection made to walk";
                 }
                 
+            	bus.publish('satorisan', 'preloader-show', { header:"我们的产品", footer:"" });
+                setTimeout(self.loadData, 250);
+            	/*
                 if (!isPreloaded)
                 {
-                    bus.publish('satorisan', 'preloader-show', { header:"Shop", footer:"" });
+                    bus.publish('satorisan', 'preloader-show', { header:"我们的产品", footer:"" });
                     setTimeout(self.loadData, 250);
                 }
                 else
                 {
                     self.appendAllProducts();
                 }
+                */
             },
 
             /*-------------------------------*/
@@ -18474,16 +18484,15 @@ Hydra.module.register( 'page-products-list', function( bus )
                     });
                     */
                 	// search
-                	
                 	window.jsbridge.callHandler(
 						'callApi',
 						'com.openteach.openshop.server.product.search',
 						'0.0.1',
 						{
-							
+							cat_ids: [user.TYPE_PRODUCT.id]
 						},
 						function(response) {
-							console.log('Got response from com.openteach.openshop.server.product.get', response);
+							console.log('Got response from com.openteach.openshop.server.product.search', response);
 							if (response.succeed) {
 								DATA_JSON = response.data.content;
 								bus.publish('satorisan', 'preloader-update', {rate: 15});
@@ -18536,7 +18545,10 @@ Hydra.module.register( 'page-products-list', function( bus )
                             {
                                 bus.publish('satorisan', 'preloader-update', {rate: 15 + loaded / total * 85});
                             },
-                            loaded_all: self.appendAllProducts
+                            loaded_all: function() {
+                            	slert("loaded all");
+                            	self.appendAllProducts();
+                            }
                         });
                     }
                     else
@@ -18570,7 +18582,7 @@ Hydra.module.register( 'page-products-list', function( bus )
                                     <div class='hover'></div>\
                                     <span href='/product/" + product.id + "'>\
                                         <div class='image-container'>\
-                                            <img width='200' class='no-loaded' src='" + product.init_folder + product.thumbnail + "' valign='baseline' />\
+                                            <img width='200' class='no-loaded' src='" + product.thumbnail + "' valign='baseline' />\
                                         </div>"
                                         if (product.type != 'Shoes')
                                         {
@@ -18729,15 +18741,18 @@ Hydra.module.register( 'page-products-list', function( bus )
 
                                 $('#model-selection .selected').removeClass('gray').text(user.MODEL_NAME);
 
-                                self.filter();
+                                //self.filter();
                             }
 
                             window.location.hash = '';
                         }
-                        else
-                        self.filter();
+                        else {
+                        	// self.filter();
+                        }
                     }
                     , 200);
+                    
+                    self.resize();
                 }
             },
 
@@ -18759,6 +18774,7 @@ Hydra.module.register( 'page-products-list', function( bus )
 
                     if (MARKUP_MODELS == "")
                     {
+                    	/*
                         for (var id in PRODUCTS_FAMILIES)
                         {
                             var model = PRODUCTS_FAMILIES[id];
@@ -18775,6 +18791,7 @@ Hydra.module.register( 'page-products-list', function( bus )
                                 </li>\
                             ';
                         }
+                        */
                     }
 
                     $list.html(MARKUP_MODELS);
@@ -18874,177 +18891,12 @@ Hydra.module.register( 'page-products-list', function( bus )
 
             filter: function()
             {
-                for (var i = 0; i < DATA_JSON.length; i++)
-                {
-                    var product = DATA_JSON[i];
-
-                    product.isVisible = true;
-                    product.isInStock = true;
-
-                    // CHECK SIZE ********************************
-
-                    if (user.TYPE_PRODUCT == "FOOTWEAR" && user.SIZE != 0 && user.SIZE != "")
-                    {
-                        if (String(product.size).indexOf(user.SIZE) == -1)
-                        {
-                            product.isVisible = false;
-                        }
-                        else
-                        {
-                            var sizes = String(product.size).split("-");
-                            var stocks = String(product.sizes_stock).split("-");
-                            var index = 0;
-
-                            for (var j = 0; j < sizes.length; j++)
-                            {
-                                if (user.SIZE == sizes[j])
-                                {
-                                    index = j;
-                                    break;
-                                }
-                            }
-
-                            if(stocks[index] == 0)
-                            {
-                                $products.eq(i).addClass("inactive");
-                            }
-                            else
-                            {
-                                $products.eq(i).removeClass("inactive");
-                            }   
-                        }
-                    }
-                    else
-                    {
-                        $products.eq(i).removeClass("inactive");
-                    }
-
-
-
-
-
-                    // HARDCODE: Set a product as out-of-stock for all sizes
-                    // Do NOT delete when unnecessary. Just comment it.
-                    if
-                    (
-                        product.id == 1551
-                        ||
-                        product.id == 2351
-                        ||
-                        product.id == 2281
-                        ||
-                        product.id == 2338
-                        ||
-                        product.id == 2364
-                        ||
-                        product.id == 2325
-                        ||
-                        product.id == 2312
-                        ||
-                        product.id == 2294
-                    )
-                    $products.eq(i).addClass("inactive inactive-all-sizes");
-
-
-
-
-
-                    // CHECK COLOR ********************************
-                    function colorsArray()
-                    {
-                        if (ATTRIBUTES_FILTER[3])
-                        {
-                            return ATTRIBUTES_FILTER[3];
-                        }
-                        else
-                        {
-                            return [
-                                {label: "", value: ""},
-                                {label: "Black", value: "42"},
-                                {label: "Brown", value: "49"},
-                                {label: "Red", value: "41"},
-                                {label: "Orange", value: "48"},
-                                {label: "Yellow", value: "47"},
-                                {label: "Green", value: "46"},
-                                {label: "Blue", value: "45"},
-                                {label: "Purple", value: "44"},
-                                {label: "White", value: "43"},
-                            ];
-                        }
-                    }
-
-                    if (user.COLOR != 0)
-                    {
-                        
-                        //if (String(product.colors).toLowerCase().indexOf(translateColor( String(ATTRIBUTES_FILTER[3][user.COLOR].label).toLowerCase() )) == -1)
-
-
-                        if (CURRENT_LANGUAGE == "es")
-                        {
-                            if (String(product.colors).toLowerCase().indexOf( String(colorsArray()[user.COLOR].label).toLowerCase() ) == -1)
-                            {
-                                product.isVisible = false;
-                            }
-                        }
-                        else
-                        {
-                            if (String(product.colors).toLowerCase().indexOf(translateColor( String(colorsArray()[user.COLOR].label).toLowerCase() )) == -1)
-                            {
-                                product.isVisible = false;
-                            }
-                        }
-                    }
-
-                    // CHECK TYPE ********************************
-
-                    if (user.TYPE_PRODUCT == "FOOTWEAR")
-                    {
-                        if (product.type != "Shoes")
-                        {
-                            product.isVisible = false;
-                        }
-                    }
-                    
-                    if (CURRENT_LANGUAGE == "en")
-                    {
-                        if (user.TYPE_PRODUCT == "ACCESORIES" && product.type == "Shoes")
-                        {
-                            product.isVisible = false;
-                        }
-                    }
-                    else if (CURRENT_LANGUAGE == "es")
-                    {
-                        if (user.TYPE_PRODUCT == "ACCESORIOS" && product.type == "Shoes")
-                        {
-                            product.isVisible = false;
-                        }
-                    }
-
-                    // CHECK PRICE ********************************
-
-                    if (!(user.PRICE_RATE_MIN == 0 && user.PRICE_RATE_MAX == 0))
-                    {
-                        if
-                        (
-                            convertTextInNumber(product.price) < user.PRICE_RATE_MIN
-                            ||
-                            convertTextInNumber(product.price) > user.PRICE_RATE_MAX
-                        )
-                        product.isVisible = false;
-                    }
-
-                    // CHECK MODEL ********************************
-
-                    if (user.TYPE_PRODUCT == "FOOTWEAR" && user.MODEL_ID && product.family_id != user.MODEL_ID)
-                    {
-                        product.isVisible = false;
-                    }
-                }
-
-                if (mode == 'products')
-                self.respawnProducts();
-                else
-                ProductsListPage.goToProducts();
+            	self.hideVisibleProducts();
+            	CURRENT_FLOOR = null;
+            	isPreloaded = false;
+            	$noresult.hide();
+            	bus.publish( 'satorisan', 'destroy-page' );
+                bus.publish( 'satorisan', 'append-page', { content: "products-list" } );
             },
 
             /*-------------------------------*/            
@@ -27737,7 +27589,7 @@ var PageTitle;
             	if( CURRENT_LANGUAGE == "es" ){
             		title = "Shop";
             	}else{
-            		title = "Shop";
+            		title = "产品列表";
             	}
             }
 
@@ -32775,7 +32627,7 @@ Hydra.module.register( 'products-filter', function(bus)
                             <div id='type-selection' class='filter-field'>\
                                 <div class='pin-selected'></div>\
                                 <div class='categoria-text-over'>" + DICTIONARY[CURRENT_LANGUAGE].selectcategory + "</div>\
-                                <div class='selected'>" + user.TYPE_PRODUCT + "</div>\
+                                <div class='selected'>" + user.TYPE_PRODUCT.name + "</div>\
                                 <div class='widget-selector'>\
                                     <div class='prev'></div>\
                                 </div>\
@@ -32978,7 +32830,7 @@ Hydra.module.register( 'products-filter', function(bus)
             {
                 if (user.TYPE_PRODUCT)
                 {
-                    $("#type-selection .selected").html(user.TYPE_PRODUCT);
+                    $("#type-selection .selected").html(user.TYPE_PRODUCT.name);
 
                     self.animateFilter();
 
@@ -33233,7 +33085,7 @@ var FilterSize;
 
 			var MARKUP = "<div id='filter-size-widget' class='filter-widget'><div class='products-filter-final clearfix'><div class='products-filter-wrapper clearfix'>";
 	        MARKUP += "<div class='filter-size-drag-area'><div class='filter-size-selector'><div class='cursor'></div><div class='background'></div><div class='green-line'></div></div></div>";
-	        MARKUP += "<div class='option-value'><div class='green-background'></div><div class='line' style='background:#acacac'></div><div class='label'>" + allText + "</div></div>";
+	        MARKUP += "<div class='option-value' value='-1'><div class='green-background'></div><div class='line' style='background:#acacac'></div><div class='label'>" + allText + "</div></div>";
 	        MARKUP += "</div></div><div class='size-system-wrapper'></div><div class='middle-line'></div></div>";
 
 			if ( $("#product-detail").length>0 )
@@ -35168,24 +35020,23 @@ var FilterItemsType;
 				
 				if (i == items.length - 1)
 				{
-					$container.find(".filter-items-type-wrapper").append( "<div class='option-value'><div class='line-item-left'></div><div class='text-container'>" + (items[i]) + "</div><div class='line-item-right'></div></div>" );
+					$container.find(".filter-items-type-wrapper").append( "<div class='option-value' value='"+ items[i].id + "'><div class='line-item-left'></div><div class='text-container'>" + (items[i].name) + "</div><div class='line-item-right'></div></div>" );
 				}
 				else
 				{
-					$container.find(".filter-items-type-wrapper").append( "<div class='option-value'><div class='line-item-left'></div><div class='text-container'>" + (items[i]) + "</div></div>" );
+					$container.find(".filter-items-type-wrapper").append( "<div class='option-value' value='" + items[i].id + "'><div class='line-item-left'></div><div class='text-container'>" + (items[i].name) + "</div></div>" );
 				}
 			}
 			
 			if (user.TYPE_PRODUCT)
 			{
-				$container.find(".option-value:contains(" + user.TYPE_PRODUCT + ")").addClass("active");	
+				$container.find(".option-value:contains(" + user.TYPE_PRODUCT.name + ")").addClass("active");	
 			}
 
 			$options = $(".option-value");
 			$options.bind (MOUSE_DOWN, this.clickItem);
 
 			$container.css({ bottom:27 }).animate({bottom:79}, {duration:250});
-
 		}
 
 
@@ -35208,18 +35059,14 @@ var FilterItemsType;
 			user.PRICE_RATE_MIN = FILTER_PRICES_MIN;
 			user.PRICE_RATE_MAX = FILTER_PRICES_MAX
 			
-			if ($clickedOption.text() != user.TYPE_PRODUCT)
+			if ($clickedOption.attr('value') != user.TYPE_PRODUCT.id)
 			{
 				globalBus.publish( 'satorisan', 'close-products-filter-open' );
-			}
-			
-			if (user.TYPE_PRODUCT != $clickedOption.text())
-			{			
-				user.TYPE_PRODUCT = $clickedOption.text();
+				
+				user.TYPE_PRODUCT = {name: $clickedOption.text(), id: $clickedOption.attr('value')};
 				self.callbackParent();
 			}
-
-			user.TYPE_PRODUCT = $clickedOption.text();	
+	
 			$options.removeClass("active");
 			$clickedOption.addClass("active");
 		}
